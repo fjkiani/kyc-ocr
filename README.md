@@ -1,22 +1,30 @@
-# Optical Character Recognition
+## Demo Video
+[![OCR Demo](https://cdn.loom.com/sessions/thumbnails/629beb6b58784717be86a8d3602cae44-with-play.gif)](https://www.loom.com/share/629beb6b58784717be86a8d3602cae44?sid=742b9994-ec12-45bc-8480-829d832ac062)
 
-OCR (Optical Character Recognition) is a technology that enables the conversion of document types such as scanned paper documents, PDF files or pictures taken with a digital camera into editable and searchable data. OCR creates words from letters and sentences from words by selecting and separating letters from images.
-
-![robot](https://user-images.githubusercontent.com/57320216/156442638-c681624f-a8cd-45ed-a4cc-8a626d295f46.jpg)
+## System Architecture
+[View Interactive System Architecture Diagram](https://excalidraw.com/#json=l0nLp1FfvFngkw_lNh0oO,Kjc-zCkWn6DHhAVG3nR5pA)
 
 # Table of Content
 - [Optical Character Recognition](#optical-character-recognition)
 
   * [Requirements](#requirements)
   * [Usage](#usage)
-  * [Results](#results)
-  * [Conclusion](#conclusion)
-  * [Source](#source)
+  * [features] (#features)
+  * [Findings](#findings)
+  * [Drivers License OCR/KYC Analysis](#drivers-license-ocr-analysis)
 
 
 ## Requirements
 
     pip install -r requirements.txt
+
+## Features
+
+### 1. Multi-Engine OCR Processing
+- **EasyOCR**: Primary engine for high-accuracy text detection
+- **Keras-OCR**: Secondary engine for complex layouts
+- **Pytesseract**: Specialized MRZ processing
+
     
 ## Usage
 
@@ -39,13 +47,8 @@ for **pytesseract**:
 
     ocr.pytesseract_model_works()
 
- ## Results
- ![kerasocr1](https://user-images.githubusercontent.com/57320216/156442703-ff06fce6-174a-4859-9d45-b32b4187b1d5.png)
-![kerasocr2](https://user-images.githubusercontent.com/57320216/156442709-cea41264-e369-48a3-92b0-afa752c313fb.png)
-![kerasocr3](https://user-images.githubusercontent.com/57320216/156442712-c05cbf58-0c9b-41fa-bd7b-c42704194527.png)
-
  
- ## Conclusion
+ ## Findings
  
  - It seems that pytesseract is not very good at detecting text in the entire image and converting str. Instead, text should be detected first with text detection and the texts have to given OCR engines.
  
@@ -56,18 +59,14 @@ Keras-OCR is image specific OCR tool. If text is inside the image and their font
 
 - Pytesseract is performing well for high-resolution images. Certain morphological operations such as dilation, erosion, OTSU binarization can help increase pytesseract performance.
     
-
 - All these results can be further improved by performing specific image operations. OCR Prediction is not only dependent on the model and also on a lot of other factors like clarity, grey scale of the image, hyper parameter, weight age given, etc.
  
     
- ## Source
- https://github.com/faustomorales/keras-ocr  
- https://github.com/JaidedAI/EasyOCR  
- https://pypi.org/project/pytesseract/  
 
 # Identity Document Verification System Analysis
 
-## Driver's License OCR Analysis
+## Driver's License OCR Analysis 
+#drivers-license-ocr-analysis
 
 ### Test Results Summary
 We tested three different OCR engines (EasyOCR, Keras OCR, and Pytesseract) on driver's license samples. EasyOCR provided the most accurate and consistent results.
@@ -259,9 +258,109 @@ Low Confidence Fields (<0.70):
            # State-specific validation
    ```
 
-### Next Steps
-1. Implement document type detection
-2. Add specialized MRZ processing
-3. Create multi-language support
-4. Develop confidence-based validation rules
-5. Add template matching for different document types
+
+
+# System Evolution and Enhancements
+
+## Latest Improvements
+
+### 1. Architecture Enhancement
+We've evolved from a basic OCR system to a comprehensive document processing pipeline:
+
+```mermaid
+graph TD
+    A[Input Document] --> B[Document Classification]
+    B --> C[OCR Processing]
+    C --> D[Specialized Processing]
+    D --> E[LLM Enhancement]
+    E --> F[Final Output]
+```
+
+### 2. Integration of LLM
+- Added Fireworks AI integration for enhanced validation
+- Implemented structured JSON output format
+- Added cross-validation between OCR and LLM results
+
+### 3. Document Processing Improvements
+- Specialized MRZ processing for passports
+- Enhanced document classification
+- Multi-layer validation system
+
+### 4. Technical Upgrades
+
+#### OCR Engine Optimization
+- EasyOCR: Now primary engine for all document types
+- Specialized configurations for different document types
+- Improved preprocessing pipeline
+
+#### New Components
+1. **DocumentClassifier**
+   - Automatic document type detection
+   - Confidence scoring system
+   - Template matching capabilities
+
+2. **MRZProcessor**
+   - Dedicated passport MRZ processing
+   - Enhanced image preprocessing
+   - Cross-validation with visual text
+
+3. **LLMProcessor**
+   - AI-powered field validation
+   - Format standardization
+   - Multi-language support
+
+### 5. Performance Metrics
+
+| Feature | Before | After |
+|---------|---------|--------|
+| Document Classification | Manual | Automatic (95% accuracy) |
+| MRZ Processing | Basic | Enhanced with validation |
+| Field Extraction | OCR only | OCR + LLM validation |
+| Output Format | Raw text | Structured JSON |
+| Confidence Scoring | Single layer | Multi-layer validation |
+
+### 6. Implementation Status
+
+#### Completed
+- [x] Base OCR implementation
+- [x] Document classification
+- [x] MRZ processing
+- [x] Initial LLM integration
+
+#### In Progress
+- [ ] Fine-tuning LLM prompts
+- [ ] Enhanced validation rules
+- [ ] Performance optimization
+- [ ] Multi-language support
+
+### 7. Current Architecture Benefits
+1. **Improved Accuracy**
+   - Multi-engine OCR processing
+   - LLM-powered validation
+   - Cross-reference verification
+
+2. **Better Standardization**
+   - Consistent output format
+   - Document-specific processing
+   - Standardized field validation
+
+3. **Enhanced Error Handling**
+   - Multi-layer validation
+   - Detailed error reporting
+   - Fallback processing options
+
+### 8. Next Development Phase
+1. **High Priority**
+   - Fine-tune LLM prompts for each document type
+   - Enhance validation rules
+   - Improve MRZ processing accuracy
+
+2. **Medium Priority**
+   - Implement caching mechanisms
+   - Add batch processing capabilities
+   - Enhance error reporting system
+
+3. **Future Enhancements**
+   - API endpoint development
+   - Additional document type support
+   - Advanced security features

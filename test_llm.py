@@ -8,28 +8,20 @@ def test_llm_processing():
     llm = LLMProcessor()
     
     # Test with a sample document
-    test_image = "test/passport-2.jpg"
+    test_image = "test/License-1.png"
     
     print("1. Getting OCR results...")
-    # Create a list of tuples (text, confidence) to simulate OCR results
-    ocr_results = [
-        ("PASSPORT", 0.97),
-        ("UNITED STATES OF AMERICA", 0.85),
-        ("JOHN", 1.00),
-        ("DOE", 1.00),
-        ("Date of Birth: 15 Mar 1996", 1.00),
-        ("Place of Birth: CALIFORNIA, U.S.A", 0.97),
-        ("Issue Date: 14 Apr 2017", 0.72),
-        ("Expiry: 2027", 0.90),
-        ("Passport No: 963545637", 0.69),
-        ("Department of State", 0.85),
-        ("P<USAJOHN<<DOE<<<<<<kk<<<kk<kkkkkk<<kkkk<<<", 0.03),
-        ("9635456374U5A9603150M2704140202113962<804330", 0.66)
-    ]
+    # Initialize OCR with the image directory
+    ocr = OCR(os.path.dirname(test_image))
     
-    print("\nOCR Results:")
-    for text, conf in ocr_results:
-        print(f"- Text: {text:<30} (Confidence: {conf:.2f})")
+    # Get actual OCR results
+    print("\nProcessing image with EasyOCR...")
+    ocr_results = []
+    results = ocr.text_reader.readtext(test_image)
+    
+    for (bbox, text, confidence) in results:
+        ocr_results.append((text.strip(), confidence))
+        print(f"- Text: {text:<30} (Confidence: {confidence:.2f})")
     
     print("\n2. Processing with LLM...")
     llm_results = llm.process_document_fields(ocr_results, "passport")

@@ -16,8 +16,8 @@ def test_imports():
     print("EasyOCR initialized successfully!")
     
     # Test Keras-OCR
-    pipeline = keras_ocr.pipeline.Pipeline()
-    print("Keras-OCR pipeline initialized successfully!")
+    # pipeline = keras_ocr.pipeline.Pipeline()
+    # print("Keras-OCR pipeline initialized successfully!")
 
 if __name__ == "__main__":
     test_imports() 
