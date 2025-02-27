@@ -1,0 +1,8 @@
+opencv-python>=4.5.0
+numpy>=1.19.0
+tensorflow-macos>=2.4.0,<2.14.0
+keras==2.12.0
+keras-ocr>=0.8.7
+pytesseract>=0.3.8
+easyocr>=1.4.1
+matplotlib>=3.3.0
