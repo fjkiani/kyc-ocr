@@ -10,7 +10,6 @@
 
   * [Requirements](#requirements)
   * [Usage](#usage)
-  * [features] (#features)
   * [Findings](#findings)
   * [Drivers License OCR/KYC Analysis](#drivers-license-ocr-analysis)
 
