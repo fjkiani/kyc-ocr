@@ -1,5 +1,6 @@
 ## Demo Video
-[![OCR Demo](https://cdn.loom.com/sessions/thumbnails/629beb6b58784717be86a8d3602cae44-with-play.gif)](https://www.loom.com/share/629beb6b58784717be86a8d3602cae44?sid=742b9994-ec12-45bc-8480-829d832ac062)
+[![OCR Demo]
+(https://cdn.loom.com/sessions/thumbnails/629beb6b58784717be86a8d3602cae44-with-play.gif)](https://www.loom.com/share/629beb6b58784717be86a8d3602cae44?sid=742b9994-ec12-45bc-8480-829d832ac062)
 
 ## System Architecture
 [View Interactive System Architecture Diagram](https://excalidraw.com/#json=l0nLp1FfvFngkw_lNh0oO,Kjc-zCkWn6DHhAVG3nR5pA)
