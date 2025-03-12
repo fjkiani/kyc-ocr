@@ -1,0 +1,10 @@
+{
+  "passports": [],
+  "drivers_licenses": [],
+  "summary": {
+    "total_processed": 0,
+    "successful": 0,
+    "failed": 3,
+    "average_confidence": 0.0
+  }
+}

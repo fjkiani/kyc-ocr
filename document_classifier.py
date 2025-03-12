@@ -1,4 +1,5 @@
 import cv2
+import os
 import numpy as np
 from ocr import OCR
 
@@ -15,8 +16,8 @@ class DocumentClassifier:
         # Initialize OCR with the image directory
         self.ocr = OCR(os.path.dirname(image_path))
         
-        # Get OCR results
-        results = self._get_ocr_results(image_path)
+        # Get OCR results using the full image path
+        results = self._get_ocr_results(str(image_path))  # Ensure path is string
         
         # Check for MRZ pattern (passport indicator)
         has_mrz = self._detect_mrz_pattern(image_path)
@@ -34,8 +35,17 @@ class DocumentClassifier:
     
     def _get_ocr_results(self, image_path):
         """Get OCR results using EasyOCR"""
-        # Use existing OCR implementation
-        return self.ocr.easyocr_model_works(visualization=False)
+        # Use existing OCR implementation with full image path
+        results = self.ocr.easyocr_model_works(str(image_path), visualization=False)
+        # Convert results to our format
+        formatted_results = []
+        for text_obj in results:
+            formatted_results.append({
+                'text': text_obj[1],  # The text
+                'confidence': text_obj[2],  # The confidence score
+                'bbox': text_obj[0]  # The bounding box
+            })
+        return formatted_results
     
     def _detect_mrz_pattern(self, image_path):
         """Detect MRZ pattern in passport"""
@@ -52,11 +62,12 @@ class DocumentClassifier:
         # Look for consistent line patterns
         horizontal_lines = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, 
                                           np.ones((1, 40), np.uint8))
-        return np.sum(horizontal_lines) > 0
+        # Convert numpy.bool_ to Python bool
+        return bool(np.sum(horizontal_lines) > 0)
     
     def _analyze_text_content(self, results):
         """Analyze OCR results to determine document type"""
-        text_lower = ' '.join([text.lower() for text in results])
+        text_lower = ' '.join([result['text'].lower() for result in results])
         
         # Check for document type indicators
         for doc_type, indicators in self.document_types.items():
@@ -73,9 +84,10 @@ class DocumentClassifier:
             confidence += 0.5  # Strong indicator for passport
             
         # Add confidence based on detected keywords
-        for text, score in results:
-            if any(indicator in text.lower() for indicators 
+        for result in results:
+            text = result['text'].lower()
+            if any(indicator in text for indicators 
                   in self.document_types.values() for indicator in indicators):
-                confidence += score
+                confidence += result['confidence']
                 
         return min(confidence, 1.0) 

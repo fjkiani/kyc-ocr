@@ -1,0 +1,99 @@
+{
+  "document_type": "unknown",
+  "confidence": 0.5,
+  "detected_fields": [
+    {
+      "text": "TR",
+      "confidence": 0.9998748261546438,
+      "bbox": [
+        [
+          18,
+          74
+        ],
+        [
+          60,
+          74
+        ],
+        [
+          60,
+          106
+        ],
+        [
+          18,
+          106
+        ]
+      ]
+    },
+    {
+      "text": "14",
+      "confidence": 0.9989386545143102,
+      "bbox": [
+        [
+          52,
+          12
+        ],
+        [
+          172,
+          12
+        ],
+        [
+          172,
+          116
+        ],
+        [
+          52,
+          116
+        ]
+      ]
+    },
+    {
+      "text": "DK 205",
+      "confidence": 0.9237837116246451,
+      "bbox": [
+        [
+          207,
+          8
+        ],
+        [
+          590,
+          8
+        ],
+        [
+          590,
+          122
+        ],
+        [
+          207,
+          122
+        ]
+      ]
+    }
+  ],
+  "extracted_fields": {
+    "country_code": {
+      "value": "TR",
+      "standardized_value": "TR",
+      "confidence": 0.9998748261546438,
+      "validation_status": "uncertain"
+    },
+    "document_number": {
+      "value": "DK 205",
+      "standardized_value": "DK205",
+      "confidence": 0.9237837116246451,
+      "validation_status": "uncertain"
+    },
+    "numeric_code": {
+      "value": "14",
+      "standardized_value": "14",
+      "confidence": 0.9989386545143102,
+      "validation_status": "uncertain"
+    }
+  },
+  "validation_notes": [
+    "The document type could not be determined due to insufficient information.",
+    "The field 'TR' may represent a country code (Turkey), but this is uncertain.",
+    "The field 'DK 205' could be a document number or reference code, but its format is unclear.",
+    "The field '14' could represent a year, day, or part of a code, but its context is unknown."
+  ],
+  "overall_confidence": 0.974
+}

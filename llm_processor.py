@@ -1,3 +1,19 @@
+# Note: This module is a key component in the document processing pipeline:
+
+# In the traditional approach (test_llm.py):
+# OCR Results → LLMProcessor → Structured Fields
+
+# In the DocumentProcessor class:
+# OCR Results → LLMProcessor → Cross-validation with MRZ → Final Output
+
+# The LLMProcessor provides several critical enhancements:
+# 1. Field identification and extraction
+# 2. Format standardization (dates, names, numbers)
+# 3. Validation of field formats and values
+# 4. Confidence scoring for each field
+# 5. Overall document validation notes 
+
+
 import os
 import json
 import requests
@@ -34,17 +50,47 @@ class LLMProcessor:
         return self._parse_llm_response(response)
     
     def _structure_ocr_results(self, ocr_results):
-        """Structure OCR results into a more organized format"""
+        """Structure OCR results into a more organized format
+        
+        This method handles different input formats:
+        1. From DocumentClassifier: List of dicts with 'text' and 'confidence' keys
+        2. From OCR class: List of tuples with (bbox, text, confidence) or (text, confidence)
+        """
         structured = {
             "detected_fields": []
         }
         
-        for text, confidence in ocr_results:
-            structured["detected_fields"].append({
-                "text": text.strip(),
-                "confidence": float(confidence)
-            })
+        # Print debug info
+        print(f"DEBUG: OCR results type: {type(ocr_results)}")
+        if ocr_results and len(ocr_results) > 0:
+            print(f"DEBUG: First OCR result type: {type(ocr_results[0])}")
         
+        for item in ocr_results:
+            # Handle different formats
+            if isinstance(item, dict) and 'text' in item and 'confidence' in item:
+                # Already in the right format (from DocumentClassifier)
+                structured["detected_fields"].append({
+                    "text": item['text'].strip(),
+                    "confidence": float(item['confidence'])
+                })
+            elif isinstance(item, tuple) or isinstance(item, list):
+                # From OCR class
+                if len(item) == 3:  # (bbox, text, confidence)
+                    structured["detected_fields"].append({
+                        "text": item[1].strip(),
+                        "confidence": float(item[2])
+                    })
+                elif len(item) == 2:  # (text, confidence)
+                    structured["detected_fields"].append({
+                        "text": item[0].strip(),
+                        "confidence": float(item[1])
+                    })
+                else:
+                    print(f"WARNING: Unexpected OCR result format: {item}")
+            else:
+                print(f"WARNING: Unexpected OCR result type: {type(item)}")
+        
+        print(f"DEBUG: Structured {len(structured['detected_fields'])} fields")
         return structured
     
     def _create_field_extraction_prompt(self, ocr_results, document_type):

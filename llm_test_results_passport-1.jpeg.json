@@ -1,0 +1,58 @@
+{
+  "extracted_fields": {
+    "full_name": {
+      "value": "JOHN DOE",
+      "standardized_value": "John Doe",
+      "confidence": 0.9998277425765991,
+      "validation_status": "valid"
+    },
+    "date_of_birth": {
+      "value": "15 Mar 1996",
+      "standardized_value": "1996-03-15",
+      "confidence": 0.8695116581323916,
+      "validation_status": "valid"
+    },
+    "place_of_birth": {
+      "value": "CALIFORNIA,",
+      "standardized_value": "California, USA",
+      "confidence": 0.8637251508359147,
+      "validation_status": "uncertain"
+    },
+    "passport_number": {
+      "value": "963545637",
+      "standardized_value": "963545637",
+      "confidence": 0.7087664517080308,
+      "validation_status": "valid"
+    },
+    "issue_date": {
+      "value": "14 Apr 2017",
+      "standardized_value": "2017-04-14",
+      "confidence": 0.6914505004717008,
+      "validation_status": "valid"
+    },
+    "expiry_date": {
+      "value": "2027",
+      "standardized_value": "2027",
+      "confidence": 0.9999868852341599,
+      "validation_status": "uncertain"
+    },
+    "issuing_authority": {
+      "value": "Department of State'",
+      "standardized_value": "Department of State",
+      "confidence": 0.7413001469980179,
+      "validation_status": "valid"
+    },
+    "mrz_data": {
+      "value": "P<usaJohn<<DOE<<<<<<<<<<<<<<K<<<<<<<<<<<<<<<<",
+      "standardized_value": "P<USAJOHN<<DOE<<<<<<<<<<<<<<K<<<<<<<<<<<<<<<<",
+      "confidence": 0.11239782974885432,
+      "validation_status": "uncertain"
+    }
+  },
+  "validation_notes": [
+    "The place of birth is marked as uncertain due to incomplete information (only 'CALIFORNIA' is provided without country).",
+    "The expiry date is marked as uncertain as only the year '2027' is provided without the full date.",
+    "The MRZ data is marked as uncertain due to low confidence score and potential OCR errors."
+  ],
+  "overall_confidence": 0.75
+}

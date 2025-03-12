@@ -1,0 +1,801 @@
+{
+  "document_type": "drivers_license",
+  "confidence": 1.0,
+  "detected_fields": [
+    {
+      "text": "99 999 999",
+      "confidence": 0.9999400225705971,
+      "bbox": [
+        [
+          417,
+          257
+        ],
+        [
+          591,
+          257
+        ],
+        [
+          591,
+          293
+        ],
+        [
+          417,
+          293
+        ]
+      ]
+    },
+    {
+      "text": "4d",
+      "confidence": 0.9998595695889662,
+      "bbox": [
+        [
+          326,
+          266
+        ],
+        [
+          358,
+          266
+        ],
+        [
+          358,
+          290
+        ],
+        [
+          326,
+          290
+        ]
+      ]
+    },
+    {
+      "text": "DD:",
+      "confidence": 0.999764620448954,
+      "bbox": [
+        [
+          322,
+          928
+        ],
+        [
+          364,
+          928
+        ],
+        [
+          364,
+          952
+        ],
+        [
+          322,
+          952
+        ]
+      ]
+    },
+    {
+      "text": "DL",
+      "confidence": 0.9997172906462988,
+      "bbox": [
+        [
+          421,
+          815
+        ],
+        [
+          506,
+          815
+        ],
+        [
+          506,
+          876
+        ],
+        [
+          421,
+          876
+        ]
+      ]
+    },
+    {
+      "text": "USA",
+      "confidence": 0.9987442465038491,
+      "bbox": [
+        [
+          394,
+          124
+        ],
+        [
+          444,
+          124
+        ],
+        [
+          444,
+          150
+        ],
+        [
+          394,
+          150
+        ]
+      ]
+    },
+    {
+      "text": "3",
+      "confidence": 0.9962424832947505,
+      "bbox": [
+        [
+          35,
+          195
+        ],
+        [
+          51,
+          195
+        ],
+        [
+          51,
+          229
+        ],
+        [
+          35,
+          229
+        ]
+      ]
+    },
+    {
+      "text": "DLN:",
+      "confidence": 0.9943947300300534,
+      "bbox": [
+        [
+          364,
+          266
+        ],
+        [
+          420,
+          266
+        ],
+        [
+          420,
+          290
+        ],
+        [
+          364,
+          290
+        ]
+      ]
+    },
+    {
+      "text": "01/07/2022",
+      "confidence": 0.9924591974883448,
+      "bbox": [
+        [
+          417,
+          363
+        ],
+        [
+          593,
+          363
+        ],
+        [
+          593,
+          399
+        ],
+        [
+          417,
+          399
+        ]
+      ]
+    },
+    {
+      "text": "PURPOSES",
+      "confidence": 0.9914779835316353,
+      "bbox": [
+        [
+          384,
+          200
+        ],
+        [
+          552,
+          200
+        ],
+        [
+          552,
+          232
+        ],
+        [
+          384,
+          232
+        ]
+      ]
+    },
+    {
+      "text": "DRIVERS LICENSE",
+      "confidence": 0.9862069839263515,
+      "bbox": [
+        [
+          155,
+          140
+        ],
+        [
+          484,
+          140
+        ],
+        [
+          484,
+          179
+        ],
+        [
+          155,
+          179
+        ]
+      ]
+    },
+    {
+      "text": "15SEX:",
+      "confidence": 0.9813414664939485,
+      "bbox": [
+        [
+          31,
+          752
+        ],
+        [
+          112,
+          752
+        ],
+        [
+          112,
+          781
+        ],
+        [
+          31,
+          781
+        ]
+      ]
+    },
+    {
+      "text": "DOB: 01/07/2005",
+      "confidence": 0.9755332405589859,
+      "bbox": [
+        [
+          359,
+          287
+        ],
+        [
+          593,
+          287
+        ],
+        [
+          593,
+          323
+        ],
+        [
+          359,
+          323
+        ]
+      ]
+    },
+    {
+      "text": "4b EXP: 01/08/2026",
+      "confidence": 0.9697877778928996,
+      "bbox": [
+        [
+          325,
+          327
+        ],
+        [
+          593,
+          327
+        ],
+        [
+          593,
+          363
+        ],
+        [
+          325,
+          363
+        ]
+      ]
+    },
+    {
+      "text": "9a END: NONE",
+      "confidence": 0.8956018830953089,
+      "bbox": [
+        [
+          328,
+          422
+        ],
+        [
+          490,
+          422
+        ],
+        [
+          490,
+          450
+        ],
+        [
+          328,
+          450
+        ]
+      ]
+    },
+    {
+      "text": "APT",
+      "confidence": 0.8777537446227541,
+      "bbox": [
+        [
+          54,
+          704
+        ],
+        [
+          112,
+          704
+        ],
+        [
+          112,
+          730
+        ],
+        [
+          54,
+          730
+        ]
+      ]
+    },
+    {
+      "text": "NOT FOR REAL ID",
+      "confidence": 0.8763083689353031,
+      "bbox": [
+        [
+          340,
+          174
+        ],
+        [
+          598,
+          174
+        ],
+        [
+          598,
+          206
+        ],
+        [
+          340,
+          206
+        ]
+      ]
+    },
+    {
+      "text": "HARRISBURG, PA 17101-0000",
+      "confidence": 0.8752133145434083,
+      "bbox": [
+        [
+          54,
+          724
+        ],
+        [
+          416,
+          724
+        ],
+        [
+          416,
+          756
+        ],
+        [
+          54,
+          756
+        ]
+      ]
+    },
+    {
+      "text": "UNDER 18 UNTIL 01/07/2023",
+      "confidence": 0.8513124034498871,
+      "bbox": [
+        [
+          316,
+          524
+        ],
+        [
+          600,
+          524
+        ],
+        [
+          600,
+          552
+        ],
+        [
+          316,
+          552
+        ]
+      ]
+    },
+    {
+      "text": "123 MAIN STREET",
+      "confidence": 0.8251222837738882,
+      "bbox": [
+        [
+          54,
+          682
+        ],
+        [
+          278,
+          682
+        ],
+        [
+          278,
+          712
+        ],
+        [
+          54,
+          712
+        ]
+      ]
+    },
+    {
+      "text": "2 JANICE ANN",
+      "confidence": 0.8132311274500625,
+      "bbox": [
+        [
+          34,
+          654
+        ],
+        [
+          236,
+          654
+        ],
+        [
+          236,
+          684
+        ],
+        [
+          34,
+          684
+        ]
+      ]
+    },
+    {
+      "text": "DUPs: 00",
+      "confidence": 0.7890422449522885,
+      "bbox": [
+        [
+          488,
+          745
+        ],
+        [
+          601,
+          745
+        ],
+        [
+          601,
+          782
+        ],
+        [
+          488,
+          782
+        ]
+      ]
+    },
+    {
+      "text": "visitPA.com",
+      "confidence": 0.7565183845512671,
+      "bbox": [
+        [
+          256,
+          124
+        ],
+        [
+          372,
+          124
+        ],
+        [
+          372,
+          150
+        ],
+        [
+          256,
+          150
+        ]
+      ]
+    },
+    {
+      "text": "16HGT: 5'-05\"",
+      "confidence": 0.7255878268765357,
+      "bbox": [
+        [
+          154,
+          752
+        ],
+        [
+          308,
+          752
+        ],
+        [
+          308,
+          778
+        ],
+        [
+          154,
+          778
+        ]
+      ]
+    },
+    {
+      "text": "UNDER 21 UNTIL 01/07/2026",
+      "confidence": 0.7187182990980314,
+      "bbox": [
+        [
+          314,
+          498
+        ],
+        [
+          602,
+          498
+        ],
+        [
+          602,
+          526
+        ],
+        [
+          314,
+          526
+        ]
+      ]
+    },
+    {
+      "text": "18EYES: BLU",
+      "confidence": 0.7104283963421525,
+      "bbox": [
+        [
+          316,
+          752
+        ],
+        [
+          470,
+          752
+        ],
+        [
+          470,
+          780
+        ],
+        [
+          316,
+          780
+        ]
+      ]
+    },
+    {
+      "text": "9 CLASS: C",
+      "confidence": 0.6332797815747633,
+      "bbox": [
+        [
+          340,
+          400
+        ],
+        [
+          458,
+          400
+        ],
+        [
+          458,
+          424
+        ],
+        [
+          340,
+          424
+        ]
+      ]
+    },
+    {
+      "text": "SAMPLE",
+      "confidence": 0.6313614310176746,
+      "bbox": [
+        [
+          54,
+          627
+        ],
+        [
+          179,
+          627
+        ],
+        [
+          179,
+          659
+        ],
+        [
+          54,
+          659
+        ]
+      ]
+    },
+    {
+      "text": "12 RESTR: NONE",
+      "confidence": 0.5312738964316132,
+      "bbox": [
+        [
+          329,
+          448
+        ],
+        [
+          516,
+          448
+        ],
+        [
+          516,
+          476
+        ],
+        [
+          329,
+          476
+        ]
+      ]
+    },
+    {
+      "text": "4a ISS:",
+      "confidence": 0.5274856492173812,
+      "bbox": [
+        [
+          328,
+          370
+        ],
+        [
+          410,
+          370
+        ],
+        [
+          410,
+          394
+        ],
+        [
+          328,
+          394
+        ]
+      ]
+    },
+    {
+      "text": "Pennsyfania",
+      "confidence": 0.5067413484904205,
+      "bbox": [
+        [
+          31,
+          35
+        ],
+        [
+          452,
+          35
+        ],
+        [
+          452,
+          164
+        ],
+        [
+          31,
+          164
+        ]
+      ]
+    },
+    {
+      "text": "damice kfmpha",
+      "confidence": 0.1319262681008211,
+      "bbox": [
+        [
+          32,
+          554
+        ],
+        [
+          356,
+          554
+        ],
+        [
+          356,
+          628
+        ],
+        [
+          32,
+          628
+        ]
+      ]
+    },
+    {
+      "text": "138455892943*",
+      "confidence": 0.10272144056089483,
+      "bbox": [
+        [
+          367,
+          922
+        ],
+        [
+          533,
+          922
+        ],
+        [
+          533,
+          974
+        ],
+        [
+          367,
+          974
+        ]
+      ]
+    },
+    {
+      "text": "7",
+      "confidence": 0.07132600039853187,
+      "bbox": [
+        [
+          40,
+          412
+        ],
+        [
+          72,
+          412
+        ],
+        [
+          72,
+          552
+        ],
+        [
+          40,
+          552
+        ]
+      ]
+    }
+  ],
+  "extracted_fields": {
+    "full_name": {
+      "value": "2 JANICE ANN",
+      "standardized_value": "Janice Ann",
+      "confidence": 0.8132311274500625,
+      "validation_status": "uncertain"
+    },
+    "address": {
+      "value": "123 MAIN STREET HARRISBURG, PA 17101-0000",
+      "standardized_value": "123 Main Street, Harrisburg, PA 17101-0000",
+      "confidence": 0.8251222837738882,
+      "validation_status": "valid"
+    },
+    "date_of_birth": {
+      "value": "DOB: 01/07/2005",
+      "standardized_value": "2005-01-07",
+      "confidence": 0.9755332405589859,
+      "validation_status": "valid"
+    },
+    "license_number": {
+      "value": "99 999 999",
+      "standardized_value": "99999999",
+      "confidence": 0.9999400225705971,
+      "validation_status": "valid"
+    },
+    "issue_date": {
+      "value": "01/07/2022",
+      "standardized_value": "2022-01-07",
+      "confidence": 0.9924591974883448,
+      "validation_status": "valid"
+    },
+    "expiry_date": {
+      "value": "4b EXP: 01/08/2026",
+      "standardized_value": "2026-01-08",
+      "confidence": 0.9697877778928996,
+      "validation_status": "valid"
+    },
+    "class_restrictions": {
+      "value": "9 CLASS: C 12 RESTR: NONE",
+      "standardized_value": "Class C, Restrictions: None",
+      "confidence": 0.6332797815747633,
+      "validation_status": "valid"
+    },
+    "sex": {
+      "value": "15SEX:",
+      "standardized_value": "Unknown",
+      "confidence": 0.9813414664939485,
+      "validation_status": "uncertain"
+    },
+    "height": {
+      "value": "16HGT: 5'-05\"",
+      "standardized_value": "5'5\"",
+      "confidence": 0.7255878268765357,
+      "validation_status": "valid"
+    },
+    "eyes": {
+      "value": "18EYES: BLU",
+      "standardized_value": "Blue",
+      "confidence": 0.7104283963421525,
+      "validation_status": "valid"
+    }
+  },
+  "validation_notes": [
+    "The full name '2 JANICE ANN' contains a leading number '2', which may be an OCR artifact.",
+    "The sex field '15SEX:' does not contain a valid value and may be incomplete.",
+    "The address is valid but includes a redundant 'APT' field that was not extracted.",
+    "The class/restrictions field has a low confidence score but appears to be valid based on context."
+  ],
+  "overall_confidence": 0.85
+}

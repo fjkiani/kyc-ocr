@@ -1,0 +1,1251 @@
+{
+  "document_type": "passport",
+  "confidence": 1.0,
+  "detected_fields": [
+    {
+      "text": "3",
+      "confidence": 0.999949694312491,
+      "bbox": [
+        [
+          623,
+          363
+        ],
+        [
+          639,
+          363
+        ],
+        [
+          639,
+          387
+        ],
+        [
+          623,
+          387
+        ]
+      ]
+    },
+    {
+      "text": "USA",
+      "confidence": 0.9998593219722675,
+      "bbox": [
+        [
+          560,
+          732
+        ],
+        [
+          668,
+          732
+        ],
+        [
+          668,
+          786
+        ],
+        [
+          560,
+          786
+        ]
+      ]
+    },
+    {
+      "text": "USA",
+      "confidence": 0.99980894281462,
+      "bbox": [
+        [
+          377,
+          485
+        ],
+        [
+          409,
+          485
+        ],
+        [
+          409,
+          501
+        ],
+        [
+          377,
+          501
+        ]
+      ]
+    },
+    {
+      "text": "Department of State",
+      "confidence": 0.9988797222826329,
+      "bbox": [
+        [
+          523,
+          704
+        ],
+        [
+          676,
+          704
+        ],
+        [
+          676,
+          732
+        ],
+        [
+          523,
+          732
+        ]
+      ]
+    },
+    {
+      "text": "PASAPORTE",
+      "confidence": 0.997143452887674,
+      "bbox": [
+        [
+          105,
+          469
+        ],
+        [
+          185,
+          469
+        ],
+        [
+          185,
+          485
+        ],
+        [
+          105,
+          485
+        ]
+      ]
+    },
+    {
+      "text": "15 Jan 2028",
+      "confidence": 0.9970816739413276,
+      "bbox": [
+        [
+          254,
+          720
+        ],
+        [
+          346,
+          720
+        ],
+        [
+          346,
+          744
+        ],
+        [
+          254,
+          744
+        ]
+      ]
+    },
+    {
+      "text": "Sexo",
+      "confidence": 0.9958344101905823,
+      "bbox": [
+        [
+          611,
+          633
+        ],
+        [
+          637,
+          633
+        ],
+        [
+          637,
+          647
+        ],
+        [
+          611,
+          647
+        ]
+      ]
+    },
+    {
+      "text": "Jan 1706",
+      "confidence": 0.9949381216447896,
+      "bbox": [
+        [
+          276,
+          614
+        ],
+        [
+          342,
+          614
+        ],
+        [
+          342,
+          638
+        ],
+        [
+          276,
+          638
+        ]
+      ]
+    },
+    {
+      "text": "PASSEPORT",
+      "confidence": 0.9892740205923732,
+      "bbox": [
+        [
+          107,
+          457
+        ],
+        [
+          185,
+          457
+        ],
+        [
+          185,
+          471
+        ],
+        [
+          107,
+          471
+        ]
+      ]
+    },
+    {
+      "text": "Autoridad",
+      "confidence": 0.987720424874597,
+      "bbox": [
+        [
+          619,
+          667
+        ],
+        [
+          665,
+          667
+        ],
+        [
+          665,
+          681
+        ],
+        [
+          619,
+          681
+        ]
+      ]
+    },
+    {
+      "text": "Suiname",
+      "confidence": 0.9785348619485525,
+      "bbox": [
+        [
+          261,
+          503
+        ],
+        [
+          303,
+          503
+        ],
+        [
+          303,
+          515
+        ],
+        [
+          261,
+          515
+        ]
+      ]
+    },
+    {
+      "text": "United States",
+      "confidence": 0.9616059590996542,
+      "bbox": [
+        [
+          548,
+          682
+        ],
+        [
+          654,
+          682
+        ],
+        [
+          654,
+          706
+        ],
+        [
+          548,
+          706
+        ]
+      ]
+    },
+    {
+      "text": "PASSFORT",
+      "confidence": 0.9214234995481677,
+      "bbox": [
+        [
+          110,
+          441
+        ],
+        [
+          183,
+          441
+        ],
+        [
+          183,
+          460
+        ],
+        [
+          110,
+          460
+        ]
+      ]
+    },
+    {
+      "text": "BENJAMIN",
+      "confidence": 0.8819341126463478,
+      "bbox": [
+        [
+          257,
+          547
+        ],
+        [
+          339,
+          547
+        ],
+        [
+          339,
+          567
+        ],
+        [
+          257,
+          567
+        ]
+      ]
+    },
+    {
+      "text": "575034801",
+      "confidence": 0.8784957374361506,
+      "bbox": [
+        [
+          498,
+          480
+        ],
+        [
+          608,
+          480
+        ],
+        [
+          608,
+          506
+        ],
+        [
+          498,
+          506
+        ]
+      ]
+    },
+    {
+      "text": "16 Jan 2018",
+      "confidence": 0.8135102325317277,
+      "bbox": [
+        [
+          254,
+          686
+        ],
+        [
+          346,
+          686
+        ],
+        [
+          346,
+          710
+        ],
+        [
+          254,
+          710
+        ]
+      ]
+    },
+    {
+      "text": "Given Names / Prenoms / Nombres",
+      "confidence": 0.7690368853030651,
+      "bbox": [
+        [
+          261,
+          535
+        ],
+        [
+          413,
+          535
+        ],
+        [
+          413,
+          549
+        ],
+        [
+          261,
+          549
+        ]
+      ]
+    },
+    {
+      "text": "UNITED STATES OF AMERICA",
+      "confidence": 0.7656393219073724,
+      "bbox": [
+        [
+          256,
+          578
+        ],
+        [
+          484,
+          578
+        ],
+        [
+          484,
+          602
+        ],
+        [
+          256,
+          602
+        ]
+      ]
+    },
+    {
+      "text": "SEE PAGE 27",
+      "confidence": 0.727208360896191,
+      "bbox": [
+        [
+          269,
+          759
+        ],
+        [
+          369,
+          759
+        ],
+        [
+          369,
+          779
+        ],
+        [
+          269,
+          779
+        ]
+      ]
+    },
+    {
+      "text": "FRANKLIN ",
+      "confidence": 0.7255899629075118,
+      "bbox": [
+        [
+          259,
+          515
+        ],
+        [
+          337,
+          515
+        ],
+        [
+          337,
+          535
+        ],
+        [
+          259,
+          535
+        ]
+      ]
+    },
+    {
+      "text": "Of the United States;",
+      "confidence": 0.7250782316945317,
+      "bbox": [
+        [
+          90,
+          100
+        ],
+        [
+          234,
+          100
+        ],
+        [
+          234,
+          126
+        ],
+        [
+          90,
+          126
+        ]
+      ]
+    },
+    {
+      "text": "SIGNATURE OF BEARER 7 STGNATURE DU TITULAIRE",
+      "confidence": 0.7127532541161125,
+      "bbox": [
+        [
+          171,
+          391
+        ],
+        [
+          435,
+          391
+        ],
+        [
+          435,
+          407
+        ],
+        [
+          171,
+          407
+        ]
+      ]
+    },
+    {
+      "text": "Sex ! Sexe",
+      "confidence": 0.6912920619869363,
+      "bbox": [
+        [
+          557,
+          633
+        ],
+        [
+          607,
+          633
+        ],
+        [
+          607,
+          647
+        ],
+        [
+          557,
+          647
+        ]
+      ]
+    },
+    {
+      "text": "PROVINCE OF MASSACHUSETTS BAY USA",
+      "confidence": 0.6818526650030341,
+      "bbox": [
+        [
+          254,
+          650
+        ],
+        [
+          590,
+          650
+        ],
+        [
+          590,
+          674
+        ],
+        [
+          254,
+          674
+        ]
+      ]
+    },
+    {
+      "text": "Endorsements / Mentions Speciales / Anotaciones",
+      "confidence": 0.6691104414067826,
+      "bbox": [
+        [
+          257,
+          743
+        ],
+        [
+          483,
+          743
+        ],
+        [
+          483,
+          759
+        ],
+        [
+          257,
+          759
+        ]
+      ]
+    },
+    {
+      "text": "Place of birth / Lieu de naissince / Lugar de nacimiento",
+      "confidence": 0.6674488703304327,
+      "bbox": [
+        [
+          259,
+          635
+        ],
+        [
+          503,
+          635
+        ],
+        [
+          503,
+          651
+        ],
+        [
+          259,
+          651
+        ]
+      ]
+    },
+    {
+      "text": "57503480110540601168m2801153532836789<274680",
+      "confidence": 0.6641227553712736,
+      "bbox": [
+        [
+          42,
+          846
+        ],
+        [
+          663,
+          846
+        ],
+        [
+          663,
+          883
+        ],
+        [
+          42,
+          883
+        ]
+      ]
+    },
+    {
+      "text": "Date d expiration / Date dexpiration / Fecha de caducidad",
+      "confidence": 0.6050088713011852,
+      "bbox": [
+        [
+          257,
+          705
+        ],
+        [
+          517,
+          705
+        ],
+        [
+          517,
+          724
+        ],
+        [
+          257,
+          724
+        ]
+      ]
+    },
+    {
+      "text": "P<USAFRANKLIN<<BENJAMIN<<<<<<<<<<<<<<<<<<<<<",
+      "confidence": 0.5968641266346736,
+      "bbox": [
+        [
+          44,
+          809
+        ],
+        [
+          662,
+          809
+        ],
+        [
+          662,
+          841
+        ],
+        [
+          44,
+          841
+        ]
+      ]
+    },
+    {
+      "text": "UNITED STATES OF AMERICA",
+      "confidence": 0.5909696564851522,
+      "bbox": [
+        [
+          238,
+          428
+        ],
+        [
+          655,
+          428
+        ],
+        [
+          655,
+          468
+        ],
+        [
+          238,
+          468
+        ]
+      ]
+    },
+    {
+      "text": "FIRMA PEL TITULAR",
+      "confidence": 0.576707623464283,
+      "bbox": [
+        [
+          441,
+          389
+        ],
+        [
+          545,
+          389
+        ],
+        [
+          545,
+          403
+        ],
+        [
+          441,
+          403
+        ]
+      ]
+    },
+    {
+      "text": "Kationalily",
+      "confidence": 0.5616347922607671,
+      "bbox": [
+        [
+          259,
+          569
+        ],
+        [
+          311,
+          569
+        ],
+        [
+          311,
+          581
+        ],
+        [
+          259,
+          581
+        ]
+      ]
+    },
+    {
+      "text": "Wationalite /  Nacicalldid",
+      "confidence": 0.5210676285190695,
+      "bbox": [
+        [
+          319,
+          567
+        ],
+        [
+          437,
+          567
+        ],
+        [
+          437,
+          581
+        ],
+        [
+          319,
+          581
+        ]
+      ]
+    },
+    {
+      "text": "and establish tbis",
+      "confidence": 0.4499564240523501,
+      "bbox": [
+        [
+          182,
+          189
+        ],
+        [
+          263,
+          189
+        ],
+        [
+          263,
+          208
+        ],
+        [
+          182,
+          208
+        ]
+      ]
+    },
+    {
+      "text": "anthe United States",
+      "confidence": 0.42787157427775885,
+      "bbox": [
+        [
+          138,
+          203
+        ],
+        [
+          227,
+          203
+        ],
+        [
+          227,
+          223
+        ],
+        [
+          138,
+          223
+        ]
+      ]
+    },
+    {
+      "text": "Dale cf issue",
+      "confidence": 0.42368163390209335,
+      "bbox": [
+        [
+          257,
+          673
+        ],
+        [
+          319,
+          673
+        ],
+        [
+          319,
+          687
+        ],
+        [
+          257,
+          687
+        ]
+      ]
+    },
+    {
+      "text": "Authority",
+      "confidence": 0.4160898639325932,
+      "bbox": [
+        [
+          527,
+          671
+        ],
+        [
+          571,
+          671
+        ],
+        [
+          571,
+          685
+        ],
+        [
+          527,
+          685
+        ]
+      ]
+    },
+    {
+      "text": "1 Cedigo",
+      "confidence": 0.41586495277451285,
+      "bbox": [
+        [
+          403,
+          469
+        ],
+        [
+          443,
+          469
+        ],
+        [
+          443,
+          485
+        ],
+        [
+          403,
+          485
+        ]
+      ]
+    },
+    {
+      "text": "Type / Type / Tip",
+      "confidence": 0.398253549182322,
+      "bbox": [
+        [
+          263,
+          471
+        ],
+        [
+          333,
+          471
+        ],
+        [
+          333,
+          485
+        ],
+        [
+          263,
+          485
+        ]
+      ]
+    },
+    {
+      "text": "Date &i brth / Dale d2 nalssance / Fecha de nacimienlo",
+      "confidence": 0.38298173454914103,
+      "bbox": [
+        [
+          259,
+          601
+        ],
+        [
+          499,
+          601
+        ],
+        [
+          499,
+          617
+        ],
+        [
+          259,
+          617
+        ]
+      ]
+    },
+    {
+      "text": "Date @e delivrance { Fecha deexpedicicn",
+      "confidence": 0.3194977688748397,
+      "bbox": [
+        [
+          323,
+          671
+        ],
+        [
+          505,
+          671
+        ],
+        [
+          505,
+          685
+        ],
+        [
+          323,
+          685
+        ]
+      ]
+    },
+    {
+      "text": "Le [e_)ople",
+      "confidence": 0.29502132204760095,
+      "bbox": [
+        [
+          70,
+          18
+        ],
+        [
+          435,
+          18
+        ],
+        [
+          435,
+          111
+        ],
+        [
+          70,
+          111
+        ]
+      ]
+    },
+    {
+      "text": "Nomn / Apeilidos",
+      "confidence": 0.2687902401670758,
+      "bbox": [
+        [
+          307,
+          501
+        ],
+        [
+          377,
+          501
+        ],
+        [
+          377,
+          515
+        ],
+        [
+          307,
+          515
+        ]
+      ]
+    },
+    {
+      "text": "Blessings %f Libety",
+      "confidence": 0.24227519777160714,
+      "bbox": [
+        [
+          95,
+          179
+        ],
+        [
+          185,
+          179
+        ],
+        [
+          185,
+          195
+        ],
+        [
+          95,
+          195
+        ]
+      ]
+    },
+    {
+      "text": "provide for the cowmon defence;.",
+      "confidence": 0.21680716672496556,
+      "bbox": [
+        [
+          76,
+          149
+        ],
+        [
+          227,
+          149
+        ],
+        [
+          227,
+          167
+        ],
+        [
+          76,
+          167
+        ]
+      ]
+    },
+    {
+      "text": "Passport No { No",
+      "confidence": 0.2004994285226913,
+      "bbox": [
+        [
+          452,
+          466
+        ],
+        [
+          531,
+          466
+        ],
+        [
+          531,
+          484
+        ],
+        [
+          452,
+          484
+        ]
+      ]
+    },
+    {
+      "text": "Autorite _",
+      "confidence": 0.16038035890071034,
+      "bbox": [
+        [
+          575,
+          669
+        ],
+        [
+          615,
+          669
+        ],
+        [
+          615,
+          683
+        ],
+        [
+          575,
+          683
+        ]
+      ]
+    },
+    {
+      "text": "port ! No: de Paraporte:",
+      "confidence": 0.1317326780030446,
+      "bbox": [
+        [
+          569,
+          467
+        ],
+        [
+          671,
+          467
+        ],
+        [
+          671,
+          481
+        ],
+        [
+          569,
+          481
+        ]
+      ]
+    },
+    {
+      "text": "in Order to form < wiore perfect Union;",
+      "confidence": 0.13064676601810385,
+      "bbox": [
+        [
+          79,
+          123
+        ],
+        [
+          251,
+          123
+        ],
+        [
+          251,
+          139
+        ],
+        [
+          79,
+          139
+        ]
+      ]
+    },
+    {
+      "text": "tbye generat Wclfare; and Secxte",
+      "confidence": 0.07775536485684076,
+      "bbox": [
+        [
+          117,
+          165
+        ],
+        [
+          257,
+          165
+        ],
+        [
+          257,
+          181
+        ],
+        [
+          117,
+          181
+        ]
+      ]
+    },
+    {
+      "text": "establish Justice, incMTe domestic Trengxility;",
+      "confidence": 0.05936839556705055,
+      "bbox": [
+        [
+          79,
+          137
+        ],
+        [
+          277,
+          137
+        ],
+        [
+          277,
+          151
+        ],
+        [
+          79,
+          151
+        ]
+      ]
+    },
+    {
+      "text": "onrseizesArd\"",
+      "confidence": 0.05614110788041994,
+      "bbox": [
+        [
+          193,
+          179
+        ],
+        [
+          259,
+          179
+        ],
+        [
+          259,
+          193
+        ],
+        [
+          193,
+          193
+        ]
+      ]
+    },
+    {
+      "text": "otoirot",
+      "confidence": 0.00618278507702641,
+      "bbox": [
+        [
+          78,
+          168
+        ],
+        [
+          118,
+          168
+        ],
+        [
+          118,
+          176
+        ],
+        [
+          78,
+          176
+        ]
+      ]
+    }
+  ],
+  "extracted_fields": {
+    "full_name": {
+      "value": "FRANKLIN BENJAMIN",
+      "standardized_value": "Franklin Benjamin",
+      "confidence": 0.7255899629075118,
+      "validation_status": "valid"
+    },
+    "date_of_birth": {
+      "value": "Jan 1706",
+      "standardized_value": "1706-01-01",
+      "confidence": 0.9949381216447896,
+      "validation_status": "uncertain"
+    },
+    "place_of_birth": {
+      "value": "Suiname",
+      "standardized_value": "Suiname",
+      "confidence": 0.9785348619485525,
+      "validation_status": "uncertain"
+    },
+    "passport_number": {
+      "value": "575034801",
+      "standardized_value": "575034801",
+      "confidence": 0.8784957374361506,
+      "validation_status": "valid"
+    },
+    "issue_date": {
+      "value": "16 Jan 2018",
+      "standardized_value": "2018-01-16",
+      "confidence": 0.8135102325317277,
+      "validation_status": "valid"
+    },
+    "expiry_date": {
+      "value": "15 Jan 2028",
+      "standardized_value": "2028-01-15",
+      "confidence": 0.9970816739413276,
+      "validation_status": "valid"
+    },
+    "issuing_authority": {
+      "value": "Department of State",
+      "standardized_value": "Department of State",
+      "confidence": 0.9988797222826329,
+      "validation_status": "valid"
+    },
+    "mrz_data": {
+      "value": "P<USAFRANKLIN<<BENJAMIN<<<<<<<<<<<<<<<<<<<<<",
+      "standardized_value": "P<USAFRANKLIN<<BENJAMIN<<<<<<<<<<<<<<<<<<<<<",
+      "confidence": 0.5968641266346736,
+      "validation_status": "valid"
+    }
+  },
+  "validation_notes": [
+    "The date of birth 'Jan 1706' is highly unusual and may be a misread.",
+    "The place of birth 'Suiname' is likely a misread of 'Suriname'.",
+    "The full name 'FRANKLIN BENJAMIN' is extracted with moderate confidence and appears to be valid.",
+    "The MRZ data is extracted with lower confidence but appears to be in a valid format."
+  ],
+  "overall_confidence": 0.85,
+  "mrz_data": {
+    "document_type": "PM",
+    "country": "SMS",
+    "surname": "CEEDACESEBTSET",
+    "passport_number": "LEUBCUSAR",
+    "nationality": "ANK",
+    "date_of_birth": "LINGSB",
+    "gender": "N",
+    "expiry_date": "GANTNS",
+    "mrz_raw": "PMSMSCEEDACESEBTSET\nLEUBCUSARRANKLINGSBENGANTNS6<<S5C<R<RSERSEECLECEE\n\n58750348014USA06011BN280183532836789<2746808\nQPEEES"
+  },
+  "cross_validation": {
+    "matches": [],
+    "mismatches": [
+      {
+        "field": "expiry_date",
+        "mrz_value": "GANTNS",
+        "visual_value": "2028-01-15"
+      }
+    ],
+    "confidence": 0.0
+  }
+}
