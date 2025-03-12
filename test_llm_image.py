@@ -58,7 +58,7 @@ def encode_image(image_path):
     img_bytes = resize_image(image_path)
     return base64.b64encode(img_bytes).decode('utf-8')
 
-    # Note: Base64 encoding is required for including images in API requests
+    # Note: Base64 encoding  is required for including images in API requests
     # The encoding increases the size by ~33%, which is why resizing is important
 
 def get_system_prompt(doc_type):
