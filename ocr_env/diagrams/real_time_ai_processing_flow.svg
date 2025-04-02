@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Arial, sans-serif">
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="13" markerHeight="13" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 L3,6 Z" fill="#333333" />
+    </marker>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#333" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Gradient for background -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#edf2f7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Animated gradients for flows -->
+    <linearGradient id="audioGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#01579B;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#81D4FA;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#01579B;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="3s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6A1B9A;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#CE93D8;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#6A1B9A;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="insightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#A5D6A7;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E65100;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="4.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#FFCC80;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="4.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#E65100;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="4.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with subtle gradient -->
+  <rect width="1200" height="800" fill="url(#bg-gradient)" rx="15" ry="15" />
+  
+  <!-- Title with shadow -->
+  <text x="600" y="40" font-size="30" font-weight="bold" text-anchor="middle" fill="#333" filter="url(#shadow)">Real-time AI Processing Flow</text>
+  <text x="600" y="70" font-size="16" text-anchor="middle" fill="#555">Detailed Component Interaction and Data Flow</text>
+  
+  <!-- Speech Processing Pipeline -->
+  <rect x="50" y="100" width="300" height="250" rx="15" ry="15" fill="#E1F5FE" stroke="#01579B" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="200" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#01579B">Speech Processing Pipeline</text>
+  
+  <!-- Audio Capture -->
+  <rect x="70" y="150" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#01579B" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="175" font-size="14" font-weight="bold" fill="#01579B">🎤 Real-time Audio Capture (Genesys)</text>
+  
+  <!-- Speech-to-Text -->
+  <rect x="70" y="200" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#01579B" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="225" font-size="14" font-weight="bold" fill="#01579B">🗣️ Azure Speech-to-Text Conversion</text>
+  
+  <!-- Speaker Diarization -->
+  <rect x="70" y="250" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#01579B" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="275" font-size="14" font-weight="bold" fill="#01579B">👥 Speaker Diarization</text>
+  
+  <!-- Audio Enhancement -->
+  <rect x="70" y="300" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#01579B" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="325" font-size="14" font-weight="bold" fill="#01579B">🔊 Audio Quality Enhancement</text>
+  
+  <!-- Sentiment Analysis Engine -->
+  <rect x="400" y="100" width="300" height="250" rx="15" ry="15" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="550" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">Sentiment Analysis Engine</text>
+  
+  <!-- Real-time Sentiment -->
+  <rect x="420" y="150" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="450" y="175" font-size="14" font-weight="bold" fill="#6A1B9A">😊 Real-time Sentiment Detection</text>
+  
+  <!-- Emotion Tracking -->
+  <rect x="420" y="200" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="450" y="225" font-size="14" font-weight="bold" fill="#6A1B9A">📈 Emotion Trend Analysis</text>
+  
+  <!-- Sentiment Visualization -->
+  <rect x="420" y="250" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="450" y="275" font-size="14" font-weight="bold" fill="#6A1B9A">📊 Sentiment Visualization</text>
+  
+  <!-- Alert System -->
+  <rect x="420" y="300" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="450" y="325" font-size="14" font-weight="bold" fill="#6A1B9A">⚠️ Negative Sentiment Alerts</text>
+  
+  <!-- Guidance Response System -->
+  <rect x="750" y="100" width="400" height="250" rx="15" ry="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="950" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#2E7D32">Guidance Response System</text>
+  
+  <!-- Document Analysis -->
+  <rect x="770" y="150" width="360" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)" />
+  <text x="800" y="175" font-size="14" font-weight="bold" fill="#2E7D32">📄 PDF Document Analysis &amp; Indexing</text>
+  
+  <!-- Response Matching -->
+  <rect x="770" y="200" width="360" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)" />
+  <text x="800" y="225" font-size="14" font-weight="bold" fill="#2E7D32">🎯 Context-aware Response Matching</text>
+  
+  <!-- Response Prioritization -->
+  <rect x="770" y="250" width="360" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)" />
+  <text x="800" y="275" font-size="14" font-weight="bold" fill="#2E7D32">⚖️ Response Prioritization</text>
+  
+  <!-- Delivery Mechanism -->
+  <rect x="770" y="300" width="360" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)" />
+  <text x="800" y="325" font-size="14" font-weight="bold" fill="#2E7D32">🚀 Agent Interface Delivery</text>
+  
+  <!-- Commercial Action System -->
+  <rect x="50" y="400" width="300" height="250" rx="15" ry="15" fill="#FFF3E0" stroke="#E65100" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="200" y="430" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">Commercial Action System</text>
+  
+  <!-- Customer Data -->
+  <rect x="70" y="450" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="475" font-size="14" font-weight="bold" fill="#E65100">👤 Customer Data Integration</text>
+  
+  <!-- Product Matching -->
+  <rect x="70" y="500" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="525" font-size="14" font-weight="bold" fill="#E65100">🎯 Product Matching Algorithm</text>
+  
+  <!-- Opportunity Scoring -->
+  <rect x="70" y="550" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="575" font-size="14" font-weight="bold" fill="#E65100">📊 Opportunity Scoring</text>
+  
+  <!-- Presentation Logic -->
+  <rect x="70" y="600" width="260" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="625" font-size="14" font-weight="bold" fill="#E65100">💡 Presentation Logic</text>
+  
+  <!-- Agent Interface -->
+  <rect x="400" y="400" width="750" height="250" rx="15" ry="15" fill="#E3F2FD" stroke="#0D47A1" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="775" y="430" font-size="18" font-weight="bold" text-anchor="middle" fill="#0D47A1">Agent Interface Components</text>
+  
+  <!-- Information Display -->
+  <rect x="420" y="450" width="340" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0D47A1" stroke-width="2" filter="url(#shadow)" />
+  <text x="450" y="475" font-size="14" font-weight="bold" fill="#0D47A1">📱 Information Display Hierarchy</text>
+  
+  <!-- Alert System -->
+  <rect x="420" y="500" width="340" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0D47A1" stroke-width="2" filter="url(#shadow)" />
+  <text x="450" y="525" font-size="14" font-weight="bold" fill="#0D47A1">🔔 Alert &amp; Notification System</text>
+  
+  <!-- Response Display -->
+  <rect x="790" y="450" width="340" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0D47A1" stroke-width="2" filter="url(#shadow)" />
+  <text x="820" y="475" font-size="14" font-weight="bold" fill="#0D47A1">💬 Response Suggestion Display</text>
+  
+  <!-- Action Prompts -->
+  <rect x="790" y="500" width="340" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0D47A1" stroke-width="2" filter="url(#shadow)" />
+  <text x="820" y="525" font-size="14" font-weight="bold" fill="#0D47A1">🎯 Commercial Action Prompts</text>
+  
+  <!-- Performance Metrics -->
+  <rect x="420" y="550" width="340" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0D47A1" stroke-width="2" filter="url(#shadow)" />
+  <text x="450" y="575" font-size="14" font-weight="bold" fill="#0D47A1">📊 Performance Metrics</text>
+  
+  <!-- Feedback Collection -->
+  <rect x="790" y="550" width="340" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0D47A1" stroke-width="2" filter="url(#shadow)" />
+  <text x="820" y="575" font-size="14" font-weight="bold" fill="#0D47A1">📝 Feedback Collection</text>
+  
+  <!-- Flow Connections -->
+  <!-- Audio Pipeline -->
+  <path d="M200 190 L200 200" fill="none" stroke="url(#audioGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M200 240 L200 250" fill="none" stroke="url(#audioGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M200 290 L200 300" fill="none" stroke="url(#audioGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- Speech to Sentiment -->
+  <path d="M330 220 C370 220, 380 170, 420 170" fill="none" stroke="url(#textGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- Sentiment Flow -->
+  <path d="M550 190 L550 200" fill="none" stroke="url(#textGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M550 240 L550 250" fill="none" stroke="url(#textGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M550 290 L550 300" fill="none" stroke="url(#textGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- Sentiment to Guidance -->
+  <path d="M680 170 C720 170, 730 170, 770 170" fill="none" stroke="url(#insightGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- Guidance Flow -->
+  <path d="M950 190 L950 200" fill="none" stroke="url(#insightGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M950 240 L950 250" fill="none" stroke="url(#insightGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M950 290 L950 300" fill="none" stroke="url(#insightGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- Commercial Action Flow -->
+  <path d="M200 490 L200 500" fill="none" stroke="url(#dataGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M200 540 L200 550" fill="none" stroke="url(#dataGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M200 590 L200 600" fill="none" stroke="url(#dataGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- System to Interface -->
+  <path d="M330 320 C370 320, 380 470, 420 470" fill="none" stroke="url(#audioGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M680 320 C720 320, 730 470, 790 470" fill="none" stroke="url(#textGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M950 340 C950 380, 950 420, 950 450" fill="none" stroke="url(#insightGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  <path d="M330 620 C370 620, 380 520, 790 520" fill="none" stroke="url(#dataGradient)" stroke-width="3" marker-end="url(#arrow)" />
+  
+  <!-- Legend -->
+  <rect x="50" y="700" width="1100" height="80" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1" opacity="0.9" />
+  <text x="70" y="725" font-size="16" font-weight="bold" fill="#333">Legend:</text>
+  
+  <!-- Legend items -->
+  <rect x="150" y="715" width="20" height="10" fill="url(#audioGradient)" />
+  <text x="180" y="725" font-size="14" fill="#333">Audio Flow</text>
+  
+  <rect x="350" y="715" width="20" height="10" fill="url(#textGradient)" />
+  <text x="380" y="725" font-size="14" fill="#333">Text/Sentiment Flow</text>
+  
+  <rect x="550" y="715" width="20" height="10" fill="url(#insightGradient)" />
+  <text x="580" y="725" font-size="14" fill="#333">Guidance Flow</text>
+  
+  <rect x="750" y="715" width="20" height="10" fill="url(#dataGradient)" />
+  <text x="780" y="725" font-size="14" fill="#333">Commercial Data Flow</text>
+  
+  <text x="600" y="765" font-size="12" fill="#666" text-anchor="middle">Real-time AI Processing Flow - Detailed Component Interaction and Data Flow</text>
+</svg> 

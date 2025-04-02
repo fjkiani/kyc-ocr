@@ -1,0 +1,54 @@
+{
+  "extracted_fields": {
+    "Full Name": {
+      "value": "John Doe",
+      "standardized_value": "John Doe",
+      "confidence": 0.95,
+      "validation_status": "valid"
+    },
+    "Date of Birth": {
+      "value": "01/01/1990",
+      "standardized_value": "1990-01-01",
+      "confidence": 0.95,
+      "validation_status": "valid"
+    },
+    "Place of Birth": {
+      "value": "New York, USA",
+      "standardized_value": "New York, USA",
+      "confidence": 0.9,
+      "validation_status": "valid"
+    },
+    "Passport Number": {
+      "value": "123456789",
+      "standardized_value": "123456789",
+      "confidence": 0.95,
+      "validation_status": "valid"
+    },
+    "Issue Date": {
+      "value": "01/01/2020",
+      "standardized_value": "2020-01-01",
+      "confidence": 0.95,
+      "validation_status": "valid"
+    },
+    "Expiry Date": {
+      "value": "01/01/2030",
+      "standardized_value": "2030-01-01",
+      "confidence": 0.95,
+      "validation_status": "valid"
+    },
+    "Issuing Authority": {
+      "value": "US Department of State",
+      "standardized_value": "US Department of State",
+      "confidence": 0.9,
+      "validation_status": "valid"
+    },
+    "MRZ Data": {
+      "value": "P<USADOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<123456789USA9001012030001",
+      "standardized_value": "P<USADOE<<JOHN<<<<<<<<<<<<<<<<<<<<<<<<123456789USA9001012030001",
+      "confidence": 0.95,
+      "validation_status": "valid"
+    }
+  },
+  "validation_notes": [],
+  "overall_confidence": 0.94
+}

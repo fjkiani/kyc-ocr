@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg">
+    <!-- Definitions -->
+    <defs>
+        <!-- Arrow markers -->
+        <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+                markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="currentColor"/>
+        </marker>
+
+        <!-- Shadow filter -->
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+            <feOffset dx="2" dy="2"/>
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3"/>
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+
+        <!-- Animated gradients for flows -->
+        <linearGradient id="customerFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1E88E5">
+                <animate attributeName="offset" values="0;1;0" dur="5s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#90CAF9">
+                <animate attributeName="offset" values="0;1;0" dur="5s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="processingFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#2E7D32">
+                <animate attributeName="offset" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#81C784">
+                <animate attributeName="offset" values="0;1;0" dur="4s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="agentFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#6A1B9A">
+                <animate attributeName="offset" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#CE93D8">
+                <animate attributeName="offset" values="0;1;0" dur="6s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#E65100">
+                <animate attributeName="offset" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+            </stop>
+            <stop offset="100%" style="stop-color:#FFB74D">
+                <animate attributeName="offset" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+            </stop>
+        </linearGradient>
+    </defs>
+
+    <!-- Title -->
+    <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+        Customer Contact Center Platform (CCCP) Architecture
+    </text>
+    <text x="600" y="70" text-anchor="middle" font-size="16" fill="#666">
+        Real-time AI-Powered Contact Center Solution
+    </text>
+
+    <!-- Customer Interaction Layer -->
+    <g transform="translate(50,100)">
+        <rect x="0" y="0" width="1100" height="120" rx="10" fill="#E3F2FD" filter="url(#shadow)"/>
+        <text x="550" y="30" text-anchor="middle" font-weight="bold" fill="#1E88E5">Customer Interaction Layer</text>
+        
+        <!-- Components -->
+        <g transform="translate(20,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#1E88E5"/>
+            <text x="100" y="30" text-anchor="middle">Voice Channel (Genesys)</text>
+        </g>
+        
+        <g transform="translate(240,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#1E88E5"/>
+            <text x="100" y="30" text-anchor="middle">Digital Channel (Teams)</text>
+        </g>
+        
+        <g transform="translate(460,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#1E88E5"/>
+            <text x="100" y="30" text-anchor="middle">Call Recording System</text>
+        </g>
+        
+        <g transform="translate(680,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#1E88E5"/>
+            <text x="100" y="30" text-anchor="middle">Media Streaming</text>
+        </g>
+        
+        <g transform="translate(900,50)">
+            <rect x="0" y="0" width="180" height="50" rx="5" fill="white" stroke="#1E88E5"/>
+            <text x="90" y="30" text-anchor="middle">Session Management</text>
+        </g>
+    </g>
+
+    <!-- Real-time Processing Hub -->
+    <g transform="translate(50,250)">
+        <rect x="0" y="0" width="700" height="150" rx="10" fill="#E8F5E9" filter="url(#shadow)"/>
+        <text x="350" y="30" text-anchor="middle" font-weight="bold" fill="#2E7D32">Real-time Processing Hub</text>
+        
+        <!-- Components -->
+        <g transform="translate(20,50)">
+            <rect x="0" y="0" width="200" height="80" rx="5" fill="white" stroke="#2E7D32"/>
+            <text x="100" y="30" text-anchor="middle">Speech-to-Text Pipeline</text>
+            <text x="100" y="50" text-anchor="middle" font-size="12">Real-time Transcription</text>
+            <text x="100" y="70" text-anchor="middle" font-size="12">Speaker Diarization</text>
+        </g>
+        
+        <g transform="translate(240,50)">
+            <rect x="0" y="0" width="200" height="80" rx="5" fill="white" stroke="#2E7D32"/>
+            <text x="100" y="30" text-anchor="middle">Sentiment Analysis</text>
+            <text x="100" y="50" text-anchor="middle" font-size="12">Emotion Detection</text>
+            <text x="100" y="70" text-anchor="middle" font-size="12">Intent Classification</text>
+        </g>
+        
+        <g transform="translate(460,50)">
+            <rect x="0" y="0" width="200" height="80" rx="5" fill="white" stroke="#2E7D32"/>
+            <text x="100" y="30" text-anchor="middle">Entity Recognition</text>
+            <text x="100" y="50" text-anchor="middle" font-size="12">Named Entity Detection</text>
+            <text x="100" y="70" text-anchor="middle" font-size="12">Key Phrase Extraction</text>
+        </g>
+    </g>
+
+    <!-- Agent Assistance Layer -->
+    <g transform="translate(780,250)">
+        <rect x="0" y="0" width="370" height="300" rx="10" fill="#F3E5F5" filter="url(#shadow)"/>
+        <text x="185" y="30" text-anchor="middle" font-weight="bold" fill="#6A1B9A">Agent Assistance Layer</text>
+        
+        <!-- Components -->
+        <g transform="translate(20,50)">
+            <rect x="0" y="0" width="330" height="60" rx="5" fill="white" stroke="#6A1B9A"/>
+            <text x="165" y="25" text-anchor="middle">Live Dashboard</text>
+            <text x="165" y="45" text-anchor="middle" font-size="12">Real-time Metrics &amp; Alerts</text>
+        </g>
+        
+        <g transform="translate(20,120)">
+            <rect x="0" y="0" width="330" height="60" rx="5" fill="white" stroke="#6A1B9A"/>
+            <text x="165" y="25" text-anchor="middle">Suggestion Panel</text>
+            <text x="165" y="45" text-anchor="middle" font-size="12">AI-Powered Recommendations</text>
+        </g>
+        
+        <g transform="translate(20,190)">
+            <rect x="0" y="0" width="330" height="60" rx="5" fill="white" stroke="#6A1B9A"/>
+            <text x="165" y="25" text-anchor="middle">Knowledge Base Integration</text>
+            <text x="165" y="45" text-anchor="middle" font-size="12">Context-Aware Responses</text>
+        </g>
+    </g>
+
+    <!-- AI/ML Processing Core -->
+    <g transform="translate(50,430)">
+        <rect x="0" y="0" width="700" height="150" rx="10" fill="#FFF3E0" filter="url(#shadow)"/>
+        <text x="350" y="30" text-anchor="middle" font-weight="bold" fill="#E65100">AI/ML Processing Core</text>
+        
+        <!-- Components -->
+        <g transform="translate(20,50)">
+            <rect x="0" y="0" width="200" height="80" rx="5" fill="white" stroke="#E65100"/>
+            <text x="100" y="30" text-anchor="middle">Azure OpenAI</text>
+            <text x="100" y="50" text-anchor="middle" font-size="12">GPT-4 Integration</text>
+            <text x="100" y="70" text-anchor="middle" font-size="12">Prompt Management</text>
+        </g>
+        
+        <g transform="translate(240,50)">
+            <rect x="0" y="0" width="200" height="80" rx="5" fill="white" stroke="#E65100"/>
+            <text x="100" y="30" text-anchor="middle">Custom ML Models</text>
+            <text x="100" y="50" text-anchor="middle" font-size="12">Domain-Specific Models</text>
+            <text x="100" y="70" text-anchor="middle" font-size="12">Model Serving</text>
+        </g>
+        
+        <g transform="translate(460,50)">
+            <rect x="0" y="0" width="200" height="80" rx="5" fill="white" stroke="#E65100"/>
+            <text x="100" y="30" text-anchor="middle">Vector Embeddings</text>
+            <text x="100" y="50" text-anchor="middle" font-size="12">Semantic Search</text>
+            <text x="100" y="70" text-anchor="middle" font-size="12">Knowledge Retrieval</text>
+        </g>
+    </g>
+
+    <!-- Data Management Layer -->
+    <g transform="translate(50,610)">
+        <rect x="0" y="0" width="1100" height="120" rx="10" fill="#EFEBE9" filter="url(#shadow)"/>
+        <text x="550" y="30" text-anchor="middle" font-weight="bold" fill="#455A64">Data Management Layer</text>
+        
+        <!-- Components -->
+        <g transform="translate(20,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#455A64"/>
+            <text x="100" y="30" text-anchor="middle">Snowflake Warehouse</text>
+        </g>
+        
+        <g transform="translate(240,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#455A64"/>
+            <text x="100" y="30" text-anchor="middle">Azure Data Lake</text>
+        </g>
+        
+        <g transform="translate(460,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#455A64"/>
+            <text x="100" y="30" text-anchor="middle">Real-time Cache</text>
+        </g>
+        
+        <g transform="translate(680,50)">
+            <rect x="0" y="0" width="200" height="50" rx="5" fill="white" stroke="#455A64"/>
+            <text x="100" y="30" text-anchor="middle">Analytics Store</text>
+        </g>
+        
+        <g transform="translate(900,50)">
+            <rect x="0" y="0" width="180" height="50" rx="5" fill="white" stroke="#455A64"/>
+            <text x="90" y="30" text-anchor="middle">Compliance Vault</text>
+        </g>
+    </g>
+
+    <!-- Data Flows -->
+    <!-- Customer to Processing -->
+    <path d="M 150,220 L 150,250" stroke="url(#customerFlow)" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M 450,220 L 450,250" stroke="url(#customerFlow)" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <!-- Processing to Agent -->
+    <path d="M 750,325 L 780,325" stroke="url(#processingFlow)" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <!-- Processing to AI/ML -->
+    <path d="M 400,400 L 400,430" stroke="url(#processingFlow)" stroke-width="3" marker-end="url(#arrow)"/>
+    
+    <!-- AI/ML to Data -->
+    <path d="M 400,580 L 400,610" stroke="url(#dataFlow)" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <!-- Legend -->
+    <g transform="translate(50,760)">
+        <text x="0" y="0" font-weight="bold">Legend:</text>
+        
+        <rect x="0" y="20" width="20" height="20" fill="#E3F2FD"/>
+        <text x="30" y="35">Customer Interaction</text>
+        
+        <rect x="200" y="20" width="20" height="20" fill="#E8F5E9"/>
+        <text x="230" y="35">Real-time Processing</text>
+        
+        <rect x="400" y="20" width="20" height="20" fill="#F3E5F5"/>
+        <text x="430" y="35">Agent Assistance</text>
+        
+        <rect x="600" y="20" width="20" height="20" fill="#FFF3E0"/>
+        <text x="630" y="35">AI/ML Processing</text>
+        
+        <rect x="800" y="20" width="20" height="20" fill="#EFEBE9"/>
+        <text x="830" y="35">Data Management</text>
+        
+        <line x1="0" y1="60" x2="40" y2="60" stroke="url(#customerFlow)" stroke-width="3"/>
+        <text x="50" y="65">Real-time Flow</text>
+        
+        <line x1="200" y1="60" x2="240" y2="60" stroke="url(#processingFlow)" stroke-width="3"/>
+        <text x="250" y="65">Processing Flow</text>
+        
+        <line x1="400" y1="60" x2="440" y2="60" stroke="url(#agentFlow)" stroke-width="3"/>
+        <text x="450" y="65">Agent Flow</text>
+        
+        <line x1="600" y1="60" x2="640" y2="60" stroke="url(#dataFlow)" stroke-width="3"/>
+        <text x="650" y="65">Data Flow</text>
+    </g>
+
+    <!-- Footer -->
+    <text x="600" y="870" text-anchor="middle" font-size="12" fill="#666">
+        CCCP Architecture - Real-time AI-Powered Contact Center Solution with Multi-Agent Capabilities
+    </text>
+</svg> 

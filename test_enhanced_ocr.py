@@ -13,6 +13,11 @@ Unlike test_llm.py (OCR+LLM) and test_llm_image.py (direct image-to-LLM),
 this script tests the entire production pipeline with all validation steps.
 """
 
+# Suppress warnings first
+import warnings
+warnings.filterwarnings("ignore", message=".*__path__._path.*")
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+
 from document_processor import DocumentProcessor, NumpyEncoder
 import os
 import json
@@ -20,6 +25,22 @@ import numpy as np
 from pathlib import Path
 from dotenv import load_dotenv
 import argparse
+import tempfile
+import shutil
+import mimetypes
+import traceback
+import sys
+
+# Import PDF handling libraries
+try:
+    import fitz  # PyMuPDF
+    import magic
+    from pdf2image import convert_from_path
+    import cv2
+    PDF_SUPPORT = True
+except ImportError:
+    print("Warning: PDF support libraries not fully installed. PDF processing will be limited.")
+    PDF_SUPPORT = False
 
 # Load environment variables from .env file
 load_dotenv()
@@ -37,114 +58,185 @@ class EnhancedOCRTester:
         """
         self.api_key = api_key or os.getenv('FIREWORKS_API_KEY')
         self.processor = DocumentProcessor(self.api_key)
+        self.temp_dir = tempfile.mkdtemp()
+        print(f"Created temporary directory: {self.temp_dir}")
     
-    def process_single_image(self, image_path):
-        """Process a single image through the complete pipeline.
+    def __del__(self):
+        """Clean up temporary files on object destruction"""
+        try:
+            shutil.rmtree(self.temp_dir)
+            print(f"Removed temporary directory: {self.temp_dir}")
+        except Exception as e:
+            print(f"Error removing temporary directory: {str(e)}")
+    
+    def detect_file_type(self, file_path):
+        """Detect the file type using python-magic and fallback to mimetypes"""
+        try:
+            if PDF_SUPPORT:
+                # Try using python-magic first (more accurate)
+                mime = magic.Magic(mime=True)
+                file_type = mime.from_file(file_path)
+                print(f"Detected file type using python-magic: {file_type}")
+                return file_type
+            else:
+                # Fallback to mimetypes
+                file_type, _ = mimetypes.guess_type(file_path)
+                print(f"Detected file type using mimetypes: {file_type}")
+                return file_type
+        except Exception as e:
+            print(f"Error detecting file type: {str(e)}")
+            # Last resort: use file extension
+            ext = os.path.splitext(file_path)[1].lower()
+            if ext == '.pdf':
+                return 'application/pdf'
+            elif ext in ['.jpg', '.jpeg']:
+                return 'image/jpeg'
+            elif ext == '.png':
+                return 'image/png'
+            else:
+                return None
+    
+    def convert_pdf_to_image(self, pdf_path, page_num=0):
+        """Convert a PDF page to an image for processing"""
+        if not PDF_SUPPORT:
+            print("PDF support libraries not installed. Cannot convert PDF.")
+            return None
+            
+        print(f"Converting PDF to image: {pdf_path}, page {page_num}")
         
-        This method provides detailed error handling and debugging for a single image,
-        making it easier to identify where issues occur in the pipeline.
-        """
+        # Check if file exists and is accessible
+        if not os.path.isfile(pdf_path):
+            print(f"Error: PDF file not found or not accessible: {pdf_path}")
+            print(f"Current working directory: {os.getcwd()}")
+            print(f"Absolute path: {os.path.abspath(pdf_path)}")
+            return None
+            
+        output_path = os.path.join(self.temp_dir, f"{os.path.basename(pdf_path).replace(':', '_')}_page_{page_num}.jpg")
+        
+        try:
+            # Try using pdf2image first (better quality usually)
+            try:
+                print("Attempting conversion with pdf2image...")
+                images = convert_from_path(pdf_path, first_page=page_num+1, last_page=page_num+1)
+                if images:
+                    images[0].save(output_path, 'JPEG')
+                    print(f"Successfully converted PDF page to image with pdf2image: {output_path}")
+                else:
+                    print("No images extracted with pdf2image, trying PyMuPDF...")
+                    raise Exception("No images extracted with pdf2image")
+            except Exception as pdf2image_error:
+                print(f"pdf2image conversion failed: {str(pdf2image_error)}")
+                print("Falling back to PyMuPDF...")
+                
+                # Fallback to PyMuPDF
+                doc = fitz.open(pdf_path)
+                if page_num < len(doc):
+                    page = doc.load_page(page_num)
+                    pix = page.get_pixmap(matrix=fitz.Matrix(2, 2))  # 2x zoom for better resolution
+                    pix.save(output_path)
+                    print(f"Successfully converted PDF page to image with PyMuPDF: {output_path}")
+                else:
+                    raise ValueError(f"Page number {page_num} out of range (document has {len(doc)} pages)")
+            
+            # Verify the image was created and can be opened
+            if not os.path.exists(output_path):
+                raise FileNotFoundError(f"Converted image file not found: {output_path}")
+            
+            # Try to open the image to verify it's valid
+            img = cv2.imread(output_path)
+            if img is None:
+                raise ValueError(f"Failed to open converted image: {output_path}")
+            
+            height, width = img.shape[:2]
+            print(f"Successfully verified converted image: {width}x{height} pixels")
+            
+            return output_path
+        except Exception as e:
+            print(f"Error converting PDF to image: {str(e)}")
+            traceback.print_exc()
+            return None
+    
+    def process_document(self, file_path):
+        """Process a document file (image or PDF) through the complete pipeline"""
         print(f"\n{'='*50}")
-        print(f"Processing: {os.path.basename(image_path)}")
+        print(f"Processing: {os.path.basename(file_path)}")
         print(f"{'='*50}")
         
         try:
-            # Step 1: Document Classification
-            print("\n1. Starting document classification...")
-            classification = self.processor.classifier.classify(image_path)
-            print(f"   Document type: {classification['document_type']}")
-            print(f"   Confidence: {float(classification['confidence']):.2f}")
-            print(f"   Detected {len(classification['detected_fields'])} text regions")
+            # Handle special characters in filenames
+            safe_file_path = file_path
+            if ':' in file_path:
+                print(f"Warning: File path contains colon which may cause issues: {file_path}")
+                # Create a copy with a safe name if needed
+                if os.path.exists(file_path):
+                    safe_name = os.path.basename(file_path).replace(':', '_')
+                    safe_file_path = os.path.join(self.temp_dir, safe_name)
+                    shutil.copy2(file_path, safe_file_path)
+                    print(f"Created safe copy at: {safe_file_path}")
             
-            # Step 2: LLM Processing
-            print("\n2. Starting LLM processing...")
-            try:
-                # Print the first few detected fields for debugging
-                print("   Sample detected fields:")
-                for i, field in enumerate(classification['detected_fields'][:3]):
-                    print(f"   - Field {i+1}: {field['text']} (Confidence: {float(field['confidence']):.2f})")
+            # Detect file type
+            file_type = self.detect_file_type(safe_file_path)
+            
+            # Handle different file types
+            if file_type and 'pdf' in file_type.lower():
+                if not PDF_SUPPORT:
+                    raise ValueError("PDF support libraries not installed. Cannot process PDF.")
+                    
+                print(f"Detected PDF document: {safe_file_path}")
                 
-                # Process with LLM
-                llm_results = self.processor.llm_processor.process_document_fields(
-                    classification['detected_fields'],
-                    classification['document_type']
-                )
+                # Get number of pages
+                doc = fitz.open(safe_file_path)
+                num_pages = len(doc)
+                print(f"PDF has {num_pages} pages")
                 
-                if llm_results:
-                    print("   ✅ LLM processing successful")
-                    print(f"   Extracted {len(llm_results['extracted_fields'])} fields")
-                    print(f"   Overall confidence: {float(llm_results['overall_confidence']):.2f}")
-                else:
-                    print("   ❌ LLM processing returned no results")
-            except Exception as e:
-                print(f"   ❌ Error in LLM processing: {str(e)}")
-                import traceback
-                print(traceback.format_exc())
-                llm_results = None
+                # For testing purposes, process only the first page
+                # In a real application, you might want to process all pages or let the user select
+                page_num = 0
+                
+                # Convert PDF to image
+                image_path = self.convert_pdf_to_image(safe_file_path, page_num)
+                if not image_path:
+                    raise ValueError("Failed to convert PDF to image")
+                
+                print(f"Processing PDF page {page_num} as image: {image_path}")
+                return self.process_single_image(image_path, original_file=safe_file_path)
             
-            # Step 3: MRZ Processing (for passports)
-            mrz_data = None
-            if classification['document_type'] == 'passport' and classification.get('has_mrz'):
-                print("\n3. Starting MRZ processing...")
-                try:
-                    mrz_data = self.processor.mrz_processor.extract_mrz(image_path)
-                    if mrz_data:
-                        print("   ✅ MRZ processing successful")
-                        print(f"   Extracted {len(mrz_data)} MRZ fields")
-                    else:
-                        print("   ⚠️ No MRZ data found")
-                except Exception as e:
-                    print(f"   ❌ Error in MRZ processing: {str(e)}")
-                    import traceback
-                    print(traceback.format_exc())
+            elif file_type and ('image' in file_type.lower() or safe_file_path.lower().endswith(('.jpg', '.jpeg', '.png'))):
+                print(f"Detected image document: {safe_file_path}")
+                return self.process_single_image(safe_file_path)
             
-            # Step 4: Combine results
-            result = {
-                'document_type': classification['document_type'],
-                'confidence': classification['confidence'],
-                'detected_fields': classification['detected_fields']
-            }
+            else:
+                raise ValueError(f"Unsupported file type: {file_type}")
+        
+        except Exception as e:
+            print(f"\n❌ Error processing document: {str(e)}")
+            traceback.print_exc()
+            return None
+    
+    def process_single_image(self, image_path, original_file=None):
+        """Process a single image through the document processing pipeline"""
+        try:
+            print(f"\nProcessing image: {image_path}")
             
-            if llm_results:
-                result['extracted_fields'] = llm_results['extracted_fields']
-                result['validation_notes'] = llm_results['validation_notes']
-                result['overall_confidence'] = llm_results['overall_confidence']
+            # Process the document using DocumentProcessor
+            result = self.processor.process_document(image_path)
             
-            # Step 5: Cross-validation (for passports with MRZ)
-            if classification['document_type'] == 'passport' and mrz_data and llm_results:
-                print("\n4. Performing cross-validation...")
-                try:
-                    cross_validation = self.processor._cross_validate_mrz(
-                        mrz_data,
-                        llm_results['extracted_fields']
-                    )
-                    result['mrz_data'] = mrz_data
-                    result['cross_validation'] = cross_validation
-                    print(f"   Cross-validation confidence: {float(cross_validation['confidence']):.2f}")
-                    print(f"   Matched fields: {len(cross_validation['matches'])}")
-                    print(f"   Mismatched fields: {len(cross_validation['mismatches'])}")
-                except Exception as e:
-                    print(f"   ❌ Error in cross-validation: {str(e)}")
-                    import traceback
-                    print(traceback.format_exc())
-            
-            # Print detailed results
-            self._print_result_summary(os.path.basename(image_path), result)
-            
-            # Save individual result to file
-            output_file = f"result_{os.path.basename(image_path)}.json"
-            with open(output_file, 'w') as f:
+            # Save results to file
+            output_filename = f"result_{os.path.basename(image_path)}.json"
+            with open(output_filename, 'w') as f:
                 json.dump(result, f, indent=2, cls=NumpyEncoder)
-            print(f"\nDetailed results saved to: {output_file}")
+            print(f"\nDetailed results saved to: {output_filename}")
+            
+            # Print summary
+            self._print_result_summary(os.path.basename(image_path), result)
             
             return result
             
         except Exception as e:
             print(f"\n❌ Error processing image: {str(e)}")
-            import traceback
-            print(traceback.format_exc())
+            traceback.print_exc()
             return None
-        
+    
     def run_test_suite(self, test_dir="test"):
         """Run comprehensive tests on different document types.
         
@@ -176,30 +268,27 @@ class EnhancedOCRTester:
         for image_file in test_path.glob("*.jpg"):
             print(f"\nProcessing: {image_file.name}")
             try:
-                # Process document one by one
-                doc_result = self.process_single_image(str(image_file))
+                # Process document
+                # Note: This single call triggers the entire pipeline
+                doc_result = self.processor.process_document(str(image_file))
                 
-                if doc_result:
-                    # Add to appropriate category
-                    if doc_result['document_type'] == 'passport':
-                        results['passports'].append(self._analyze_result(image_file.name, doc_result))
-                    elif doc_result['document_type'] == 'drivers_license':
-                        results['drivers_licenses'].append(self._analyze_result(image_file.name, doc_result))
-                    
-                    # Update summary
-                    results['summary']['total_processed'] += 1
-                    results['summary']['successful'] += 1
-                    results['summary']['average_confidence'] += doc_result.get('overall_confidence', 0)
-                else:
-                    results['summary']['failed'] += 1
-                    results['summary']['total_processed'] += 1
+                # Add to appropriate category
+                if doc_result['document_type'] == 'passport':
+                    results['passports'].append(self._analyze_result(image_file.name, doc_result))
+                elif doc_result['document_type'] == 'drivers_license':
+                    results['drivers_licenses'].append(self._analyze_result(image_file.name, doc_result))
+                
+                # Update summary
+                results['summary']['total_processed'] += 1
+                results['summary']['successful'] += 1
+                results['summary']['average_confidence'] += doc_result.get('overall_confidence', 0)
+                
+                # Print progress
+                self._print_result_summary(image_file.name, doc_result)
                 
             except Exception as e:
                 print(f"Error processing {image_file.name}: {str(e)}")
-                import traceback
-                print(traceback.format_exc())
                 results['summary']['failed'] += 1
-                results['summary']['total_processed'] += 1
         
         # Calculate final average confidence
         if results['summary']['successful'] > 0:
@@ -219,13 +308,13 @@ class EnhancedOCRTester:
         analysis = {
             'filename': filename,
             'document_type': result['document_type'],
-            'confidence': float(result.get('confidence', 0)),  # Convert numpy types to Python types
+            'confidence': result.get('confidence', 0),
             'fields_extracted': len(result.get('extracted_fields', {})),
             'validation_status': self._get_validation_status(result)
         }
         
         if 'mrz_data' in result:
-            analysis['mrz_validation'] = float(result.get('cross_validation', {}).get('confidence', 0))
+            analysis['mrz_validation'] = result.get('cross_validation', {}).get('confidence', 0)
         
         return analysis
     
@@ -253,7 +342,7 @@ class EnhancedOCRTester:
         Note: This method provides a detailed visualization of each step in the pipeline:
         1. Initial OCR detection
         2. Document classification
-        3. LLM-enhanced field extraction
+        3. LLM Enhanced Results
         4. Validation notes
         5. Cross-validation (for passports)
         
@@ -269,7 +358,7 @@ class EnhancedOCRTester:
         print("-" * 40)
         if 'detected_fields' in result:
             for text_obj in result['detected_fields']:
-                confidence = float(text_obj.get('confidence', 0))  # Convert numpy types
+                confidence = text_obj.get('confidence', 0)
                 text = text_obj.get('text', '')
                 confidence_level = "HIGH" if confidence > 0.8 else "MEDIUM" if confidence > 0.6 else "LOW"
                 print(f"• {text:<30} (Confidence: {confidence:.2f} - {confidence_level})")
@@ -278,7 +367,7 @@ class EnhancedOCRTester:
         print(f"\n🔍 DOCUMENT CLASSIFICATION:")
         print("-" * 40)
         print(f"Type: {result['document_type']}")
-        print(f"Classification Confidence: {float(result.get('confidence', 0)):.2f}")
+        print(f"Classification Confidence: {result.get('confidence', 0):.2f}")
         
         # STEP 3: LLM Enhanced Results
         print(f"\n🤖 LLM ENHANCED FIELDS:")
@@ -288,10 +377,8 @@ class EnhancedOCRTester:
                 print(f"\n• {field.replace('_', ' ').title()}:")
                 print(f"  - Raw Value: {data['value']}")
                 print(f"  - Standardized: {data['standardized_value']}")
-                print(f"  - Confidence: {float(data['confidence']):.2f}")
+                print(f"  - Confidence: {data['confidence']:.2f}")
                 print(f"  - Status: {data['validation_status']}")
-        else:
-            print("No LLM-enhanced fields available")
         
         # STEP 4: Validation Notes
         if 'validation_notes' in result:
@@ -304,7 +391,7 @@ class EnhancedOCRTester:
         if 'cross_validation' in result:
             print(f"\n✅ CROSS-VALIDATION RESULTS:")
             print("-" * 40)
-            print(f"Confidence: {float(result['cross_validation']['confidence']):.2f}")
+            print(f"Confidence: {result['cross_validation']['confidence']:.2f}")
             if result['cross_validation']['matches']:
                 print("Matched Fields:", ', '.join(result['cross_validation']['matches']))
             if result['cross_validation']['mismatches']:
@@ -317,13 +404,17 @@ class EnhancedOCRTester:
         print(f"\n{'='*50}\n")
 
 def main():
-    """Main entry point for the enhanced OCR test suite."""
-    parser = argparse.ArgumentParser(description='Test the enhanced OCR pipeline')
-    parser.add_argument('--image', type=str, help='Process a single image')
-    parser.add_argument('--dir', type=str, default='test', help='Directory containing test images')
+    """Main entry point for the enhanced OCR test suite.
     
-    args = parser.parse_args()
+    Note: This function demonstrates the complete workflow:
+    1. Initialize the DocumentProcessor with API credentials
+    2. Process all test images through the full pipeline
+    3. Collect and analyze results
+    4. Save detailed metrics to a JSON file
     
+    This represents the most comprehensive testing approach,
+    evaluating all components working together in the production pipeline.
+    """
     # Get API key from environment variable
     api_key = os.getenv('FIREWORKS_API_KEY')
     if not api_key:
@@ -332,27 +423,22 @@ def main():
     # Initialize tester
     tester = EnhancedOCRTester(api_key)
     
-    if args.image:
-        # Process a single image
-        print(f"Processing single image: {args.image}")
-        tester.process_single_image(args.image)
-    else:
-        # Run the full test suite
-        print("Starting Enhanced OCR Test Suite...")
-        results = tester.run_test_suite(args.dir)
-        
-        # Save results
-        output_file = "test_results.json"
-        with open(output_file, 'w') as f:
-            json.dump(results, f, indent=2, cls=NumpyEncoder)
-        
-        # Print summary
-        print("\nTest Suite Summary:")
-        print(f"Total Documents Processed: {results['summary']['total_processed']}")
-        print(f"Successful: {results['summary']['successful']}")
-        print(f"Failed: {results['summary']['failed']}")
-        print(f"Average Confidence: {results['summary']['average_confidence']:.2f}")
-        print(f"\nDetailed results saved to: {output_file}")
+    # Run tests
+    print("Starting Enhanced OCR Test Suite...")
+    results = tester.run_test_suite()
+    
+    # Save results
+    output_file = "test_results.json"
+    with open(output_file, 'w') as f:
+        json.dump(results, f, indent=2)
+    
+    # Print summary
+    print("\nTest Suite Summary:")
+    print(f"Total Documents Processed: {results['summary']['total_processed']}")
+    print(f"Successful: {results['summary']['successful']}")
+    print(f"Failed: {results['summary']['failed']}")
+    print(f"Average Confidence: {results['summary']['average_confidence']:.2f}")
+    print(f"\nDetailed results saved to: {output_file}")
 
 if __name__ == "__main__":
     main()

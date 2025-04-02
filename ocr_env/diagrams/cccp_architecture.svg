@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Arial, sans-serif">
+  <!-- Definitions -->
+  <defs>
+    <!-- Arrow marker -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 L2,5 Z" fill="#333333" />
+    </marker>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#333" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Background gradient -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#edf2f7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Animated flow gradients -->
+    <linearGradient id="customerGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E88E5;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#90CAF9;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#1E88E5;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="3s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="processingGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#81C784;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6A1B9A;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#CE93D8;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#6A1B9A;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg-gradient)" rx="15" ry="15" />
+
+  <!-- Title -->
+  <text x="600" y="40" font-size="30" font-weight="bold" text-anchor="middle" fill="#333" filter="url(#shadow)">
+    Customer Contact Center Platform
+  </text>
+  <text x="600" y="70" font-size="16" text-anchor="middle" fill="#555">
+    Real-time Processing and AI Integration Architecture
+  </text>
+
+  <!-- Customer Interaction Layer -->
+  <g transform="translate(50,100)">
+    <rect width="250" height="200" rx="15" ry="15" fill="#E3F2FD" stroke="#1E88E5" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="125" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#1E88E5">Customer Interaction</text>
+    
+    <!-- Inner boxes -->
+    <rect x="20" y="50" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1E88E5" stroke-width="2" />
+    <text x="40" y="75" font-size="14" fill="#1E88E5">🎤 Voice Channel (ACS)</text>
+    
+    <rect x="20" y="100" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1E88E5" stroke-width="2" />
+    <text x="40" y="125" font-size="14" fill="#1E88E5">💬 Digital Channel</text>
+    
+    <rect x="20" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1E88E5" stroke-width="2" />
+    <text x="40" y="175" font-size="14" fill="#1E88E5">📼 Call Recording</text>
+  </g>
+
+  <!-- Real-time Processing -->
+  <g transform="translate(350,100)">
+    <rect width="250" height="200" rx="15" ry="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="125" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#2E7D32">Real-time Processing</text>
+    
+    <rect x="20" y="50" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" />
+    <text x="40" y="75" font-size="14" fill="#2E7D32">🗣️ Speech-to-Text</text>
+    
+    <rect x="20" y="100" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" />
+    <text x="40" y="125" font-size="14" fill="#2E7D32">😊 Sentiment Analysis</text>
+    
+    <rect x="20" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" />
+    <text x="40" y="175" font-size="14" fill="#2E7D32">🎯 Intent Classification</text>
+  </g>
+
+  <!-- AI/ML Processing -->
+  <g transform="translate(650,100)">
+    <rect width="250" height="200" rx="15" ry="15" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="125" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">AI/ML Processing</text>
+    
+    <rect x="20" y="50" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" />
+    <text x="40" y="75" font-size="14" fill="#6A1B9A">🤖 Azure OpenAI</text>
+    
+    <rect x="20" y="100" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" />
+    <text x="40" y="125" font-size="14" fill="#6A1B9A">🧠 Custom ML Models</text>
+    
+    <rect x="20" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" />
+    <text x="40" y="175" font-size="14" fill="#6A1B9A">📊 Vector Embeddings</text>
+  </g>
+
+  <!-- Agent Interface -->
+  <g transform="translate(950,100)">
+    <rect width="200" height="200" rx="15" ry="15" fill="#FFF3E0" stroke="#E65100" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="100" y="30" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">Agent Interface</text>
+    
+    <rect x="20" y="50" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" />
+    <text x="40" y="75" font-size="14" fill="#E65100">📊 Live Dashboard</text>
+    
+    <rect x="20" y="100" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" />
+    <text x="40" y="125" font-size="14" fill="#E65100">💡 Suggestions</text>
+    
+    <rect x="20" y="150" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" />
+    <text x="40" y="175" font-size="14" fill="#E65100">⚠️ Alerts</text>
+  </g>
+
+  <!-- Infrastructure & Integration -->
+  <rect x="50" y="350" width="1100" height="250" rx="15" ry="15" fill="#E8EAF6" stroke="#283593" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="600" y="380" font-size="18" font-weight="bold" text-anchor="middle" fill="#283593">Infrastructure &amp; Integration</text>
+
+  <!-- Azure Services -->
+  <g transform="translate(70,400)">
+    <rect width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="125" y="30" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Azure Services</text>
+    <text x="30" y="60" font-size="14" fill="#283593">🔷 Communication Services</text>
+    <text x="30" y="90" font-size="14" fill="#283593">🗣️ Speech Services</text>
+    <text x="30" y="120" font-size="14" fill="#283593">🤖 OpenAI Service</text>
+    <text x="30" y="150" font-size="14" fill="#283593">📊 Monitor &amp; Insights</text>
+  </g>
+
+  <!-- Data Platform -->
+  <g transform="translate(340,400)">
+    <rect width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="125" y="30" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Data Platform</text>
+    <text x="30" y="60" font-size="14" fill="#283593">❄️ Snowflake</text>
+    <text x="30" y="90" font-size="14" fill="#283593">💾 Data Lake</text>
+    <text x="30" y="120" font-size="14" fill="#283593">⚡ Real-time Cache</text>
+    <text x="30" y="150" font-size="14" fill="#283593">📈 Analytics Store</text>
+  </g>
+
+  <!-- Security -->
+  <g transform="translate(610,400)">
+    <rect width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="125" y="30" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Security &amp; Compliance</text>
+    <text x="30" y="60" font-size="14" fill="#283593">🔒 Access Control</text>
+    <text x="30" y="90" font-size="14" fill="#283593">📝 Audit Logging</text>
+    <text x="30" y="120" font-size="14" fill="#283593">✅ Compliance Checks</text>
+    <text x="30" y="150" font-size="14" fill="#283593">🛡️ Data Protection</text>
+  </g>
+
+  <!-- Integration -->
+  <g transform="translate(880,400)">
+    <rect width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="125" y="30" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Integration Hub</text>
+    <text x="30" y="60" font-size="14" fill="#283593">🔌 API Gateway</text>
+    <text x="30" y="90" font-size="14" fill="#283593">📡 Event Processing</text>
+    <text x="30" y="120" font-size="14" fill="#283593">🔄 Service Mesh</text>
+    <text x="30" y="150" font-size="14" fill="#283593">🌐 Teams Integration</text>
+  </g>
+
+  <!-- Flow Connections -->
+  <path d="M300 200 L350 200" stroke="url(#customerGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M600 200 L650 200" stroke="url(#processingGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M900 200 L950 200" stroke="url(#aiGradient)" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- Vertical Flows -->
+  <path d="M175 300 L175 400" stroke="url(#customerGradient)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+  <path d="M475 300 L475 400" stroke="url(#processingGradient)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+  <path d="M775 300 L775 400" stroke="url(#aiGradient)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+
+  <!-- Legend -->
+  <rect x="50" y="650" width="1100" height="120" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1" opacity="0.9" />
+  <text x="70" y="675" font-size="16" font-weight="bold" fill="#333">Legend:</text>
+
+  <!-- Legend items -->
+  <rect x="150" y="665" width="20" height="10" fill="url(#customerGradient)" />
+  <text x="180" y="675" font-size="14" fill="#333">Customer Flow</text>
+
+  <rect x="350" y="665" width="20" height="10" fill="url(#processingGradient)" />
+  <text x="380" y="675" font-size="14" fill="#333">Processing Flow</text>
+
+  <rect x="550" y="665" width="20" height="10" fill="url(#aiGradient)" />
+  <text x="580" y="675" font-size="14" fill="#333">AI/ML Flow</text>
+
+  <rect x="150" y="695" width="20" height="10" fill="#E3F2FD" />
+  <text x="180" y="705" font-size="14" fill="#333">Customer Layer</text>
+
+  <rect x="350" y="695" width="20" height="10" fill="#E8F5E9" />
+  <text x="380" y="705" font-size="14" fill="#333">Processing Layer</text>
+
+  <rect x="550" y="695" width="20" height="10" fill="#F3E5F5" />
+  <text x="580" y="705" font-size="14" fill="#333">AI/ML Layer</text>
+
+  <rect x="750" y="695" width="20" height="10" fill="#FFF3E0" />
+  <text x="780" y="705" font-size="14" fill="#333">Agent Interface</text>
+
+  <rect x="950" y="695" width="20" height="10" fill="#E8EAF6" />
+  <text x="980" y="705" font-size="14" fill="#333">Infrastructure &amp; Integration</text>
+
+  <!-- Footer -->
+  <text x="600" y="745" font-size="12" fill="#666" text-anchor="middle">
+    Customer Contact Center Platform (CCCP) - Real-time AI Integration and Processing Architecture
+  </text>
+</svg> 

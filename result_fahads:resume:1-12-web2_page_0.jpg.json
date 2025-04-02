@@ -1,0 +1,3120 @@
+{
+  "document_type": "unknown",
+  "confidence": 0.5,
+  "detected_fields": [
+    {
+      "text": "2015",
+      "confidence": 0.9999986886978149,
+      "bbox": [
+        [
+          1308,
+          1398
+        ],
+        [
+          1352,
+          1398
+        ],
+        [
+          1352,
+          1422
+        ],
+        [
+          1308,
+          1422
+        ]
+      ]
+    },
+    {
+      "text": "Education",
+      "confidence": 0.9999971787114907,
+      "bbox": [
+        [
+          1037,
+          1221
+        ],
+        [
+          1195,
+          1221
+        ],
+        [
+          1195,
+          1259
+        ],
+        [
+          1037,
+          1259
+        ]
+      ]
+    },
+    {
+      "text": "05/2021",
+      "confidence": 0.9999933315751284,
+      "bbox": [
+        [
+          66,
+          756
+        ],
+        [
+          148,
+          756
+        ],
+        [
+          148,
+          780
+        ],
+        [
+          66,
+          780
+        ]
+      ]
+    },
+    {
+      "text": "01/2021",
+      "confidence": 0.9999879697906628,
+      "bbox": [
+        [
+          66,
+          1320
+        ],
+        [
+          140,
+          1320
+        ],
+        [
+          140,
+          1344
+        ],
+        [
+          66,
+          1344
+        ]
+      ]
+    },
+    {
+      "text": "Data Engineering",
+      "confidence": 0.9999875386302713,
+      "bbox": [
+        [
+          1036,
+          461
+        ],
+        [
+          1218,
+          461
+        ],
+        [
+          1218,
+          492
+        ],
+        [
+          1036,
+          492
+        ]
+      ]
+    },
+    {
+      "text": "Work Experience",
+      "confidence": 0.9999823323024739,
+      "bbox": [
+        [
+          67,
+          249
+        ],
+        [
+          326,
+          249
+        ],
+        [
+          326,
+          289
+        ],
+        [
+          67,
+          289
+        ]
+      ]
+    },
+    {
+      "text": "08/2023",
+      "confidence": 0.9999802199681402,
+      "bbox": [
+        [
+          66,
+          380
+        ],
+        [
+          150,
+          380
+        ],
+        [
+          150,
+          404
+        ],
+        [
+          66,
+          404
+        ]
+      ]
+    },
+    {
+      "text": "USA",
+      "confidence": 0.9999642108177886,
+      "bbox": [
+        [
+          861,
+          127
+        ],
+        [
+          897,
+          127
+        ],
+        [
+          897,
+          147
+        ],
+        [
+          861,
+          147
+        ]
+      ]
+    },
+    {
+      "text": "Certifications",
+      "confidence": 0.9999245870568159,
+      "bbox": [
+        [
+          1035,
+          1543
+        ],
+        [
+          1251,
+          1543
+        ],
+        [
+          1251,
+          1581
+        ],
+        [
+          1035,
+          1581
+        ]
+      ]
+    },
+    {
+      "text": "global",
+      "confidence": 0.9999055363722322,
+      "bbox": [
+        [
+          228.47893962030983,
+          1795.4141973545268
+        ],
+        [
+          291.6926629793122,
+          1791.6772883610397
+        ],
+        [
+          292.5210603796902,
+          1817.5858026454732
+        ],
+        [
+          229.30733702068775,
+          1822.3227116389603
+        ]
+      ]
+    },
+    {
+      "text": "X-ray",
+      "confidence": 0.9998707706900134,
+      "bbox": [
+        [
+          1510.9580569325292,
+          2205.186753717829
+        ],
+        [
+          1565.886618137473,
+          2213.183032602602
+        ],
+        [
+          1562.0419430674708,
+          2237.813246282171
+        ],
+        [
+          1507.113381862527,
+          2229.816967397398
+        ]
+      ]
+    },
+    {
+      "text": "BS Forensic",
+      "confidence": 0.999834980859299,
+      "bbox": [
+        [
+          1038,
+          1350
+        ],
+        [
+          1180,
+          1350
+        ],
+        [
+          1180,
+          1380
+        ],
+        [
+          1038,
+          1380
+        ]
+      ]
+    },
+    {
+      "text": "Deployment",
+      "confidence": 0.9995520847620555,
+      "bbox": [
+        [
+          1036,
+          884
+        ],
+        [
+          1162,
+          884
+        ],
+        [
+          1162,
+          912
+        ],
+        [
+          1036,
+          912
+        ]
+      ]
+    },
+    {
+      "text": "Fahad Kiani",
+      "confidence": 0.9991068690057874,
+      "bbox": [
+        [
+          708,
+          72
+        ],
+        [
+          958,
+          72
+        ],
+        [
+          958,
+          122
+        ],
+        [
+          708,
+          122
+        ]
+      ]
+    },
+    {
+      "text": "Spearheaded a",
+      "confidence": 0.9991056633073878,
+      "bbox": [
+        [
+          89,
+          1794
+        ],
+        [
+          232,
+          1794
+        ],
+        [
+          232,
+          1820
+        ],
+        [
+          89,
+          1820
+        ]
+      ]
+    },
+    {
+      "text": "08/2017",
+      "confidence": 0.9986922926425544,
+      "bbox": [
+        [
+          66,
+          1636
+        ],
+        [
+          140,
+          1636
+        ],
+        [
+          140,
+          1662
+        ],
+        [
+          66,
+          1662
+        ]
+      ]
+    },
+    {
+      "text": "org",
+      "confidence": 0.998499341750296,
+      "bbox": [
+        [
+          176,
+          348
+        ],
+        [
+          222,
+          348
+        ],
+        [
+          222,
+          378
+        ],
+        [
+          176,
+          378
+        ]
+      ]
+    },
+    {
+      "text": "06/2015",
+      "confidence": 0.9960524573262707,
+      "bbox": [
+        [
+          66,
+          2016
+        ],
+        [
+          140,
+          2016
+        ],
+        [
+          140,
+          2040
+        ],
+        [
+          66,
+          2040
+        ]
+      ]
+    },
+    {
+      "text": "Technical Work",
+      "confidence": 0.995692482700994,
+      "bbox": [
+        [
+          1037,
+          1717
+        ],
+        [
+          1293,
+          1717
+        ],
+        [
+          1293,
+          1755
+        ],
+        [
+          1037,
+          1755
+        ]
+      ]
+    },
+    {
+      "text": "built with AWS Sagemaker and data labeling pipeline",
+      "confidence": 0.9932689880391373,
+      "bbox": [
+        [
+          1080,
+          2260
+        ],
+        [
+          1562,
+          2260
+        ],
+        [
+          1562,
+          2291
+        ],
+        [
+          1080,
+          2291
+        ]
+      ]
+    },
+    {
+      "text": "knowledge graphs allowing students to intuitively",
+      "confidence": 0.9928706368033208,
+      "bbox": [
+        [
+          1079,
+          2033
+        ],
+        [
+          1534,
+          2033
+        ],
+        [
+          1534,
+          2065
+        ],
+        [
+          1079,
+          2065
+        ]
+      ]
+    },
+    {
+      "text": "8/2023 (Data integration and cloud transformation)",
+      "confidence": 0.9813910581203269,
+      "bbox": [
+        [
+          160,
+          756
+        ],
+        [
+          612,
+          756
+        ],
+        [
+          612,
+          782
+        ],
+        [
+          160,
+          782
+        ]
+      ]
+    },
+    {
+      "text": "WWW",
+      "confidence": 0.9799157247140059,
+      "bbox": [
+        [
+          1137,
+          1797
+        ],
+        [
+          1181,
+          1797
+        ],
+        [
+          1181,
+          1811
+        ],
+        [
+          1137,
+          1811
+        ]
+      ]
+    },
+    {
+      "text": "JediLabs.c",
+      "confidence": 0.9748937690683227,
+      "bbox": [
+        [
+          64,
+          342
+        ],
+        [
+          184,
+          342
+        ],
+        [
+          184,
+          374
+        ],
+        [
+          64,
+          374
+        ]
+      ]
+    },
+    {
+      "text": "Amazon Web Services (AWS)",
+      "confidence": 0.9694925186498448,
+      "bbox": [
+        [
+          1036,
+          698
+        ],
+        [
+          1322,
+          698
+        ],
+        [
+          1322,
+          724
+        ],
+        [
+          1036,
+          724
+        ]
+      ]
+    },
+    {
+      "text": "pneumonia diagnoses in just 30 seconds with over 80% accuracy, leveraging a serverless API",
+      "confidence": 0.9654848503927725,
+      "bbox": [
+        [
+          92,
+          561
+        ],
+        [
+          928,
+          561
+        ],
+        [
+          928,
+          590
+        ],
+        [
+          92,
+          590
+        ]
+      ]
+    },
+    {
+      "text": "Designed and optimized data models for EMR systems, significantly improving reporting",
+      "confidence": 0.9607494283682861,
+      "bbox": [
+        [
+          92,
+          2109
+        ],
+        [
+          890,
+          2109
+        ],
+        [
+          890,
+          2138
+        ],
+        [
+          92,
+          2138
+        ]
+      ]
+    },
+    {
+      "text": "Security Frameworks & Compliance",
+      "confidence": 0.9577127048868107,
+      "bbox": [
+        [
+          1034,
+          1129
+        ],
+        [
+          1402,
+          1129
+        ],
+        [
+          1402,
+          1162
+        ],
+        [
+          1034,
+          1162
+        ]
+      ]
+    },
+    {
+      "text": "AWS Professional Solutions Architect",
+      "confidence": 0.9470763746951731,
+      "bbox": [
+        [
+          1037,
+          1641
+        ],
+        [
+          1537,
+          1641
+        ],
+        [
+          1537,
+          1680
+        ],
+        [
+          1037,
+          1680
+        ]
+      ]
+    },
+    {
+      "text": "Software Engineering Bootcamp",
+      "confidence": 0.9469544893591061,
+      "bbox": [
+        [
+          1035,
+          1435
+        ],
+        [
+          1435,
+          1435
+        ],
+        [
+          1435,
+          1473
+        ],
+        [
+          1035,
+          1473
+        ]
+      ]
+    },
+    {
+      "text": "Built a GraphRAG educational platform that transforms",
+      "confidence": 0.9447621908100303,
+      "bbox": [
+        [
+          1080,
+          1984
+        ],
+        [
+          1584,
+          1984
+        ],
+        [
+          1584,
+          2012
+        ],
+        [
+          1080,
+          2012
+        ]
+      ]
+    },
+    {
+      "text": "Al Services that transforms application development",
+      "confidence": 0.9444900090195638,
+      "bbox": [
+        [
+          1080,
+          1816
+        ],
+        [
+          1560,
+          1816
+        ],
+        [
+          1560,
+          1845
+        ],
+        [
+          1080,
+          1845
+        ]
+      ]
+    },
+    {
+      "text": "Founding Solutions Engineer",
+      "confidence": 0.9396772135461652,
+      "bbox": [
+        [
+          65,
+          1554
+        ],
+        [
+          467,
+          1554
+        ],
+        [
+          467,
+          1599
+        ],
+        [
+          65,
+          1599
+        ]
+      ]
+    },
+    {
+      "text": "Vercel, Netlify, Railway, Render and AWS CloudFront",
+      "confidence": 0.9388941642503768,
+      "bbox": [
+        [
+          1035,
+          912
+        ],
+        [
+          1518,
+          912
+        ],
+        [
+          1518,
+          940
+        ],
+        [
+          1035,
+          940
+        ]
+      ]
+    },
+    {
+      "text": "Spearheaded mission-critical data integration transformation using Talend's ETL conversion",
+      "confidence": 0.9366976827519208,
+      "bbox": [
+        [
+          90,
+          1160
+        ],
+        [
+          922,
+          1160
+        ],
+        [
+          922,
+          1188
+        ],
+        [
+          90,
+          1188
+        ]
+      ]
+    },
+    {
+      "text": "iMedicare",
+      "confidence": 0.93650496210745,
+      "bbox": [
+        [
+          65,
+          1978
+        ],
+        [
+          195,
+          1978
+        ],
+        [
+          195,
+          2008
+        ],
+        [
+          65,
+          2008
+        ]
+      ]
+    },
+    {
+      "text": "Full-Stack Web Engineer",
+      "confidence": 0.9323244663889448,
+      "bbox": [
+        [
+          67,
+          303
+        ],
+        [
+          405,
+          303
+        ],
+        [
+          405,
+          343
+        ],
+        [
+          67,
+          343
+        ]
+      ]
+    },
+    {
+      "text": "architecture design and reducing system design time by 80% and development cycles by 60%_",
+      "confidence": 0.9311544735567859,
+      "bbox": [
+        [
+          89,
+          436
+        ],
+        [
+          936,
+          436
+        ],
+        [
+          936,
+          468
+        ],
+        [
+          89,
+          468
+        ]
+      ]
+    },
+    {
+      "text": "traditional course structures into interactive",
+      "confidence": 0.9310036230058452,
+      "bbox": [
+        [
+          1078,
+          2012
+        ],
+        [
+          1484,
+          2012
+        ],
+        [
+          1484,
+          2036
+        ],
+        [
+          1078,
+          2036
+        ]
+      ]
+    },
+    {
+      "text": "Founding Sales Engineer",
+      "confidence": 0.9302245390048554,
+      "bbox": [
+        [
+          63,
+          1931
+        ],
+        [
+          410,
+          1931
+        ],
+        [
+          410,
+          1980
+        ],
+        [
+          63,
+          1980
+        ]
+      ]
+    },
+    {
+      "text": "delivering strategic KPI planning and conducting proactive architecture reviews across usage",
+      "confidence": 0.9297105149042846,
+      "bbox": [
+        [
+          89,
+          1060
+        ],
+        [
+          928,
+          1060
+        ],
+        [
+          928,
+          1090
+        ],
+        [
+          89,
+          1090
+        ]
+      ]
+    },
+    {
+      "text": "sales by leveraging data-driven insights and expanding international partnerships by 80%",
+      "confidence": 0.9243186802588669,
+      "bbox": [
+        [
+          90,
+          1759
+        ],
+        [
+          898,
+          1759
+        ],
+        [
+          898,
+          1786
+        ],
+        [
+          90,
+          1786
+        ]
+      ]
+    },
+    {
+      "text": "analysis with over 80% accuracy utilizing a serverless API",
+      "confidence": 0.9226272482499831,
+      "bbox": [
+        [
+          1080,
+          2236
+        ],
+        [
+          1596,
+          2236
+        ],
+        [
+          1596,
+          2264
+        ],
+        [
+          1080,
+          2264
+        ]
+      ]
+    },
+    {
+      "text": "San Francisco",
+      "confidence": 0.9202535113232574,
+      "bbox": [
+        [
+          743,
+          127
+        ],
+        [
+          849,
+          127
+        ],
+        [
+          849,
+          147
+        ],
+        [
+          743,
+          147
+        ]
+      ]
+    },
+    {
+      "text": "05/2021 (Full-stack web development coding bootcamp)",
+      "confidence": 0.9189521150968369,
+      "bbox": [
+        [
+          150,
+          1318
+        ],
+        [
+          582,
+          1318
+        ],
+        [
+          582,
+          1347
+        ],
+        [
+          150,
+          1347
+        ]
+      ]
+    },
+    {
+      "text": "New York City",
+      "confidence": 0.9147919153739934,
+      "bbox": [
+        [
+          622,
+          126
+        ],
+        [
+          732,
+          126
+        ],
+        [
+          732,
+          150
+        ],
+        [
+          622,
+          150
+        ]
+      ]
+    },
+    {
+      "text": "efficiency and contributing to a 30% growth in client engagement and patient outcomes",
+      "confidence": 0.9049623693722365,
+      "bbox": [
+        [
+          89,
+          2135
+        ],
+        [
+          890,
+          2135
+        ],
+        [
+          890,
+          2167
+        ],
+        [
+          89,
+          2167
+        ]
+      ]
+    },
+    {
+      "text": "management software, significantly reducing the time for enrolling patients by 30%.",
+      "confidence": 0.9012302247098525,
+      "bbox": [
+        [
+          91,
+          2198
+        ],
+        [
+          856,
+          2198
+        ],
+        [
+          856,
+          2229
+        ],
+        [
+          91,
+          2229
+        ]
+      ]
+    },
+    {
+      "text": "Orchestrated automated AWS Kinesis, Firehose and Talend workflows with deploying real-time",
+      "confidence": 0.899146966647926,
+      "bbox": [
+        [
+          90,
+          972
+        ],
+        [
+          954,
+          972
+        ],
+        [
+          954,
+          998
+        ],
+        [
+          90,
+          998
+        ]
+      ]
+    },
+    {
+      "text": "Engineered an Al-powered X-ray analysis pipeline for AiMedical world to fast-track suspected",
+      "confidence": 0.8985858686702972,
+      "bbox": [
+        [
+          92,
+          533
+        ],
+        [
+          938,
+          533
+        ],
+        [
+          938,
+          561
+        ],
+        [
+          92,
+          561
+        ]
+      ]
+    },
+    {
+      "text": "enabling users to go from concept to implementation",
+      "confidence": 0.8982444806901008,
+      "bbox": [
+        [
+          1079,
+          1864
+        ],
+        [
+          1568,
+          1864
+        ],
+        [
+          1568,
+          1896
+        ],
+        [
+          1079,
+          1896
+        ]
+      ]
+    },
+    {
+      "text": "Present (Freelance Machine Learning and GenAI Services & Implementation)",
+      "confidence": 0.8951947483204824,
+      "bbox": [
+        [
+          160,
+          378
+        ],
+        [
+          822,
+          378
+        ],
+        [
+          822,
+          406
+        ],
+        [
+          160,
+          406
+        ]
+      ]
+    },
+    {
+      "text": "while evaluating 50+ demo reviews bi-quarterly sprints to improve 40% conversion increase",
+      "confidence": 0.895130218414615,
+      "bbox": [
+        [
+          92,
+          1883
+        ],
+        [
+          924,
+          1883
+        ],
+        [
+          924,
+          1912
+        ],
+        [
+          92,
+          1912
+        ]
+      ]
+    },
+    {
+      "text": "JediLabs org",
+      "confidence": 0.8825266148801296,
+      "bbox": [
+        [
+          1178,
+          1792
+        ],
+        [
+          1276,
+          1792
+        ],
+        [
+          1276,
+          1816
+        ],
+        [
+          1178,
+          1816
+        ]
+      ]
+    },
+    {
+      "text": "development time 40% through automated ETL workflows and real-time APl integrations",
+      "confidence": 0.8776054813312693,
+      "bbox": [
+        [
+          89,
+          812
+        ],
+        [
+          900,
+          812
+        ],
+        [
+          900,
+          843
+        ],
+        [
+          89,
+          843
+        ]
+      ]
+    },
+    {
+      "text": "Collaborated with Product Management to define technical requirements for 100+ major",
+      "confidence": 0.875062063166572,
+      "bbox": [
+        [
+          90,
+          1097
+        ],
+        [
+          902,
+          1097
+        ],
+        [
+          902,
+          1125
+        ],
+        [
+          90,
+          1125
+        ]
+      ]
+    },
+    {
+      "text": "increase in global partnerships and 40% growth in international engagement across the web",
+      "confidence": 0.8723554313778442,
+      "bbox": [
+        [
+          90,
+          1822
+        ],
+        [
+          928,
+          1822
+        ],
+        [
+          928,
+          1851
+        ],
+        [
+          90,
+          1851
+        ]
+      ]
+    },
+    {
+      "text": "85% POC-to-win rate through architectural frameworks and deployment discovery sessions",
+      "confidence": 0.8708537600680196,
+      "bbox": [
+        [
+          90,
+          935
+        ],
+        [
+          920,
+          935
+        ],
+        [
+          920,
+          962
+        ],
+        [
+          90,
+          962
+        ]
+      ]
+    },
+    {
+      "text": "Talend",
+      "confidence": 0.8632764113544814,
+      "bbox": [
+        [
+          66,
+          718
+        ],
+        [
+          156,
+          718
+        ],
+        [
+          156,
+          750
+        ],
+        [
+          66,
+          750
+        ]
+      ]
+    },
+    {
+      "text": "Developed visual-to-code engine generating production-ready full-stack applications with",
+      "confidence": 0.861355414829503,
+      "bbox": [
+        [
+          91,
+          470
+        ],
+        [
+          904,
+          470
+        ],
+        [
+          904,
+          500
+        ],
+        [
+          91,
+          500
+        ]
+      ]
+    },
+    {
+      "text": "architecture diagrams, accelerating complex development lifecycle from 6 months to 6 weeks",
+      "confidence": 0.8559102081787071,
+      "bbox": [
+        [
+          90,
+          497
+        ],
+        [
+          942,
+          497
+        ],
+        [
+          942,
+          529
+        ],
+        [
+          90,
+          529
+        ]
+      ]
+    },
+    {
+      "text": "Fahad@JediLabs org",
+      "confidence": 0.8532930081966497,
+      "bbox": [
+        [
+          511,
+          144
+        ],
+        [
+          674,
+          144
+        ],
+        [
+          674,
+          170
+        ],
+        [
+          511,
+          170
+        ]
+      ]
+    },
+    {
+      "text": "Senior Solutions Engineer",
+      "confidence": 0.8523301461490597,
+      "bbox": [
+        [
+          65,
+          677
+        ],
+        [
+          425,
+          677
+        ],
+        [
+          425,
+          717
+        ],
+        [
+          65,
+          717
+        ]
+      ]
+    },
+    {
+      "text": "05/2020",
+      "confidence": 0.8514379262293285,
+      "bbox": [
+        [
+          1264,
+          1484
+        ],
+        [
+          1332,
+          1484
+        ],
+        [
+          1332,
+          1510
+        ],
+        [
+          1264,
+          1510
+        ]
+      ]
+    },
+    {
+      "text": "Per-Scholas 01/2020",
+      "confidence": 0.8443739584943827,
+      "bbox": [
+        [
+          1036,
+          1478
+        ],
+        [
+          1254,
+          1478
+        ],
+        [
+          1254,
+          1510
+        ],
+        [
+          1036,
+          1510
+        ]
+      ]
+    },
+    {
+      "text": "05/2019 (Worlds largest luxury eCommerce)",
+      "confidence": 0.8348985020655081,
+      "bbox": [
+        [
+          150,
+          1635
+        ],
+        [
+          494,
+          1635
+        ],
+        [
+          494,
+          1663
+        ],
+        [
+          150,
+          1663
+        ]
+      ]
+    },
+    {
+      "text": "Al-Medical: Instant results for faster pneumonia diagnosis",
+      "confidence": 0.8323161159621025,
+      "bbox": [
+        [
+          1080,
+          2122
+        ],
+        [
+          1544,
+          2122
+        ],
+        [
+          1544,
+          2150
+        ],
+        [
+          1080,
+          2150
+        ]
+      ]
+    },
+    {
+      "text": "resulting in 100% of students deploying production-grade applications within 2 weeks",
+      "confidence": 0.8316917681086167,
+      "bbox": [
+        [
+          90,
+          1441
+        ],
+        [
+          908,
+          1441
+        ],
+        [
+          908,
+          1470
+        ],
+        [
+          90,
+          1470
+        ]
+      ]
+    },
+    {
+      "text": "Taught full-stack development using MERN stack (MongoDB, Express, React, Node js) ,",
+      "confidence": 0.8271253566329569,
+      "bbox": [
+        [
+          90,
+          1412
+        ],
+        [
+          906,
+          1412
+        ],
+        [
+          906,
+          1443
+        ],
+        [
+          90,
+          1443
+        ]
+      ]
+    },
+    {
+      "text": "Web Development",
+      "confidence": 0.8257574951916508,
+      "bbox": [
+        [
+          1036,
+          383
+        ],
+        [
+          1224,
+          383
+        ],
+        [
+          1224,
+          413
+        ],
+        [
+          1036,
+          413
+        ]
+      ]
+    },
+    {
+      "text": "navigate through interconnected concepts",
+      "confidence": 0.8186281497236148,
+      "bbox": [
+        [
+          1080,
+          2064
+        ],
+        [
+          1470,
+          2064
+        ],
+        [
+          1470,
+          2090
+        ],
+        [
+          1080,
+          2090
+        ]
+      ]
+    },
+    {
+      "text": "BS in Computer Science",
+      "confidence": 0.8161303144569488,
+      "bbox": [
+        [
+          1035,
+          1262
+        ],
+        [
+          1323,
+          1262
+        ],
+        [
+          1323,
+          1300
+        ],
+        [
+          1035,
+          1300
+        ]
+      ]
+    },
+    {
+      "text": "Edulga: Adaptive, personalized and impactful learning",
+      "confidence": 0.8135856351909723,
+      "bbox": [
+        [
+          1080,
+          1928
+        ],
+        [
+          1503,
+          1928
+        ],
+        [
+          1503,
+          1960
+        ],
+        [
+          1080,
+          1960
+        ]
+      ]
+    },
+    {
+      "text": "GPT, Gemini, Claude, LLaMA and Stable Diffusion",
+      "confidence": 0.8129251788920655,
+      "bbox": [
+        [
+          1036,
+          570
+        ],
+        [
+          1504,
+          570
+        ],
+        [
+          1504,
+          598
+        ],
+        [
+          1036,
+          598
+        ]
+      ]
+    },
+    {
+      "text": "releases, contributing 20+ customer-driven features resulting in 90% renewal and adoption rate",
+      "confidence": 0.8092946586119856,
+      "bbox": [
+        [
+          89,
+          1121
+        ],
+        [
+          960,
+          1121
+        ],
+        [
+          960,
+          1152
+        ],
+        [
+          89,
+          1152
+        ]
+      ]
+    },
+    {
+      "text": "07/2017 (SaaS Medicare comparison platform for independent pharmacies)",
+      "confidence": 0.8061667910456064,
+      "bbox": [
+        [
+          150,
+          2013
+        ],
+        [
+          720,
+          2013
+        ],
+        [
+          720,
+          2043
+        ],
+        [
+          150,
+          2043
+        ]
+      ]
+    },
+    {
+      "text": "City University of New York 2019 - 2021",
+      "confidence": 0.7977918068725735,
+      "bbox": [
+        [
+          1035,
+          1304
+        ],
+        [
+          1497,
+          1304
+        ],
+        [
+          1497,
+          1343
+        ],
+        [
+          1035,
+          1343
+        ]
+      ]
+    },
+    {
+      "text": "analytics, increasing forecasting accuracy by 30% and supporting S1M+ in budget decisions_",
+      "confidence": 0.7902229746547976,
+      "bbox": [
+        [
+          90,
+          997
+        ],
+        [
+          916,
+          997
+        ],
+        [
+          916,
+          1026
+        ],
+        [
+          90,
+          1026
+        ]
+      ]
+    },
+    {
+      "text": "Al Agents",
+      "confidence": 0.7897619867379159,
+      "bbox": [
+        [
+          1036,
+          964
+        ],
+        [
+          1136,
+          964
+        ],
+        [
+          1136,
+          992
+        ],
+        [
+          1036,
+          992
+        ]
+      ]
+    },
+    {
+      "text": "eCommerce initiative with multi-currency support, contributing to an 80%",
+      "confidence": 0.788047868637285,
+      "bbox": [
+        [
+          289,
+          1791
+        ],
+        [
+          964,
+          1791
+        ],
+        [
+          964,
+          1822
+        ],
+        [
+          289,
+          1822
+        ]
+      ]
+    },
+    {
+      "text": "Catered API-first solutions within pharmacy networks, enabling real-time data exchange",
+      "confidence": 0.7843339766407899,
+      "bbox": [
+        [
+          90,
+          2232
+        ],
+        [
+          890,
+          2232
+        ],
+        [
+          890,
+          2265
+        ],
+        [
+          90,
+          2265
+        ]
+      ]
+    },
+    {
+      "text": "student completion and 80% of graduates securing engineering roles after graduation",
+      "confidence": 0.7841636145636856,
+      "bbox": [
+        [
+          89,
+          1499
+        ],
+        [
+          909,
+          1499
+        ],
+        [
+          909,
+          1536
+        ],
+        [
+          89,
+          1536
+        ]
+      ]
+    },
+    {
+      "text": "Served as Lead Instructor for a coding bootcamp at City University of New York, teaching six",
+      "confidence": 0.783462023801505,
+      "bbox": [
+        [
+          90,
+          1349
+        ],
+        [
+          926,
+          1349
+        ],
+        [
+          926,
+          1380
+        ],
+        [
+          90,
+          1380
+        ]
+      ]
+    },
+    {
+      "text": "Lead Web Engineering Instructor",
+      "confidence": 0.782951856903365,
+      "bbox": [
+        [
+          67,
+          1239
+        ],
+        [
+          523,
+          1239
+        ],
+        [
+          523,
+          1281
+        ],
+        [
+          67,
+          1281
+        ]
+      ]
+    },
+    {
+      "text": "John Jay College 2008",
+      "confidence": 0.7814121190764356,
+      "bbox": [
+        [
+          1033,
+          1393
+        ],
+        [
+          1301,
+          1393
+        ],
+        [
+          1301,
+          1429
+        ],
+        [
+          1033,
+          1429
+        ]
+      ]
+    },
+    {
+      "text": "amongst primary care providers (PCPs) , leading to a 20 point increase in pharmacy NPS scores",
+      "confidence": 0.780724188716668,
+      "bbox": [
+        [
+          90,
+          2260
+        ],
+        [
+          944,
+          2260
+        ],
+        [
+          944,
+          2292
+        ],
+        [
+          90,
+          2292
+        ]
+      ]
+    },
+    {
+      "text": "Accelerated enterprise pipeline with 3 AEs, executing 1000+ technical discoveries and achieving",
+      "confidence": 0.7792000876033914,
+      "bbox": [
+        [
+          90,
+          906
+        ],
+        [
+          960,
+          906
+        ],
+        [
+          960,
+          936
+        ],
+        [
+          90,
+          936
+        ]
+      ]
+    },
+    {
+      "text": "Generative Al Orchestration & Frameworks",
+      "confidence": 0.7731793971141947,
+      "bbox": [
+        [
+          1036,
+          619
+        ],
+        [
+          1468,
+          619
+        ],
+        [
+          1468,
+          647
+        ],
+        [
+          1036,
+          647
+        ]
+      ]
+    },
+    {
+      "text": "Led tailored targeted marketing, lifting new logo rates by 25% through personalized outreach,",
+      "confidence": 0.7704997723386533,
+      "bbox": [
+        [
+          90,
+          1856
+        ],
+        [
+          940,
+          1856
+        ],
+        [
+          940,
+          1886
+        ],
+        [
+          90,
+          1886
+        ]
+      ]
+    },
+    {
+      "text": "AWS Machine Learning Specialist",
+      "confidence": 0.770337224454869,
+      "bbox": [
+        [
+          1037,
+          1591
+        ],
+        [
+          1484,
+          1591
+        ],
+        [
+          1484,
+          1635
+        ],
+        [
+          1037,
+          1635
+        ]
+      ]
+    },
+    {
+      "text": "Unstructured, LlamaHub, dbt, Dagster, Talend and AirByte",
+      "confidence": 0.7681800457239145,
+      "bbox": [
+        [
+          1035,
+          1071
+        ],
+        [
+          1592,
+          1071
+        ],
+        [
+          1592,
+          1102
+        ],
+        [
+          1035,
+          1102
+        ]
+      ]
+    },
+    {
+      "text": "347-684-2656",
+      "confidence": 0.7657089647959506,
+      "bbox": [
+        [
+          909,
+          127
+        ],
+        [
+          1017,
+          127
+        ],
+        [
+          1017,
+          147
+        ],
+        [
+          909,
+          147
+        ]
+      ]
+    },
+    {
+      "text": "patients in just 30 seconds utilizing Al-powered",
+      "confidence": 0.7648994043745994,
+      "bbox": [
+        [
+          1079,
+          2208
+        ],
+        [
+          1510,
+          2208
+        ],
+        [
+          1510,
+          2236
+        ],
+        [
+          1079,
+          2236
+        ]
+      ]
+    },
+    {
+      "text": "HyGraph, Sanity, Airtable and Strapi",
+      "confidence": 0.7647585787146506,
+      "bbox": [
+        [
+          1036,
+          834
+        ],
+        [
+          1382,
+          834
+        ],
+        [
+          1382,
+          862
+        ],
+        [
+          1036,
+          862
+        ]
+      ]
+    },
+    {
+      "text": "resulting in a significant 1Ox enhancement in data accuracy for manual Medicare data entries_",
+      "confidence": 0.7631358482101258,
+      "bbox": [
+        [
+          90,
+          2076
+        ],
+        [
+          938,
+          2076
+        ],
+        [
+          938,
+          2102
+        ],
+        [
+          90,
+          2102
+        ]
+      ]
+    },
+    {
+      "text": "Streamlined Medicare enrollment for over 80% through API integration of EMRs with pharmacy",
+      "confidence": 0.7622962493105814,
+      "bbox": [
+        [
+          90,
+          2174
+        ],
+        [
+          958,
+          2174
+        ],
+        [
+          958,
+          2200
+        ],
+        [
+          90,
+          2200
+        ]
+      ]
+    },
+    {
+      "text": "Fast track the diagnosis of suspected pneumonia",
+      "confidence": 0.7590184618127277,
+      "bbox": [
+        [
+          1080,
+          2181
+        ],
+        [
+          1524,
+          2181
+        ],
+        [
+          1524,
+          2209
+        ],
+        [
+          1080,
+          2209
+        ]
+      ]
+    },
+    {
+      "text": "Large Language Models (LLMs)",
+      "confidence": 0.7566259497207124,
+      "bbox": [
+        [
+          1035,
+          540
+        ],
+        [
+          1354,
+          540
+        ],
+        [
+          1354,
+          571
+        ],
+        [
+          1035,
+          571
+        ]
+      ]
+    },
+    {
+      "text": "City University of New York (CUNY)",
+      "confidence": 0.7427386255679232,
+      "bbox": [
+        [
+          62,
+          1277
+        ],
+        [
+          529,
+          1277
+        ],
+        [
+          529,
+          1318
+        ],
+        [
+          62,
+          1318
+        ]
+      ]
+    },
+    {
+      "text": "Architected custom CRM integrations using REST and GraphQL APls, onboarding 10K+ luxury",
+      "confidence": 0.7373879013090457,
+      "bbox": [
+        [
+          89,
+          1664
+        ],
+        [
+          931,
+          1664
+        ],
+        [
+          931,
+          1700
+        ],
+        [
+          89,
+          1700
+        ]
+      ]
+    },
+    {
+      "text": "Next, Framer Motion, TypeScript; Three js and Node js",
+      "confidence": 0.7354607228902558,
+      "bbox": [
+        [
+          1036,
+          413
+        ],
+        [
+          1556,
+          413
+        ],
+        [
+          1556,
+          442
+        ],
+        [
+          1036,
+          442
+        ]
+      ]
+    },
+    {
+      "text": "Architected healthcare data transformation pipeline processing 1TB+ daily, reducing",
+      "confidence": 0.734165329170587,
+      "bbox": [
+        [
+          90,
+          786
+        ],
+        [
+          856,
+          786
+        ],
+        [
+          856,
+          816
+        ],
+        [
+          90,
+          816
+        ]
+      ]
+    },
+    {
+      "text": "education and thought leadership in emerging technologies.",
+      "confidence": 0.7309448254635725,
+      "bbox": [
+        [
+          586,
+          220
+        ],
+        [
+          1062,
+          220
+        ],
+        [
+          1062,
+          244
+        ],
+        [
+          586,
+          244
+        ]
+      ]
+    },
+    {
+      "text": "Jedi Labs: You imagine, Jedi Lab'$ Engineer",
+      "confidence": 0.7268855568535514,
+      "bbox": [
+        [
+          1078,
+          1758
+        ],
+        [
+          1426,
+          1758
+        ],
+        [
+          1426,
+          1789
+        ],
+        [
+          1078,
+          1789
+        ]
+      ]
+    },
+    {
+      "text": "web development: Unique background in molecular biology and computer science to build scalable end-to-end Al solutions, while mentoring the next generation of developers through technical",
+      "confidence": 0.7228343426604762,
+      "bbox": [
+        [
+          58,
+          194
+        ],
+        [
+          1594,
+          194
+        ],
+        [
+          1594,
+          221
+        ],
+        [
+          58,
+          221
+        ]
+      ]
+    },
+    {
+      "text": "through Al-powered visual architecture design,",
+      "confidence": 0.7218426403207675,
+      "bbox": [
+        [
+          1078,
+          1844
+        ],
+        [
+          1510,
+          1844
+        ],
+        [
+          1510,
+          1870
+        ],
+        [
+          1078,
+          1870
+        ]
+      ]
+    },
+    {
+      "text": "accelerators, and successfully migrating 300+ complex ETL jobs to AWS cloud infrastructure",
+      "confidence": 0.7196640199080307,
+      "bbox": [
+        [
+          89,
+          1187
+        ],
+        [
+          920,
+          1187
+        ],
+        [
+          920,
+          1214
+        ],
+        [
+          89,
+          1214
+        ]
+      ]
+    },
+    {
+      "text": "Spark, Talend, Snowflake, Redshift, Redis and Databricks",
+      "confidence": 0.7176921630783245,
+      "bbox": [
+        [
+          1034,
+          492
+        ],
+        [
+          1576,
+          492
+        ],
+        [
+          1576,
+          520
+        ],
+        [
+          1034,
+          520
+        ]
+      ]
+    },
+    {
+      "text": "Led technical QBRs for 1000+ Fortune 500 accounts, driving a 40% reduction in churn by",
+      "confidence": 0.7099040064389949,
+      "bbox": [
+        [
+          90,
+          1033
+        ],
+        [
+          892,
+          1033
+        ],
+        [
+          892,
+          1062
+        ],
+        [
+          90,
+          1062
+        ]
+      ]
+    },
+    {
+      "text": "Built Edulga.ai NLP pipeline transforming unstructured data into knowledge graph nodes and",
+      "confidence": 0.7044207536023566,
+      "bbox": [
+        [
+          92,
+          598
+        ],
+        [
+          934,
+          598
+        ],
+        [
+          934,
+          626
+        ],
+        [
+          92,
+          626
+        ]
+      ]
+    },
+    {
+      "text": "Achieved 1000%+ YoY growth by leading demos on APl integration in pharmacy EMR systems,",
+      "confidence": 0.702623117649776,
+      "bbox": [
+        [
+          91,
+          2045
+        ],
+        [
+          944,
+          2045
+        ],
+        [
+          944,
+          2077
+        ],
+        [
+          91,
+          2077
+        ]
+      ]
+    },
+    {
+      "text": "A Full-Stack Al Web Engineer and AWS-certified Solutions Architect Professional and Machine Learning Specialist who combines expertise in cloud architecture, machine learning, and full-stack",
+      "confidence": 0.6924403390958547,
+      "bbox": [
+        [
+          68,
+          170
+        ],
+        [
+          1586,
+          170
+        ],
+        [
+          1586,
+          197
+        ],
+        [
+          68,
+          197
+        ]
+      ]
+    },
+    {
+      "text": "Content Management System (CMS)",
+      "confidence": 0.6890535791637521,
+      "bbox": [
+        [
+          1036,
+          803
+        ],
+        [
+          1400,
+          803
+        ],
+        [
+          1400,
+          835
+        ],
+        [
+          1036,
+          835
+        ]
+      ]
+    },
+    {
+      "text": "CrewAI, LangGraph, Phidata, LangFlow and Pydantic Al",
+      "confidence": 0.6799451199793217,
+      "bbox": [
+        [
+          1036,
+          988
+        ],
+        [
+          1546,
+          988
+        ],
+        [
+          1546,
+          1021
+        ],
+        [
+          1036,
+          1021
+        ]
+      ]
+    },
+    {
+      "text": "SOC 2 Type Il, HIPAA, GDPR, PCI DSS and ISO 27001",
+      "confidence": 0.6766805587110545,
+      "bbox": [
+        [
+          1034,
+          1162
+        ],
+        [
+          1488,
+          1162
+        ],
+        [
+          1488,
+          1188
+        ],
+        [
+          1034,
+          1188
+        ]
+      ]
+    },
+    {
+      "text": "Achieved a 70% rise in customer engagement and contributed to a SlM+ increase in quarterly",
+      "confidence": 0.6633384735562811,
+      "bbox": [
+        [
+          89,
+          1732
+        ],
+        [
+          946,
+          1732
+        ],
+        [
+          946,
+          1761
+        ],
+        [
+          89,
+          1761
+        ]
+      ]
+    },
+    {
+      "text": "dealers YoY and boosting partner acquisition efficiency by 200% through 1stdibs Trade Program",
+      "confidence": 0.6285726407365436,
+      "bbox": [
+        [
+          90,
+          1694
+        ],
+        [
+          958,
+          1694
+        ],
+        [
+          958,
+          1725
+        ],
+        [
+          90,
+          1725
+        ]
+      ]
+    },
+    {
+      "text": "Programming Languages",
+      "confidence": 0.6270431091731771,
+      "bbox": [
+        [
+          1036,
+          306
+        ],
+        [
+          1286,
+          306
+        ],
+        [
+          1286,
+          334
+        ],
+        [
+          1036,
+          334
+        ]
+      ]
+    },
+    {
+      "text": "generating real-time learning roadmaps to enable 1Ox learner adaptability with GraphRAG",
+      "confidence": 0.624458838915817,
+      "bbox": [
+        [
+          89,
+          620
+        ],
+        [
+          910,
+          620
+        ],
+        [
+          910,
+          652
+        ],
+        [
+          89,
+          652
+        ]
+      ]
+    },
+    {
+      "text": "JavaScript, Python, and Reactjs",
+      "confidence": 0.6207797640043942,
+      "bbox": [
+        [
+          1034,
+          334
+        ],
+        [
+          1340,
+          334
+        ],
+        [
+          1340,
+          362
+        ],
+        [
+          1034,
+          362
+        ]
+      ]
+    },
+    {
+      "text": "EC2, EKS, Lambda, S3, DynamoDB, Bedrock, Firehose,",
+      "confidence": 0.6207492585323039,
+      "bbox": [
+        [
+          1036,
+          730
+        ],
+        [
+          1528,
+          730
+        ],
+        [
+          1528,
+          756
+        ],
+        [
+          1036,
+          756
+        ]
+      ]
+    },
+    {
+      "text": "months of Full-Stack Web Development using HTML/CSS, React; Node:js, SQL and NoSQL",
+      "confidence": 0.6183004899470236,
+      "bbox": [
+        [
+          92,
+          1378
+        ],
+        [
+          896,
+          1378
+        ],
+        [
+          896,
+          1408
+        ],
+        [
+          92,
+          1408
+        ]
+      ]
+    },
+    {
+      "text": "Founded and built Jedi Labs platform, transforming development through Al-powered visual",
+      "confidence": 0.6139739270992752,
+      "bbox": [
+        [
+          90,
+          410
+        ],
+        [
+          930,
+          410
+        ],
+        [
+          930,
+          439
+        ],
+        [
+          90,
+          439
+        ]
+      ]
+    },
+    {
+      "text": "Biology (Pre-Medicine)",
+      "confidence": 0.6122575058248382,
+      "bbox": [
+        [
+          1174,
+          1344
+        ],
+        [
+          1419,
+          1344
+        ],
+        [
+          1419,
+          1389
+        ],
+        [
+          1174,
+          1389
+        ]
+      ]
+    },
+    {
+      "text": "Kinesis, IAM, VPC, Step Functions and SageMaker",
+      "confidence": 0.6090901719464858,
+      "bbox": [
+        [
+          1035,
+          755
+        ],
+        [
+          1496,
+          755
+        ],
+        [
+          1496,
+          784
+        ],
+        [
+          1035,
+          784
+        ]
+      ]
+    },
+    {
+      "text": "Technical Skills",
+      "confidence": 0.6076971641690365,
+      "bbox": [
+        [
+          1035,
+          247
+        ],
+        [
+          1269,
+          247
+        ],
+        [
+          1269,
+          285
+        ],
+        [
+          1035,
+          285
+        ]
+      ]
+    },
+    {
+      "text": "scaling AstraZeneca's clinical trials platform across 100+ labs, yielding S1B operational saving",
+      "confidence": 0.60456370844046,
+      "bbox": [
+        [
+          89,
+          872
+        ],
+        [
+          934,
+          872
+        ],
+        [
+          934,
+          902
+        ],
+        [
+          89,
+          902
+        ]
+      ]
+    },
+    {
+      "text": "Engineered distributed data processing framework utilizing Apache Spark, Talend and Kafka",
+      "confidence": 0.5963569340574826,
+      "bbox": [
+        [
+          92,
+          846
+        ],
+        [
+          924,
+          846
+        ],
+        [
+          924,
+          872
+        ],
+        [
+          92,
+          872
+        ]
+      ]
+    },
+    {
+      "text": "Mentored 40+ Computer Science students learn web development frameworks, with 90%",
+      "confidence": 0.5562814456410261,
+      "bbox": [
+        [
+          92,
+          1477
+        ],
+        [
+          946,
+          1477
+        ],
+        [
+          946,
+          1505
+        ],
+        [
+          92,
+          1505
+        ]
+      ]
+    },
+    {
+      "text": "Lamalndex, LangChain, Flowise, n8n and LangFlow",
+      "confidence": 0.5436785226233442,
+      "bbox": [
+        [
+          1036,
+          648
+        ],
+        [
+          1506,
+          648
+        ],
+        [
+          1506,
+          679
+        ],
+        [
+          1036,
+          679
+        ]
+      ]
+    },
+    {
+      "text": "Data Processing & Extract Transform Load (ETL)",
+      "confidence": 0.5382770703448945,
+      "bbox": [
+        [
+          1036,
+          1038
+        ],
+        [
+          1528,
+          1038
+        ],
+        [
+          1528,
+          1070
+        ],
+        [
+          1036,
+          1070
+        ]
+      ]
+    },
+    {
+      "text": "1stdibs",
+      "confidence": 0.5302655948968478,
+      "bbox": [
+        [
+          68,
+          1600
+        ],
+        [
+          160,
+          1600
+        ],
+        [
+          160,
+          1630
+        ],
+        [
+          68,
+          1630
+        ]
+      ]
+    },
+    {
+      "text": "Github com/Fikiani ",
+      "confidence": 0.4553212230906036,
+      "bbox": [
+        [
+          743,
+          147
+        ],
+        [
+          893,
+          147
+        ],
+        [
+          893,
+          167
+        ],
+        [
+          743,
+          167
+        ]
+      ]
+    },
+    {
+      "text": "https:[Jaimedicalworld",
+      "confidence": 0.4400926018942302,
+      "bbox": [
+        [
+          1078,
+          2154
+        ],
+        [
+          1260,
+          2154
+        ],
+        [
+          1260,
+          2178
+        ],
+        [
+          1078,
+          2178
+        ]
+      ]
+    },
+    {
+      "text": "httpsic",
+      "confidence": 0.40998918324747335,
+      "bbox": [
+        [
+          1079,
+          1793
+        ],
+        [
+          1129,
+          1793
+        ],
+        [
+          1129,
+          1813
+        ],
+        [
+          1079,
+          1813
+        ]
+      ]
+    },
+    {
+      "text": "WWW _",
+      "confidence": 0.39648803809215,
+      "bbox": [
+        [
+          699,
+          153
+        ],
+        [
+          743,
+          153
+        ],
+        [
+          743,
+          167
+        ],
+        [
+          699,
+          167
+        ]
+      ]
+    },
+    {
+      "text": "https:[Ledulga-aiup railwayapp",
+      "confidence": 0.39204220848046806,
+      "bbox": [
+        [
+          1079,
+          1959
+        ],
+        [
+          1324,
+          1959
+        ],
+        [
+          1324,
+          1984
+        ],
+        [
+          1079,
+          1984
+        ]
+      ]
+    },
+    {
+      "text": "jedilabs org/team/Fahad",
+      "confidence": 0.32626062360139424,
+      "bbox": [
+        [
+          942,
+          144
+        ],
+        [
+          1138,
+          144
+        ],
+        [
+          1138,
+          170
+        ],
+        [
+          942,
+          170
+        ]
+      ]
+    },
+    {
+      "text": "WWW  ",
+      "confidence": 0.3099723972804258,
+      "bbox": [
+        [
+          901,
+          153
+        ],
+        [
+          945,
+          153
+        ],
+        [
+          945,
+          167
+        ],
+        [
+          901,
+          167
+        ]
+      ]
+    }
+  ],
+  "extracted_fields": {
+    "full_name": {
+      "value": "Fahad Kiani",
+      "standardized_value": "Fahad Kiani",
+      "confidence": 0.9991068690057874,
+      "validation_status": "valid"
+    },
+    "education": {
+      "value": "BS Forensic, BS in Computer Science, Biology (Pre-Medicine), City University of New York 2019 - 2021, John Jay College 2008",
+      "standardized_value": "BS Forensic, BS in Computer Science, Biology (Pre-Medicine), City University of New York (2019-2021), John Jay College (2008)",
+      "confidence": 0.999834980859299,
+      "validation_status": "valid"
+    },
+    "work_experience": {
+      "value": "Founding Solutions Engineer, Senior Solutions Engineer, Full-Stack Web Engineer, Lead Web Engineering Instructor, Software Engineering Bootcamp, Founding Sales Engineer, AWS Professional Solutions Architect, AWS Machine Learning Specialist, Generative AI Orchestration & Frameworks, Data Engineering, Technical Work, Deployment, Spearheaded a, Al Services that transforms application development, Built a GraphRAG educational platform, Engineered an AI-powered X-ray analysis pipeline, Designed and optimized data models, Orchestrated automated AWS workflows, Developed visual-to-code engine, Architected healthcare data transformation pipeline, Collaborated with Product Management, Led tailored targeted marketing, Accelerated enterprise pipeline, Served as Lead Instructor, Mentored 40+ Computer Science students, Achieved 1000%+ YoY growth, Built Edulga.ai NLP pipeline, Engineered distributed data processing framework, Founded and built Jedi Labs platform, Architected custom CRM integrations",
+      "standardized_value": "Founding Solutions Engineer, Senior Solutions Engineer, Full-Stack Web Engineer, Lead Web Engineering Instructor, Software Engineering Bootcamp, Founding Sales Engineer, AWS Professional Solutions Architect, AWS Machine Learning Specialist, Generative AI Orchestration & Frameworks, Data Engineering, Technical Work, Deployment, Spearheaded a, AI Services that transforms application development, Built a GraphRAG educational platform, Engineered an AI-powered X-ray analysis pipeline, Designed and optimized data models, Orchestrated automated AWS workflows, Developed visual-to-code engine, Architected healthcare data transformation pipeline, Collaborated with Product Management, Led tailored targeted marketing, Accelerated enterprise pipeline, Served as Lead Instructor, Mentored 40+ Computer Science students, Achieved 1000%+ YoY growth, Built Edulga.ai NLP pipeline, Engineered distributed data processing framework, Founded and built Jedi Labs platform, Architected custom CRM integrations",
+      "confidence": 0.9999823323024739,
+      "validation_status": "valid"
+    },
+    "certifications": {
+      "value": "AWS Professional Solutions Architect, AWS Machine Learning Specialist, SOC 2 Type II, HIPAA, GDPR, PCI DSS, ISO 27001",
+      "standardized_value": "AWS Professional Solutions Architect, AWS Machine Learning Specialist, SOC 2 Type II, HIPAA, GDPR, PCI DSS, ISO 27001",
+      "confidence": 0.9999245870568159,
+      "validation_status": "valid"
+    },
+    "technical_skills": {
+      "value": "AWS SageMaker, AWS Kinesis, AWS Firehose, AWS Lambda, AWS S3, AWS DynamoDB, AWS Bedrock, AWS EC2, AWS EKS, AWS IAM, AWS VPC, AWS Step Functions, AWS SageMaker, Talend, Snowflake, Redshift, Redis, Databricks, Apache Spark, Kafka, GPT, Gemini, Claude, LLaMA, Stable Diffusion, JavaScript, Python, React.js, Node.js, SQL, NoSQL, REST, GraphQL, Next.js, Framer Motion, TypeScript, Three.js, Node.js, HyGraph, Sanity, Airtable, Strapi, Unstructured, LlamaHub, dbt, Dagster, Talend, AirByte, CrewAI, LangGraph, Phidata, LangFlow, Pydantic AI",
+      "standardized_value": "AWS SageMaker, AWS Kinesis, AWS Firehose, AWS Lambda, AWS S3, AWS DynamoDB, AWS Bedrock, AWS EC2, AWS EKS, AWS IAM, AWS VPC, AWS Step Functions, AWS SageMaker, Talend, Snowflake, Redshift, Redis, Databricks, Apache Spark, Kafka, GPT, Gemini, Claude, LLaMA, Stable Diffusion, JavaScript, Python, React.js, Node.js, SQL, NoSQL, REST, GraphQL, Next.js, Framer Motion, TypeScript, Three.js, Node.js, HyGraph, Sanity, Airtable, Strapi, Unstructured, LlamaHub, dbt, Dagster, Talend, AirByte, CrewAI, LangGraph, Phidata, LangFlow, Pydantic AI",
+      "confidence": 0.9999875386302713,
+      "validation_status": "valid"
+    },
+    "contact_info": {
+      "value": "Fahad@JediLabs org, 347-684-2656, Github com/Fikiani, jedilabs org/team/Fahad",
+      "standardized_value": "Fahad@JediLabs.org, 347-684-2656, github.com/Fikiani, jedilabs.org/team/Fahad",
+      "confidence": 0.8532930081966497,
+      "validation_status": "valid"
+    },
+    "dates": {
+      "value": "2015, 05/2021, 01/2021, 08/2023, 08/2017, 06/2015, 05/2020, 01/2020, 05/2019, 07/2017",
+      "standardized_value": "2015, May 2021, January 2021, August 2023, August 2017, June 2015, May 2020, January 2020, May 2019, July 2017",
+      "confidence": 0.9999986886978149,
+      "validation_status": "valid"
+    },
+    "locations": {
+      "value": "USA, San Francisco, New York City",
+      "standardized_value": "USA, San Francisco, New York City",
+      "confidence": 0.9999642108177886,
+      "validation_status": "valid"
+    }
+  },
+  "validation_notes": [
+    "The document type is identified as a resume/CV based on the content.",
+    "Some URLs and email addresses are incomplete or contain OCR errors (e.g., 'https:[Jaimedicalworld', 'Fahad@JediLabs org').",
+    "Confidence scores for most fields are high, indicating reliable extraction."
+  ],
+  "overall_confidence": 0.95
+}

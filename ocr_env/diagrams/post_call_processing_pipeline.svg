@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Arial, sans-serif">
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 L2,5 Z" fill="#333333" />
+    </marker>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#333" flood-opacity="0.3"/>
+    </filter>
+    
+    <!-- Gradient for background -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#edf2f7;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Animated gradients for flows -->
+    <linearGradient id="storageGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0277BD;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#81D4FA;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="3s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#0277BD;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="3s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="analysisGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00695C;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#80CBC4;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="4s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#00695C;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="4s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="knowledgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4527A0;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#B39DDB;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#4527A0;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="3.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <linearGradient id="feedbackGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#BF360C;stop-opacity:1">
+        <animate attributeName="offset" from="0%" to="100%" dur="4.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="50%" style="stop-color:#FFAB91;stop-opacity:1">
+        <animate attributeName="offset" from="50%" to="150%" dur="4.5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" style="stop-color:#BF360C;stop-opacity:1">
+        <animate attributeName="offset" from="100%" to="200%" dur="4.5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with subtle gradient -->
+  <rect width="1200" height="800" fill="url(#bg-gradient)" rx="15" ry="15" />
+  
+  <!-- Title with shadow -->
+  <text x="600" y="40" font-size="30" font-weight="bold" text-anchor="middle" fill="#333" filter="url(#shadow)">Post-Call Processing Pipeline</text>
+  <text x="600" y="70" font-size="16" text-anchor="middle" fill="#555">Comprehensive Analysis and Knowledge Enhancement Flow</text>
+  
+  <!-- Recording Management -->
+  <rect x="50" y="100" width="250" height="250" rx="15" ry="15" fill="#E1F5FE" stroke="#0277BD" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="175" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#0277BD">Recording Management</text>
+  
+  <!-- Storage -->
+  <rect x="70" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0277BD" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="175" font-size="14" font-weight="bold" fill="#0277BD">💾 Call Recording Storage</text>
+  
+  <!-- Format -->
+  <rect x="70" y="200" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0277BD" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="225" font-size="14" font-weight="bold" fill="#0277BD">🔄 Format Standardization</text>
+  
+  <!-- Quality -->
+  <rect x="70" y="250" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0277BD" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="275" font-size="14" font-weight="bold" fill="#0277BD">✅ Quality Validation</text>
+  
+  <!-- Metadata -->
+  <rect x="70" y="300" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#0277BD" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="325" font-size="14" font-weight="bold" fill="#0277BD">🏷️ Metadata Tagging</text>
+  
+  <!-- Transcription & Analysis -->
+  <rect x="350" y="100" width="250" height="250" rx="15" ry="15" fill="#E0F2F1" stroke="#00695C" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="475" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#00695C">Transcription &amp; Analysis</text>
+  
+  <!-- Batch Processing -->
+  <rect x="370" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#00695C" stroke-width="2" filter="url(#shadow)" />
+  <text x="400" y="175" font-size="14" font-weight="bold" fill="#00695C">🔄 Batch Speech-to-Text</text>
+  
+  <!-- Segmentation -->
+  <rect x="370" y="200" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#00695C" stroke-width="2" filter="url(#shadow)" />
+  <text x="400" y="225" font-size="14" font-weight="bold" fill="#00695C">✂️ Conversation Segments</text>
+  
+  <!-- Topics -->
+  <rect x="370" y="250" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#00695C" stroke-width="2" filter="url(#shadow)" />
+  <text x="400" y="275" font-size="14" font-weight="bold" fill="#00695C">📑 Topic Identification</text>
+  
+  <!-- Key Phrases -->
+  <rect x="370" y="300" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#00695C" stroke-width="2" filter="url(#shadow)" />
+  <text x="400" y="325" font-size="14" font-weight="bold" fill="#00695C">🔑 Key Phrase Extraction</text>
+  
+  <!-- Agent Performance -->
+  <rect x="650" y="100" width="250" height="250" rx="15" ry="15" fill="#EDE7F6" stroke="#4527A0" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="775" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#4527A0">Agent Performance</text>
+  
+  <!-- Patterns -->
+  <rect x="670" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#4527A0" stroke-width="2" filter="url(#shadow)" />
+  <text x="700" y="175" font-size="14" font-weight="bold" fill="#4527A0">📊 Interaction Patterns</text>
+  
+  <!-- Script -->
+  <rect x="670" y="200" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#4527A0" stroke-width="2" filter="url(#shadow)" />
+  <text x="700" y="225" font-size="14" font-weight="bold" fill="#4527A0">📝 Script Adherence</text>
+  
+  <!-- Response Time -->
+  <rect x="670" y="250" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#4527A0" stroke-width="2" filter="url(#shadow)" />
+  <text x="700" y="275" font-size="14" font-weight="bold" fill="#4527A0">⏱️ Response Metrics</text>
+  
+  <!-- Satisfaction -->
+  <rect x="670" y="300" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#4527A0" stroke-width="2" filter="url(#shadow)" />
+  <text x="700" y="325" font-size="14" font-weight="bold" fill="#4527A0">😊 CSAT Correlation</text>
+  
+  <!-- Knowledge Enhancement -->
+  <rect x="950" y="100" width="200" height="250" rx="15" ry="15" fill="#FBE9E7" stroke="#BF360C" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="1050" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#BF360C">Knowledge Base</text>
+  
+  <!-- Best Practices -->
+  <rect x="970" y="150" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#BF360C" stroke-width="2" filter="url(#shadow)" />
+  <text x="1000" y="175" font-size="14" font-weight="bold" fill="#BF360C">⭐ Best Practices</text>
+  
+  <!-- Issues -->
+  <rect x="970" y="200" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#BF360C" stroke-width="2" filter="url(#shadow)" />
+  <text x="1000" y="225" font-size="14" font-weight="bold" fill="#BF360C">🔍 Issue Patterns</text>
+  
+  <!-- Solutions -->
+  <rect x="970" y="250" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#BF360C" stroke-width="2" filter="url(#shadow)" />
+  <text x="1000" y="275" font-size="14" font-weight="bold" fill="#BF360C">✅ Solution DB</text>
+  
+  <!-- Training -->
+  <rect x="970" y="300" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#BF360C" stroke-width="2" filter="url(#shadow)" />
+  <text x="1000" y="325" font-size="14" font-weight="bold" fill="#BF360C">📚 Training Docs</text>
+  
+  <!-- Cross-selling Analytics -->
+  <rect x="50" y="400" width="1100" height="200" rx="15" ry="15" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+  <text x="600" y="430" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">Cross-selling Analytics</text>
+  
+  <!-- Customer Analysis -->
+  <rect x="70" y="450" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="475" font-size="14" font-weight="bold" fill="#6A1B9A">👥 Customer Need Analysis</text>
+  
+  <!-- Product Patterns -->
+  <rect x="340" y="450" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="370" y="475" font-size="14" font-weight="bold" fill="#6A1B9A">📈 Product Recommendation</text>
+  
+  <!-- Success Tracking -->
+  <rect x="610" y="450" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="640" y="475" font-size="14" font-weight="bold" fill="#6A1B9A">🎯 Success Rate Tracking</text>
+  
+  <!-- Opportunities -->
+  <rect x="880" y="450" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="910" y="475" font-size="14" font-weight="bold" fill="#6A1B9A">💡 Opportunity Discovery</text>
+  
+  <!-- Storage Architecture -->
+  <rect x="70" y="520" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="100" y="545" font-size="14" font-weight="bold" fill="#6A1B9A">🗄️ Azure Blob Storage</text>
+  
+  <!-- Processing -->
+  <rect x="340" y="520" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="370" y="545" font-size="14" font-weight="bold" fill="#6A1B9A">⚡ Databricks Analytics</text>
+  
+  <!-- Integration -->
+  <rect x="610" y="520" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="640" y="545" font-size="14" font-weight="bold" fill="#6A1B9A">🔄 System Integration</text>
+  
+  <!-- Security -->
+  <rect x="880" y="520" width="250" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+  <text x="910" y="545" font-size="14" font-weight="bold" fill="#6A1B9A">🔒 Security &amp; Compliance</text>
+  
+  <!-- Flow Connections -->
+  <!-- Recording Management Flow -->
+  <path d="M175 190 L175 200" fill="none" stroke="url(#storageGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M175 240 L175 250" fill="none" stroke="url(#storageGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M175 290 L175 300" fill="none" stroke="url(#storageGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Recording to Analysis -->
+  <path d="M280 170 C320 170, 330 170, 370 170" fill="none" stroke="url(#analysisGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Analysis Flow -->
+  <path d="M475 190 L475 200" fill="none" stroke="url(#analysisGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M475 240 L475 250" fill="none" stroke="url(#analysisGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M475 290 L475 300" fill="none" stroke="url(#analysisGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Analysis to Performance -->
+  <path d="M580 170 C620 170, 630 170, 670 170" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Performance Flow -->
+  <path d="M775 190 L775 200" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M775 240 L775 250" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M775 290 L775 300" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Performance to Knowledge -->
+  <path d="M880 170 C920 170, 930 170, 970 170" fill="none" stroke="url(#feedbackGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Knowledge Flow -->
+  <path d="M1050 190 L1050 200" fill="none" stroke="url(#feedbackGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M1050 240 L1050 250" fill="none" stroke="url(#feedbackGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M1050 290 L1050 300" fill="none" stroke="url(#feedbackGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Cross-selling Flow -->
+  <path d="M320 470 L340 470" fill="none" stroke="url(#feedbackGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M590 470 L610 470" fill="none" stroke="url(#feedbackGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M860 470 L880 470" fill="none" stroke="url(#feedbackGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Architecture Flow -->
+  <path d="M320 540 L340 540" fill="none" stroke="url(#storageGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M590 540 L610 540" fill="none" stroke="url(#storageGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  <path d="M860 540 L880 540" fill="none" stroke="url(#storageGradient)" stroke-width="2" marker-end="url(#arrow)" />
+  
+  <!-- Legend -->
+  <rect x="50" y="650" width="1100" height="120" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1" opacity="0.9" />
+  <text x="70" y="675" font-size="16" font-weight="bold" fill="#333">Legend:</text>
+  
+  <!-- Legend items -->
+  <rect x="150" y="665" width="20" height="10" fill="url(#storageGradient)" />
+  <text x="180" y="675" font-size="14" fill="#333">Storage Flow</text>
+  
+  <rect x="350" y="665" width="20" height="10" fill="url(#analysisGradient)" />
+  <text x="380" y="675" font-size="14" fill="#333">Analysis Flow</text>
+  
+  <rect x="550" y="665" width="20" height="10" fill="url(#knowledgeGradient)" />
+  <text x="580" y="675" font-size="14" fill="#333">Performance Flow</text>
+  
+  <rect x="750" y="665" width="20" height="10" fill="url(#feedbackGradient)" />
+  <text x="780" y="675" font-size="14" fill="#333">Knowledge Flow</text>
+  
+  <!-- Component colors -->
+  <rect x="150" y="695" width="20" height="10" fill="#E1F5FE" />
+  <text x="180" y="705" font-size="14" fill="#333">Recording Management</text>
+  
+  <rect x="350" y="695" width="20" height="10" fill="#E0F2F1" />
+  <text x="380" y="705" font-size="14" fill="#333">Transcription &amp; Analysis</text>
+  
+  <rect x="550" y="695" width="20" height="10" fill="#EDE7F6" />
+  <text x="580" y="705" font-size="14" fill="#333">Agent Performance</text>
+  
+  <rect x="750" y="695" width="20" height="10" fill="#FBE9E7" />
+  <text x="780" y="705" font-size="14" fill="#333">Knowledge Enhancement</text>
+  
+  <rect x="950" y="695" width="20" height="10" fill="#F3E5F5" />
+  <text x="980" y="705" font-size="14" fill="#333">Cross-selling Analytics</text>
+  
+  <text x="600" y="745" font-size="12" fill="#666" text-anchor="middle">Post-Call Processing Pipeline - Comprehensive Analysis and Knowledge Enhancement Flow</text>
+</svg> 

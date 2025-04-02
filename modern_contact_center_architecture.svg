@@ -1,0 +1,8 @@
+<!-- Arrow marker definition -->
+<defs>
+  <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#333333" />
+  </marker>
+  
+  <!-- Shadow filter -->
+</defs> 

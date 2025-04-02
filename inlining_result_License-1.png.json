@@ -1,0 +1,45 @@
+{
+  "document_type": "loan_application",
+  "processing_method": "document_inlining",
+  "structure_preservation": true,
+  "modality_gap_bridged": true,
+  "model": "llama-v3p3-70b-instruct",
+  "extracted_fields": {
+    "full_text": {
+      "value": "After analyzing the provided loan application, I extracted the following information while preserving the document structure:\n\n### Header Section\n- **State:** California\n- **License Type:** USA Driver License\n\n### License Information\n- **License Number:** DL 11234568\n- **License Class:** CLASS C\n- **Expiration Date:** 08/31/2014\n- **Endorsements:** NONE\n\n### Personal Details\n- **Last Name:** CARDHOLDER\n- **First Name:** FNIMA\n- **Address:** 2570 24TH STREET, ANYTOWN, CA 95818\n\n### Demographic Information\n- **Date of Birth:** 08/31/1977\n- **Restrictions:** NONE\n\n### Additional Information\n- **Donor Status:** DONOR\n- **Veteran Status:** VETERAN\n\n### Physical Characteristics\n- **Hair Color:** BRN\n- **Eye Color:** BRN\n- **Issue Date:** 08/31/2009\n\n### Personal Attributes\n- **Sex:** F\n- **Height:** 5'-05\"\n- **Weight:** 125 lb\n- **DD (Unknown Field):** 00/00/0000NNNAN/ANFD/YY\n\n### Confidence Score\nGiven the structured format of the document, the extraction of information was relatively straightforward. However, the meaning and relevance of some fields (like \"DD\" and the sequence \"00/00/0000NNNAN/ANFD/YY\") are unclear, which might affect the overall understanding of the document. Additionally, the document does not appear to be a loan application but rather a driver's license information page. Therefore, the confidence in the extraction process, assuming the task was to extract relevant information from a loan application, is lower due to the mismatch in document types.\n\n**Confidence Score:** 0.6\n\nThis score reflects the ease of extracting the provided information but also accounts for the confusion regarding the document's purpose and the unclear fields. If the task were to extract information from a driver's license, the confidence would be higher, but given the specified context of a loan application, the relevance and completeness of the extracted data are questionable.",
+      "confidence": 0.8
+    }
+  },
+  "field_confidence_avg": 0.8,
+  "structured_content": "After analyzing the provided loan application, I extracted the following information while preserving the document structure:\n\n### Header Section\n- **State:** California\n- **License Type:** USA Driver License\n\n### License Information\n- **License Number:** DL 11234568\n- **License Class:** CLASS C\n- **Expiration Date:** 08/31/2014\n- **Endorsements:** NONE\n\n### Personal Details\n- **Last Name:** CARDHOLDER\n- **First Name:** FNIMA\n- **Address:** 2570 24TH STREET, ANYTOWN, CA 95818\n\n### Demographic Information\n- **Date of Birth:** 08/31/1977\n- **Restrictions:** NONE\n\n### Additional Information\n- **Donor Status:** DONOR\n- **Veteran Status:** VETERAN\n\n### Physical Characteristics\n- **Hair Color:** BRN\n- **Eye Color:** BRN\n- **Issue Date:** 08/31/2009\n\n### Personal Attributes\n- **Sex:** F\n- **Height:** 5'-05\"\n- **Weight:** 125 lb\n- **DD (Unknown Field):** 00/00/0000NNNAN/ANFD/YY\n\n### Confidence Score\nGiven the structured format of the document, the extraction of information was relatively straightforward. However, the meaning and relevance of some fields (like \"DD\" and the sequence \"00/00/0000NNNAN/ANFD/YY\") are unclear, which might affect the overall understanding of the document. Additionally, the document does not appear to be a loan application but rather a driver's license information page. Therefore, the confidence in the extraction process, assuming the task was to extract relevant information from a loan application, is lower due to the mismatch in document types.\n\n**Confidence Score:** 0.6\n\nThis score reflects the ease of extracting the provided information but also accounts for the confusion regarding the document's purpose and the unclear fields. If the task were to extract information from a driver's license, the confidence would be higher, but given the specified context of a loan application, the relevance and completeness of the extracted data are questionable.",
+  "validation_notes": [
+    "Document processed with Document Inlining technology"
+  ],
+  "overall_confidence": 0.8,
+  "confidence": 0.8,
+  "detected_fields": [
+    {
+      "text": "full_text",
+      "confidence": 0.8,
+      "bbox": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "confidence_explanation": "Based on average confidence of 1 extracted fields"
+}

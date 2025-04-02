@@ -1,0 +1,443 @@
+# Instructions
+
+During you interaction with the user, if you find anything reusable in this project (e.g. version of a library, model name), especially about a fix to a mistake you made or a correction you received, you should take note in the `Lessons` section in the `.cursorrules` file so you will not make the same mistake again. 
+
+You should also use the `.cursorrules` file as a scratchpad to organize your thoughts. Especially when you receive a new task, you should first review the content of the scratchpad, clear old different task if necessary, first explain the task, and plan the steps you need to take to complete the task. You can use todo markers to indicate the progress, e.g.
+[X] Task 1
+[ ] Task 2
+
+Also update the progress of the task in the Scratchpad when you finish a subtask.
+Especially when you finished a milestone, it will help to improve your depth of task accomplishment to use the scratchpad to reflect and plan.
+The goal is to help you maintain a big picture as well as the progress of the task. Always refer to the Scratchpad when you plan the next step.
+
+# Tools
+
+Note all the tools are in python. So in the case you need to do batch processing, you can always consult the python files and write your own script.
+
+## Screenshot Verification
+The screenshot verification workflow allows you to capture screenshots of web pages and verify their appearance using LLMs. The following tools are available:
+
+1. Screenshot Capture:
+```bash
+venv/bin/python tools/screenshot_utils.py URL [--output OUTPUT] [--width WIDTH] [--height HEIGHT]
+```
+
+2. LLM Verification with Images:
+```bash
+venv/bin/python tools/llm_api.py --prompt "Your verification question" --provider {openai|anthropic} --image path/to/screenshot.png
+```
+
+Example workflow:
+```python
+from screenshot_utils import take_screenshot_sync
+from llm_api import query_llm
+
+# Take a screenshot
+screenshot_path = take_screenshot_sync('https://example.com', 'screenshot.png')
+
+# Verify with LLM
+response = query_llm(
+    "What is the background color and title of this webpage?",
+    provider="openai",  # or "anthropic"
+    image_path=screenshot_path
+)
+print(response)
+```
+
+## LLM
+
+You always have an LLM at your side to help you with the task. For simple tasks, you could invoke the LLM by running the following command:
+```
+venv/bin/python ./tools/llm_api.py --prompt "What is the capital of France?" --provider "anthropic"
+```
+
+The LLM API supports multiple providers:
+- OpenAI (default, model: gpt-4o)
+- Azure OpenAI (model: configured via AZURE_OPENAI_MODEL_DEPLOYMENT in .env file, defaults to gpt-4o-ms)
+- DeepSeek (model: deepseek-chat)
+- Anthropic (model: claude-3-sonnet-20240229)
+- Gemini (model: gemini-pro)
+- Local LLM (model: Qwen/Qwen2.5-32B-Instruct-AWQ)
+
+But usually it's a better idea to check the content of the file and use the APIs in the `tools/llm_api.py` file to invoke the LLM if needed.
+
+## Web browser
+
+You could use the `tools/web_scraper.py` file to scrape the web.
+```
+venv/bin/python ./tools/web_scraper.py --max-concurrent 3 URL1 URL2 URL3
+```
+This will output the content of the web pages.
+
+## Search engine
+
+You could use the `tools/search_engine.py` file to search the web.
+```
+venv/bin/python ./tools/search_engine.py "your search keywords"
+```
+This will output the search results in the following format:
+```
+URL: https://example.com
+Title: This is the title of the search result
+Snippet: This is a snippet of the search result
+```
+If needed, you can further use the `web_scraper.py` file to scrape the web page content.
+
+# Lessons
+
+## User Specified Lessons
+
+- You have a python venv in ./venv. Use it.
+- Include info useful for debugging in the program output.
+- Read the file before you try to edit it.
+- Due to Cursor's limit, when you use `git` and `gh` and need to submit a multiline commit message, first write the message in a file, and then use `git commit -F <filename>` or similar command to commit. And then remove the file. Include "[Cursor] " in the commit message and PR title.
+
+## Cursor learned
+
+- For search results, ensure proper handling of different character encodings (UTF-8) for international queries
+- Add debug information to stderr while keeping the main output clean in stdout for better pipeline integration
+- When using seaborn styles in matplotlib, use 'seaborn-v0_8' instead of 'seaborn' as the style name due to recent seaborn version changes
+- Use 'gpt-4o' as the model name for OpenAI's GPT-4 with vision capabilities
+- When using f-strings with JSON templates, double the curly braces `{{` and `}}` to escape them properly and avoid format specifier errors
+- When working with experimental models like `gemini-2.0-flash-thinking-exp-01-21`, always implement fallback mechanisms to standard models in case the experimental model is unavailable
+- For options data, use RapidAPI directly instead of the YahooFinanceConnector class to avoid compatibility issues with the OptionChainQuote initialization
+- When processing options data from RapidAPI, create a mapping of strikes to straddles for easier lookup and processing of call and put data
+- When implementing the `display_analysis` function in Streamlit, ensure it combines all necessary display components (market overview, ticker analysis, technical insights, learning points) to avoid NameError exceptions
+
+# Scratchpad
+
+## Current Task: Technical Discovery Meeting Plan for Financial Services Loan Processing
+
+### Overview
+The task is to prepare for a 30-minute technical discovery meeting with a financial services prospect who wants to streamline their loan processing system. The meeting will include senior leadership (Head of ML, Engineering, Mortgage Services). As a Solutions Architect at Fireworks AI, I need to develop a structured approach to uncover their needs and position our solutions.
+
+### Meeting Preparation Plan
+[X] Create meeting structure
+[X] Develop discovery questions for different areas
+[X] Research financial loan processing challenges
+[X] Prepare Fireworks AI capability highlights
+[X] Prepare talking points on ROI and metrics
+[X] Outline post-meeting follow-up strategy
+
+### Research: Common Loan Processing Challenges
+From industry research, financial institutions typically face these challenges:
+
+1. **Document Management Overload**
+   - Average mortgage application contains 500+ pages of documentation
+   - Mix of structured forms, semi-structured documents, and unstructured text
+   - Multiple document formats (PDFs, scans, photos from mobile devices)
+   - Manual document verification requires 2-3 hours per application
+
+2. **Data Extraction Issues**
+   - Manual data entry introduces 3-5% error rate
+   - Inconsistent data formats across documents
+   - Difficulty with handwritten information validation
+   - Challenges connecting related information across multiple documents
+
+3. **Regulatory Compliance**
+   - Changing regulatory requirements (TRID, HMDA, fair lending)
+   - Audit trail requirements for all decisions
+   - Need for explainable decision-making processes
+   - Regulatory penalties for non-compliance averaging $1-5M per incident
+
+4. **Process Efficiency Issues**
+   - Average mortgage takes 40-45 days to close
+   - 70% of time spent on document collection and verification
+   - High touch: 15-20 different human touchpoints in typical process
+   - Inconsistency in underwriting standards between processors
+
+5. **Customer Experience Impact**
+   - Lengthy processes lead to 15-20% application abandonment
+   - Multiple requests for the same information frustrates applicants
+   - Lack of transparency into application status
+   - Competitor financial institutions offering faster processing (7-10 days)
+
+6. **Integration Challenges**
+   - Legacy loan origination systems with limited API capabilities
+   - Multiple disconnected systems (CRM, underwriting, servicing)
+   - Data silos preventing holistic view of customer relationship
+   - Difficulty implementing new technology without disruption
+
+### Detailed 30-Minute Meeting Structure
+
+**1. Introduction (5 minutes)**
+- Personal introduction: "I'm [Name], Solutions Architect at Fireworks AI with experience helping financial institutions modernize their document processing"
+- Clarify meeting goals: "Today's goal is to understand your loan processing challenges and explore how our AI capabilities might address them"
+- Set expectations: "I'll ask questions about your current processes, then briefly share relevant capabilities based on what I learn"
+- Build rapport: "Before we dive in, I'd love to hear your roles and involvement with the loan processing initiative"
+
+**2. Discovery Phase (15 minutes)**
+
+*Current Process (5 min):*
+- "Could you walk me through your current loan processing workflow from application to closing?"
+- "Which parts of the process are currently automated versus manual?"
+- "What's your current processing volume and average time-to-close?"
+- "How many different systems or platforms are involved in your loan process?"
+
+*Pain Points (5 min):*
+- "Where do you see the most significant delays or bottlenecks?"
+- "What are the most error-prone or inefficient aspects of document processing?"
+- "How do compliance requirements impact your processing speeds?"
+- "What are your customers' biggest frustrations with the current loan process?"
+
+*Goals & Success Metrics (5 min):*
+- "What specific improvements are you hoping to achieve by streamlining the process?"
+- "How do you currently measure efficiency in your loan processing?"
+- "What would success look like for this initiative in 6-12 months?"
+- "Are there specific competitors or benchmarks you're measuring against?"
+
+**3. Fireworks AI Capabilities Overview (7 minutes)**
+*Start with acknowledgment:* "Based on what you've shared, I'd like to highlight a few capabilities that seem most relevant to your challenges..."
+
+*For document processing challenges:*
+- Intelligent document processing that handles 300+ document types in mortgage workflows
+- 95%+ extraction accuracy for structured and semi-structured documents
+- Specialized models for financial documents (W2s, bank statements, pay stubs)
+- Support for both digital and scanned document formats
+
+*For workflow efficiency challenges:*
+- Automated document classification and data extraction
+- Real-time verification against internal and external data sources
+- Intelligent workflow routing based on application characteristics
+- Exception handling with human-in-the-loop capabilities
+
+*For compliance challenges:*
+- Automated regulatory checks and verification
+- Complete audit trails with decision explanations
+- Fair lending assessments and consistency checking
+- Compliance reporting dashboards
+
+*For integration challenges:*
+- API-first architecture for integration with existing systems
+- Flexible deployment options (cloud, on-premises, hybrid)
+- Phased implementation approach to minimize disruption
+- Proven integrations with major loan origination systems
+
+**4. Q&A and Next Steps (3 minutes)**
+- "What aspects of what I've shared seem most relevant to your needs?"
+- "Are there specific capabilities you'd like to see demonstrated in a follow-up?"
+- "Who else should be involved in the next conversation?"
+- "Based on your timeline, what would be the ideal next step?"
+
+### Post-Meeting Planning
+
+**1. Immediate Follow-up (Same Day)**
+- Send thank-you email with summary of key points discussed
+- Share 1-2 relevant case studies based on their specific challenges
+- Propose specific next steps (technical demo, solution workshop, etc.)
+
+**2. Demo Preparation**
+- Build custom demo focused on 2-3 key pain points identified
+- Create visualization of their loan process with Fireworks AI integration
+- Prepare ROI calculator with their specific metrics
+- Include relevant compliance frameworks in the demonstration
+
+**3. Stakeholder Mapping**
+- Identify decision-makers vs. influencers from the meeting
+- Research additional stakeholders who should be involved
+- Tailor messaging for different personas (technical vs. business)
+
+### Key Value Propositions (With Metrics)
+- 60-80% reduction in document processing time
+- >95% accuracy in data extraction from complex financial documents
+- Reduction in time-to-close from industry average of 45 days to 15-20 days
+- 70% decrease in manual review requirements
+- 90% reduction in data entry errors
+- Full compliance audit trails for 100% of applications
+
+### Industry-Specific Talking Points
+- "Mortgage origination costs have increased to over $8,000 per loan - AI can reduce this by 40-50%"
+- "Top performing lenders have reduced time-to-close to under 20 days - our clients typically achieve similar results"
+- "Manual document processing creates a 3-5% error rate, leading to compliance risks and customer dissatisfaction"
+- "Each hour of manual document review costs approximately $75-100 in labor costs"
+- "Regulatory penalties for non-compliance averaged $5M per incident in 2023"
+
+### Competitive Differentiators to Highlight
+- Domain-specific models pre-trained on financial services documents
+- Ability to extract data across multiple documents for verification
+- Greater accuracy on handwritten and poor-quality scanned documents
+- More flexible integration options than competitor solutions
+- Faster implementation timeline (8-12 weeks vs. industry average of 6 months)
+
+This comprehensive approach ensures we can efficiently learn about their specific challenges while positioning Fireworks AI as a knowledgeable partner with tailored solutions for financial services.
+
+
+# Intelligent Document Processing Architecture Explanation
+
+## Key Components Explained
+
+1. **Document Input Layer**
+   - **Loan Applications**: Primary documents containing borrower information, loan terms, and property details
+   - **Bank Statements**: Financial records showing cash flow, income stability, and account balances
+   - **Tax Documents**: W-2s, 1099s, and tax returns to verify income claims
+   - **Property Records**: Appraisals, title documents, and property histories
+
+2. **Fireworks AI Processing Core**
+   - **Document Inlining Technology**: 
+     - Transforms documents into a format that preserves visual structure while enabling LLM processing
+     - Handles tables, forms, and mixed-format documents without loss of relationships
+     - Creates a unified representation that bridges the modality gap between document images and text
+   
+   - **AI Analysis**:
+     - Context-aware extraction using domain-specific models trained on financial documents
+     - Recognizes patterns specific to loan processing (e.g., debt-to-income calculations)
+     - Extracts structured data while maintaining context and relationships
+     - Handles document variations and format inconsistencies
+
+   - **Data Validation**:
+     - Cross-references information across multiple documents
+     - Flags inconsistencies (e.g., income reported on application vs. tax documents)
+     - Determines confidence scores for extracted fields
+     - Identifies missing information or requirements
+
+3. **Business Systems Integration**
+   - **Loan Processing**: Streamlines application processing with extracted data
+   - **Underwriting**: Provides structured financial information for risk assessment
+   - **Compliance**: Maintains audit trails and verification records
+   - **Reporting**: Enables analytics on processing times, exceptions, and trends
+
+## Technical Differentiators
+
+1. **Structure Preservation**: Unlike vision-only models that lose document structure, Document Inlining maintains relationships between elements and their context.
+
+2. **Superior Accuracy**: Financial-specific models achieve 95%+ extraction accuracy compared to 80-85% with generic document AI.
+
+3. **Cross-Document Intelligence**: Can understand relationships between separate documents in a loan package.
+
+4. **Specialized Financial Understanding**: Pre-trained on millions of financial forms and documents.
+
+5. **Simple Integration**: Standard API interfaces that work with existing systems.
+
+## Implementation Benefits
+
+1. **Reduced Manual Review**: 85% reduction in manual document review times.
+
+2. **Lower Error Rates**: 90% reduction in data entry errors.
+
+3. **Faster Processing**: Can process a typical loan document package in minutes vs. hours.
+
+4. **Better Compliance**: Complete audit trails with data provenance tracking.
+
+5. **Scalability**: Handles volume spikes without quality degradation.
+
+This architecture specifically addresses the loan processing challenges faced by financial institutions by focusing on the document-heavy aspects that typically create bottlenecks and errors.
+
+
+# Financial Institution Demo Planning - Post Discovery Meeting
+
+## Discovery Meeting Insights
+ 
+[X] Completed technical discovery with banking institution
+[X] Identified key pain points: OCR inaccuracies, manual verification, processing delays
+[X] Validated fit for Document Inlining solution to bridge modality gap
+[ ] Prepare demo for next meeting with product team involvement
+[ ] Address privacy/security concerns with specific documentation
+[ ] Develop ROI framework based on 85% processing improvement
+
+## Key Customer Challenges to Address
+
+### 1. OCR Accuracy Issues
+- Current OCR solutions fail with complex financial documents
+- Manual review creates bottlenecks (calculate how many FTEs are involved)
+- Customer satisfaction impacted by delays (explore metrics they track)
+
+### 2. Document Structure Preservation
+- Tables and relationships between data elements are lost
+- Multi-page documents lose contextual connections
+- Exploratory GPT efforts lack structure preservation capability
+
+### 3. Scalability During Peak Seasons
+- Processing delays increase during high-volume periods
+- Inconsistent performance affects customer experience
+- Manual verification doesn't scale with volume
+
+## Demo Components to Prepare
+
+### 1. Modality Gap Illustration
+- [ ] Prepare side-by-side comparison: Traditional OCR vs Document Inlining
+- [ ] Use similar financial documents to those mentioned (loan applications, bank statements)
+- [ ] Show visual diagram of information loss at modality gap
+- [ ] Highlight structural preservation with different document types
+
+### 2. Document Processing Workflow
+- [ ] Create sample workflow matching their current process
+- [ ] Show Document Inlining integration points
+- [ ] Demonstrate manual verification reduction
+- [ ] Calculate time savings based on their specific volumes
+
+### 3. Accuracy Metrics Dashboard
+- [ ] Develop comparison metrics for accuracy improvements
+- [ ] Create visualization of error reduction
+- [ ] Show confidence scores for extracted fields
+- [ ] Demonstrate cross-validation between documents
+
+### 4. Security and Compliance Features
+- [ ] Prepare deployment options slide (cloud, on-prem, hybrid)
+- [ ] Detail data protection methods
+- [ ] Show audit trail capabilities
+- [ ] Explain how Document Inlining enhances compliance
+
+## ROI Framework
+
+### 1. Time Savings
+- [ ] Calculate processing time reduction (85%)
+- [ ] Translate to loan closing time improvements
+- [ ] Quantify manual review reduction
+
+### 2. Revenue Impact
+- [ ] Improved customer experience metrics
+- [ ] Reduced application abandonment
+- [ ] Increased throughput during peak seasons
+
+### 3. Cost Reduction
+- [ ] FTE reallocation potential
+- [ ] Error reduction savings
+- [ ] Compliance risk mitigation
+
+## Technical Demo Script
+
+### Introduction (5 minutes)
+- Recap discovery findings and challenges
+- Overview of Document Inlining approach
+- Modality gap diagram as foundation
+
+### Document Processing Demo (15 minutes)
+- Show processing of complex loan document
+- Compare traditional OCR output vs Document Inlining
+- Demonstrate structure preservation in tables
+- Show relationship maintenance between pages
+
+### Integration Scenario (10 minutes)
+- Show API implementation (one-line code change)
+- Demonstrate workflow integration
+- Performance metrics during volume spikes
+- Security and compliance features
+
+### ROI Discussion (10 minutes)
+- Present customized ROI based on their volumes
+- Show implementation timeline
+- Discuss resource requirements
+
+### Q&A and Next Steps (10 minutes)
+- Address specific product questions
+- Determine PoC parameters
+- Schedule follow-up with broader stakeholder group
+
+## Pre-Demo Preparation Checklist
+
+- [ ] Obtain sample documents similar to their loan processing files
+- [ ] Configure demo environment with security features enabled
+- [ ] Prepare custom ROI calculator with their metrics
+- [ ] Brief product team member on technical discovery findings
+- [ ] Test demo with different document types (variation testing)
+- [ ] Prepare fallback demos in case of technical issues
+- [ ] Create one-page technical overview for distribution
+
+## Post-Demo Follow-Up Plan
+
+- [ ] Document all questions asked and prepare detailed responses
+- [ ] Provide additional technical documentation on security features
+- [ ] Develop PoC proposal with success criteria
+- [ ] Schedule technical workshop with IT implementation team
+- [ ] Create executive summary for senior leadership
+

@@ -1,0 +1,1684 @@
+{
+  "document_type": "passport",
+  "confidence": 1.0,
+  "detected_fields": [
+    {
+      "text": "677880563",
+      "confidence": 0.999997337657428,
+      "bbox": [
+        [
+          1953,
+          1660
+        ],
+        [
+          2336,
+          1660
+        ],
+        [
+          2336,
+          1738
+        ],
+        [
+          1953,
+          1738
+        ]
+      ]
+    },
+    {
+      "text": "Sexe",
+      "confidence": 0.9999825954437256,
+      "bbox": [
+        [
+          2249,
+          2202
+        ],
+        [
+          2337,
+          2202
+        ],
+        [
+          2337,
+          2245
+        ],
+        [
+          2249,
+          2245
+        ]
+      ]
+    },
+    {
+      "text": "PASAPORTE",
+      "confidence": 0.9998653684441516,
+      "bbox": [
+        [
+          494,
+          1605
+        ],
+        [
+          793,
+          1605
+        ],
+        [
+          793,
+          1673
+        ],
+        [
+          494,
+          1673
+        ]
+      ]
+    },
+    {
+      "text": "Surname",
+      "confidence": 0.9998585181767876,
+      "bbox": [
+        [
+          1061,
+          1745
+        ],
+        [
+          1212,
+          1745
+        ],
+        [
+          1212,
+          1785
+        ],
+        [
+          1061,
+          1785
+        ]
+      ]
+    },
+    {
+      "text": "Prenoms",
+      "confidence": 0.999845225762511,
+      "bbox": [
+        [
+          1297,
+          1858
+        ],
+        [
+          1455,
+          1858
+        ],
+        [
+          1455,
+          1902
+        ],
+        [
+          1297,
+          1902
+        ]
+      ]
+    },
+    {
+      "text": "KIANI",
+      "confidence": 0.9997889351033517,
+      "bbox": [
+        [
+          1059,
+          1796
+        ],
+        [
+          1227,
+          1796
+        ],
+        [
+          1227,
+          1860
+        ],
+        [
+          1059,
+          1860
+        ]
+      ]
+    },
+    {
+      "text": "PASSPORT",
+      "confidence": 0.9995433800040897,
+      "bbox": [
+        [
+          504,
+          1505
+        ],
+        [
+          777,
+          1505
+        ],
+        [
+          777,
+          1567
+        ],
+        [
+          504,
+          1567
+        ]
+      ]
+    },
+    {
+      "text": "USA",
+      "confidence": 0.9994914655933517,
+      "bbox": [
+        [
+          2179,
+          2538
+        ],
+        [
+          2553,
+          2538
+        ],
+        [
+          2553,
+          2727
+        ],
+        [
+          2179,
+          2727
+        ]
+      ]
+    },
+    {
+      "text": "3",
+      "confidence": 0.9993311093581383,
+      "bbox": [
+        [
+          2422,
+          1323
+        ],
+        [
+          2507,
+          1323
+        ],
+        [
+          2507,
+          1401
+        ],
+        [
+          2422,
+          1401
+        ]
+      ]
+    },
+    {
+      "text": "Sexo",
+      "confidence": 0.9993114471435547,
+      "bbox": [
+        [
+          2352,
+          2197
+        ],
+        [
+          2448,
+          2197
+        ],
+        [
+          2448,
+          2246
+        ],
+        [
+          2352,
+          2246
+        ]
+      ]
+    },
+    {
+      "text": "Tipo",
+      "confidence": 0.9989438056945801,
+      "bbox": [
+        [
+          1263,
+          1622
+        ],
+        [
+          1344,
+          1622
+        ],
+        [
+          1344,
+          1666
+        ],
+        [
+          1263,
+          1666
+        ]
+      ]
+    },
+    {
+      "text": "USA",
+      "confidence": 0.9985089065784297,
+      "bbox": [
+        [
+          1494,
+          1670
+        ],
+        [
+          1617,
+          1670
+        ],
+        [
+          1617,
+          1734
+        ],
+        [
+          1494,
+          1734
+        ]
+      ]
+    },
+    {
+      "text": "Date of birth",
+      "confidence": 0.9985016225637141,
+      "bbox": [
+        [
+          1067,
+          2106
+        ],
+        [
+          1279,
+          2106
+        ],
+        [
+          1279,
+          2158
+        ],
+        [
+          1067,
+          2158
+        ]
+      ]
+    },
+    {
+      "text": "PASSEPORT",
+      "confidence": 0.997909963438858,
+      "bbox": [
+        [
+          494,
+          1553
+        ],
+        [
+          790,
+          1553
+        ],
+        [
+          790,
+          1621
+        ],
+        [
+          494,
+          1621
+        ]
+      ]
+    },
+    {
+      "text": "Nationality",
+      "confidence": 0.996210802443993,
+      "bbox": [
+        [
+          1063,
+          1986
+        ],
+        [
+          1248,
+          1986
+        ],
+        [
+          1248,
+          2035
+        ],
+        [
+          1063,
+          2035
+        ]
+      ]
+    },
+    {
+      "text": "Sex",
+      "confidence": 0.995302006100731,
+      "bbox": [
+        [
+          2161,
+          2202
+        ],
+        [
+          2233,
+          2202
+        ],
+        [
+          2233,
+          2245
+        ],
+        [
+          2161,
+          2245
+        ]
+      ]
+    },
+    {
+      "text": "FIRMA DEL TITULAR",
+      "confidence": 0.990263296678488,
+      "bbox": [
+        [
+          1763,
+          1378
+        ],
+        [
+          2142,
+          1378
+        ],
+        [
+          2142,
+          1427
+        ],
+        [
+          1763,
+          1427
+        ]
+      ]
+    },
+    {
+      "text": "P",
+      "confidence": 0.9802273635753842,
+      "bbox": [
+        [
+          1187,
+          1685
+        ],
+        [
+          1225,
+          1685
+        ],
+        [
+          1225,
+          1732
+        ],
+        [
+          1187,
+          1732
+        ]
+      ]
+    },
+    {
+      "text": "United States",
+      "confidence": 0.9773087464273243,
+      "bbox": [
+        [
+          2134,
+          2383
+        ],
+        [
+          2494,
+          2383
+        ],
+        [
+          2494,
+          2456
+        ],
+        [
+          2134,
+          2456
+        ]
+      ]
+    },
+    {
+      "text": "01 Jun 2032",
+      "confidence": 0.974345733981863,
+      "bbox": [
+        [
+          1071,
+          2531
+        ],
+        [
+          1393,
+          2531
+        ],
+        [
+          1393,
+          2605
+        ],
+        [
+          1071,
+          2605
+        ]
+      ]
+    },
+    {
+      "text": "Date de naissance",
+      "confidence": 0.9646146580685069,
+      "bbox": [
+        [
+          1293,
+          2102
+        ],
+        [
+          1592,
+          2102
+        ],
+        [
+          1592,
+          2152
+        ],
+        [
+          1293,
+          2152
+        ]
+      ]
+    },
+    {
+      "text": "and establish this",
+      "confidence": 0.9617782561583472,
+      "bbox": [
+        [
+          708,
+          479
+        ],
+        [
+          1087,
+          479
+        ],
+        [
+          1087,
+          567
+        ],
+        [
+          708,
+          567
+        ]
+      ]
+    },
+    {
+      "text": "Date de delivrance / Fecha de",
+      "confidence": 0.9577930273542319,
+      "bbox": [
+        [
+          1305,
+          2341
+        ],
+        [
+          1784,
+          2341
+        ],
+        [
+          1784,
+          2402
+        ],
+        [
+          1305,
+          2402
+        ]
+      ]
+    },
+    {
+      "text": "Department of State",
+      "confidence": 0.9484932020911603,
+      "bbox": [
+        [
+          2044,
+          2455
+        ],
+        [
+          2584,
+          2455
+        ],
+        [
+          2584,
+          2552
+        ],
+        [
+          2044,
+          2552
+        ]
+      ]
+    },
+    {
+      "text": "Nombres",
+      "confidence": 0.9330365987138954,
+      "bbox": [
+        [
+          1474,
+          1855
+        ],
+        [
+          1628,
+          1855
+        ],
+        [
+          1628,
+          1899
+        ],
+        [
+          1474,
+          1899
+        ]
+      ]
+    },
+    {
+      "text": "Place of birth / Lieu de naissance / Lugar de nacimiento",
+      "confidence": 0.9310590734935521,
+      "bbox": [
+        [
+          1068,
+          2210
+        ],
+        [
+          1963,
+          2210
+        ],
+        [
+          1963,
+          2283
+        ],
+        [
+          1068,
+          2283
+        ]
+      ]
+    },
+    {
+      "text": "Code",
+      "confidence": 0.9129672785388688,
+      "bbox": [
+        [
+          1398,
+          1619
+        ],
+        [
+          1489,
+          1619
+        ],
+        [
+          1489,
+          1663
+        ],
+        [
+          1398,
+          1663
+        ]
+      ]
+    },
+    {
+      "text": "Given Names",
+      "confidence": 0.9085955319922718,
+      "bbox": [
+        [
+          1060,
+          1863
+        ],
+        [
+          1282,
+          1863
+        ],
+        [
+          1282,
+          1912
+        ],
+        [
+          1060,
+          1912
+        ]
+      ]
+    },
+    {
+      "text": "USA",
+      "confidence": 0.9004156120256221,
+      "bbox": [
+        [
+          509,
+          1722
+        ],
+        [
+          848,
+          1722
+        ],
+        [
+          848,
+          1831
+        ],
+        [
+          509,
+          1831
+        ]
+      ]
+    },
+    {
+      "text": "Fecha de nacimiento",
+      "confidence": 0.8943294526920686,
+      "bbox": [
+        [
+          1605,
+          2093
+        ],
+        [
+          1944,
+          2093
+        ],
+        [
+          1944,
+          2146
+        ],
+        [
+          1605,
+          2146
+        ]
+      ]
+    },
+    {
+      "text": "Nom}",
+      "confidence": 0.8891199231147766,
+      "bbox": [
+        [
+          1231,
+          1742
+        ],
+        [
+          1316,
+          1742
+        ],
+        [
+          1316,
+          1782
+        ],
+        [
+          1231,
+          1782
+        ]
+      ]
+    },
+    {
+      "text": "SIGNATURE",
+      "confidence": 0.8773758349723333,
+      "bbox": [
+        [
+          1237,
+          1369
+        ],
+        [
+          1468,
+          1369
+        ],
+        [
+          1468,
+          1418
+        ],
+        [
+          1237,
+          1418
+        ]
+      ]
+    },
+    {
+      "text": "Anotaciones",
+      "confidence": 0.8746425170540103,
+      "bbox": [
+        [
+          1679,
+          2595
+        ],
+        [
+          1883,
+          2595
+        ],
+        [
+          1883,
+          2639
+        ],
+        [
+          1679,
+          2639
+        ]
+      ]
+    },
+    {
+      "text": "Date of expiration",
+      "confidence": 0.8581833493488193,
+      "bbox": [
+        [
+          1073,
+          2475
+        ],
+        [
+          1369,
+          2475
+        ],
+        [
+          1369,
+          2530
+        ],
+        [
+          1073,
+          2530
+        ]
+      ]
+    },
+    {
+      "text": "Endorsements / Mentions Speciales",
+      "confidence": 0.8519694072466684,
+      "bbox": [
+        [
+          1076,
+          2597
+        ],
+        [
+          1664,
+          2597
+        ],
+        [
+          1664,
+          2650
+        ],
+        [
+          1076,
+          2650
+        ]
+      ]
+    },
+    {
+      "text": "defence;",
+      "confidence": 0.8476510293813582,
+      "bbox": [
+        [
+          704.9161904048586,
+          233.05352308907203
+        ],
+        [
+          905.6556327749063,
+          266.2691594395969
+        ],
+        [
+          886.0838095951414,
+          355.94647691092797
+        ],
+        [
+          685.3443672250937,
+          322.7308405604031
+        ]
+      ]
+    },
+    {
+      "text": "SEE PAGE 27",
+      "confidence": 0.8395462529694311,
+      "bbox": [
+        [
+          1124,
+          2653
+        ],
+        [
+          1483,
+          2653
+        ],
+        [
+          1483,
+          2730
+        ],
+        [
+          1124,
+          2730
+        ]
+      ]
+    },
+    {
+      "text": "Fecha de caducidad",
+      "confidence": 0.8327767244168449,
+      "bbox": [
+        [
+          1683,
+          2455
+        ],
+        [
+          2016,
+          2455
+        ],
+        [
+          2016,
+          2516
+        ],
+        [
+          1683,
+          2516
+        ]
+      ]
+    },
+    {
+      "text": "SIGNATURE OF BEARER",
+      "confidence": 0.8296608130413682,
+      "bbox": [
+        [
+          732,
+          1360
+        ],
+        [
+          1217,
+          1360
+        ],
+        [
+          1217,
+          1415
+        ],
+        [
+          732,
+          1415
+        ]
+      ]
+    },
+    {
+      "text": "UNTTED STATES OF",
+      "confidence": 0.8288593681077703,
+      "bbox": [
+        [
+          1003,
+          1497
+        ],
+        [
+          2024,
+          1497
+        ],
+        [
+          2024,
+          1595
+        ],
+        [
+          1003,
+          1595
+        ]
+      ]
+    },
+    {
+      "text": "promote the gene:",
+      "confidence": 0.8233070949299385,
+      "bbox": [
+        [
+          143,
+          313
+        ],
+        [
+          562,
+          313
+        ],
+        [
+          562,
+          414
+        ],
+        [
+          143,
+          414
+        ]
+      ]
+    },
+    {
+      "text": "expedicion",
+      "confidence": 0.8124876646294695,
+      "bbox": [
+        [
+          1774,
+          2329
+        ],
+        [
+          1971,
+          2329
+        ],
+        [
+          1971,
+          2401
+        ],
+        [
+          1774,
+          2401
+        ]
+      ]
+    },
+    {
+      "text": "FAHAD JAVED",
+      "confidence": 0.8075364336356314,
+      "bbox": [
+        [
+          1054,
+          1907
+        ],
+        [
+          1455,
+          1907
+        ],
+        [
+          1455,
+          1988
+        ],
+        [
+          1054,
+          1988
+        ]
+      ]
+    },
+    {
+      "text": "UNITED STATES OF AMERICA",
+      "confidence": 0.791807337139242,
+      "bbox": [
+        [
+          1060,
+          2020
+        ],
+        [
+          1894,
+          2020
+        ],
+        [
+          1894,
+          2108
+        ],
+        [
+          1060,
+          2108
+        ]
+      ]
+    },
+    {
+      "text": "Nationalite",
+      "confidence": 0.7532358416028793,
+      "bbox": [
+        [
+          1283,
+          1976
+        ],
+        [
+          1466,
+          1976
+        ],
+        [
+          1466,
+          2030
+        ],
+        [
+          1283,
+          2030
+        ]
+      ]
+    },
+    {
+      "text": "Apellidos",
+      "confidence": 0.7401253040796278,
+      "bbox": [
+        [
+          1337,
+          1737
+        ],
+        [
+          1493,
+          1737
+        ],
+        [
+          1493,
+          1786
+        ],
+        [
+          1337,
+          1786
+        ]
+      ]
+    },
+    {
+      "text": "oursetves and",
+      "confidence": 0.7351525653619818,
+      "bbox": [
+        [
+          741,
+          406
+        ],
+        [
+          1055,
+          406
+        ],
+        [
+          1055,
+          490
+        ],
+        [
+          741,
+          490
+        ]
+      ]
+    },
+    {
+      "text": "MERICA",
+      "confidence": 0.731317618226956,
+      "bbox": [
+        [
+          2044,
+          1496
+        ],
+        [
+          2501,
+          1496
+        ],
+        [
+          2501,
+          1575
+        ],
+        [
+          2044,
+          1575
+        ]
+      ]
+    },
+    {
+      "text": "provide for the common",
+      "confidence": 0.7308954985606508,
+      "bbox": [
+        [
+          121,
+          223
+        ],
+        [
+          705,
+          223
+        ],
+        [
+          705,
+          326
+        ],
+        [
+          121,
+          326
+        ]
+      ]
+    },
+    {
+      "text": "Authority / Autorite / Autoridad",
+      "confidence": 0.7272094095788707,
+      "bbox": [
+        [
+          2055,
+          2315
+        ],
+        [
+          2551,
+          2315
+        ],
+        [
+          2551,
+          2383
+        ],
+        [
+          2055,
+          2383
+        ]
+      ]
+    },
+    {
+      "text": "Type / Type",
+      "confidence": 0.7159761302307048,
+      "bbox": [
+        [
+          1057,
+          1624
+        ],
+        [
+          1251,
+          1624
+        ],
+        [
+          1251,
+          1676
+        ],
+        [
+          1057,
+          1676
+        ]
+      ]
+    },
+    {
+      "text": "02 Jun 2022",
+      "confidence": 0.7128651960232059,
+      "bbox": [
+        [
+          1068,
+          2409
+        ],
+        [
+          1390,
+          2409
+        ],
+        [
+          1390,
+          2481
+        ],
+        [
+          1068,
+          2481
+        ]
+      ]
+    },
+    {
+      "text": "10 Mav 1989",
+      "confidence": 0.6841340366540374,
+      "bbox": [
+        [
+          1068,
+          2158
+        ],
+        [
+          1395,
+          2158
+        ],
+        [
+          1395,
+          2233
+        ],
+        [
+          1068,
+          2233
+        ]
+      ]
+    },
+    {
+      "text": "UYelfare; and secure",
+      "confidence": 0.682675754614432,
+      "bbox": [
+        [
+          603,
+          317
+        ],
+        [
+          1058,
+          317
+        ],
+        [
+          1058,
+          422
+        ],
+        [
+          603,
+          422
+        ]
+      ]
+    },
+    {
+      "text": "Code / Codigo",
+      "confidence": 0.676967667359184,
+      "bbox": [
+        [
+          1509,
+          1616
+        ],
+        [
+          1735,
+          1616
+        ],
+        [
+          1735,
+          1659
+        ],
+        [
+          1509,
+          1659
+        ]
+      ]
+    },
+    {
+      "text": "Date d\"'expiration",
+      "confidence": 0.6607372471762173,
+      "bbox": [
+        [
+          1385,
+          2470
+        ],
+        [
+          1668,
+          2470
+        ],
+        [
+          1668,
+          2524
+        ],
+        [
+          1385,
+          2524
+        ]
+      ]
+    },
+    {
+      "text": "6778805636u54890510103206010692471622<474082",
+      "confidence": 0.631887504025964,
+      "bbox": [
+        [
+          352,
+          2932
+        ],
+        [
+          2517,
+          2932
+        ],
+        [
+          2517,
+          3085
+        ],
+        [
+          352,
+          3085
+        ]
+      ]
+    },
+    {
+      "text": "No:de Pasapordte",
+      "confidence": 0.6169660293687078,
+      "bbox": [
+        [
+          2287,
+          1603
+        ],
+        [
+          2554,
+          1603
+        ],
+        [
+          2554,
+          1644
+        ],
+        [
+          2287,
+          1644
+        ]
+      ]
+    },
+    {
+      "text": "Nacionalidad",
+      "confidence": 0.6070240305824577,
+      "bbox": [
+        [
+          1500,
+          1968
+        ],
+        [
+          1721,
+          1968
+        ],
+        [
+          1721,
+          2025
+        ],
+        [
+          1500,
+          2025
+        ]
+      ]
+    },
+    {
+      "text": "Passport-No / No du Passeport",
+      "confidence": 0.573823147534636,
+      "bbox": [
+        [
+          1772,
+          1608
+        ],
+        [
+          2272,
+          1608
+        ],
+        [
+          2272,
+          1660
+        ],
+        [
+          1772,
+          1660
+        ]
+      ]
+    },
+    {
+      "text": "in Order to form a more perfect _",
+      "confidence": 0.5460817714478782,
+      "bbox": [
+        [
+          90,
+          53
+        ],
+        [
+          860,
+          53
+        ],
+        [
+          860,
+          178
+        ],
+        [
+          90,
+          178
+        ]
+      ]
+    },
+    {
+      "text": "etablisb Justice; insure domestic Tranquility;",
+      "confidence": 0.5111444354214391,
+      "bbox": [
+        [
+          106,
+          133
+        ],
+        [
+          1170,
+          133
+        ],
+        [
+          1170,
+          279
+        ],
+        [
+          106,
+          279
+        ]
+      ]
+    },
+    {
+      "text": "tbe Blessinps",
+      "confidence": 0.41804694146628113,
+      "bbox": [
+        [
+          158,
+          384
+        ],
+        [
+          470,
+          384
+        ],
+        [
+          470,
+          482
+        ],
+        [
+          158,
+          482
+        ]
+      ]
+    },
+    {
+      "text": "Umion,",
+      "confidence": 0.4145316171475975,
+      "bbox": [
+        [
+          854.9308939388299,
+          73.05731363111714
+        ],
+        [
+          1027.5517312264728,
+          100.03952190056688
+        ],
+        [
+          1011.0691060611701,
+          185.94268636888287
+        ],
+        [
+          837.4482687735272,
+          158.96047809943312
+        ]
+      ]
+    },
+    {
+      "text": "Date GISTA Dat",
+      "confidence": 0.34850748104884377,
+      "bbox": [
+        [
+          1065,
+          2279
+        ],
+        [
+          1369,
+          2279
+        ],
+        [
+          1369,
+          2414
+        ],
+        [
+          1065,
+          2414
+        ]
+      ]
+    },
+    {
+      "text": "79KMRAIRE",
+      "confidence": 0.2114801499127741,
+      "bbox": [
+        [
+          1540,
+          1373
+        ],
+        [
+          1735,
+          1373
+        ],
+        [
+          1735,
+          1417
+        ],
+        [
+          1540,
+          1417
+        ]
+      ]
+    },
+    {
+      "text": "PKUSAKIANI<<F AHAD<JAVEDRK<",
+      "confidence": 0.20260614471012509,
+      "bbox": [
+        [
+          354,
+          2852
+        ],
+        [
+          1588,
+          2852
+        ],
+        [
+          1588,
+          2938
+        ],
+        [
+          354,
+          2938
+        ]
+      ]
+    },
+    {
+      "text": "Jlutes,",
+      "confidence": 0.17148937442538684,
+      "bbox": [
+        [
+          675,
+          0
+        ],
+        [
+          921,
+          0
+        ],
+        [
+          921,
+          93
+        ],
+        [
+          675,
+          93
+        ]
+      ]
+    },
+    {
+      "text": "<<<<<<<<K<<<<",
+      "confidence": 0.09563590673257966,
+      "bbox": [
+        [
+          1833,
+          2818
+        ],
+        [
+          2517,
+          2818
+        ],
+        [
+          2517,
+          2917
+        ],
+        [
+          1833,
+          2917
+        ]
+      ]
+    },
+    {
+      "text": "Uuuicu",
+      "confidence": 0.08431644451337773,
+      "bbox": [
+        [
+          410,
+          0
+        ],
+        [
+          679,
+          0
+        ],
+        [
+          679,
+          55
+        ],
+        [
+          410,
+          55
+        ]
+      ]
+    },
+    {
+      "text": "U LiJl",
+      "confidence": 0.06132896283704469,
+      "bbox": [
+        [
+          146,
+          0
+        ],
+        [
+          395,
+          0
+        ],
+        [
+          395,
+          61
+        ],
+        [
+          146,
+          61
+        ]
+      ]
+    },
+    {
+      "text": "0U",
+      "confidence": 0.03446493997314391,
+      "bbox": [
+        [
+          1470.8674325266986,
+          1365.129959864804
+        ],
+        [
+          1540.5745890078647,
+          1374.9817989671185
+        ],
+        [
+          1533.1325674733014,
+          1417.870040135196
+        ],
+        [
+          1463.4254109921353,
+          1409.0182010328815
+        ]
+      ]
+    },
+    {
+      "text": "Ited Sioue;'66 Nmet",
+      "confidence": 0.0037259586924680665,
+      "bbox": [
+        [
+          702,
+          556
+        ],
+        [
+          1077,
+          556
+        ],
+        [
+          1077,
+          636
+        ],
+        [
+          702,
+          636
+        ]
+      ]
+    }
+  ],
+  "fields": {},
+  "extracted_fields": {
+    "Full Name": {
+      "value": "KIANI FAHAD JAVED",
+      "standardized_value": "Kiani Fahad Javed",
+      "confidence": 0.8075364336356314,
+      "validation_status": "valid"
+    },
+    "Date of Birth": {
+      "value": "10 Mav 1989",
+      "standardized_value": "10 May 1989",
+      "confidence": 0.6841340366540374,
+      "validation_status": "uncertain"
+    },
+    "Place of Birth": {
+      "value": "United States",
+      "standardized_value": "United States",
+      "confidence": 0.9773087464273243,
+      "validation_status": "valid"
+    },
+    "Passport Number": {
+      "value": "677880563",
+      "standardized_value": "677880563",
+      "confidence": 0.999997337657428,
+      "validation_status": "valid"
+    },
+    "Issue Date": {
+      "value": "02 Jun 2022",
+      "standardized_value": "02 Jun 2022",
+      "confidence": 0.7128651960232059,
+      "validation_status": "valid"
+    },
+    "Expiry Date": {
+      "value": "01 Jun 2032",
+      "standardized_value": "01 Jun 2032",
+      "confidence": 0.974345733981863,
+      "validation_status": "valid"
+    },
+    "Issuing Authority": {
+      "value": "Department of State",
+      "standardized_value": "Department of State",
+      "confidence": 0.9484932020911603,
+      "validation_status": "valid"
+    },
+    "MRZ Data": {
+      "value": "6778805636u54890510103206010692471622<474082",
+      "standardized_value": "6778805636U54890510103206010692471622<474082",
+      "confidence": 0.631887504025964,
+      "validation_status": "uncertain"
+    }
+  },
+  "validation_notes": [
+    "Date of Birth appears as '10 Mav 1989', which might be a typo for '10 May 1989'.",
+    "MRZ data contains lowercase 'u' which might be a typo for uppercase 'U'."
+  ],
+  "overall_confidence": 0.85,
+  "mrz_data": {
+    "document_type": "BO",
+    "country": "TII",
+    "surname": " LS ORION LONGROAMISEGTIDOGBUNGSED",
+    "passport_number": "OR MRSS S",
+    "nationality": " RE",
+    "date_of_birth": "S K P ",
+    "gender": "E",
+    "expiry_date": " SORE ",
+    "mrz_raw": "BOTII LS ORION LONGROAMISEGTIDOGBUNGSED\nOR MRSS SG RES K P PE SORE J OP UR CUERPO\nOS TG Y SSS OC Y RUG GIR A EF RES TIS ATRER A A SPE\n2 LAGI ODDO OG SCISENS SOISIDSIPNINIR ARG SS S0 RA S YL CC TOG BESS LLY Y SIM\nTG S S TV 7 U DEM TRS S C EE YL A UGA A ROY BOG WS A UIE NY\nQ LL FOR LI CC CO ORS\n5 OLY CS AH NS EM ON AY T RS ALAS J SW B07 A LO P RG A 4 AJ SANS Y INE AS RK CRCRSY L\nUS YG N WRG S SH UINGY SILAS SO OS LON S ERNE 3\nB 2 DN O DP PLIES O BUURLS PPI WE UR PRUE MAS ERASER SP SRESOREGP2\nD EMY OG SL G GS Y OPER Y W RA GN PAN O YB WG APG PISS CGR MERGER G A LENDO M7\nWS NYAS SE TD WIRE LAD LERGAGRISEOY SEEINEBEUNPAT\n5 SO 7 NLCEN WY A BUR RAK DY SS DUTY SS P I I AR LK A AY S3N TF S ASIA\nWO BR AG 1M RUE BX I PAGS 5 ALN REPO A EINE ERE DG ROSUN BL PR\nRS TY LY B UKE LO ES OTR EA P SS LGR PN YAK TRG AY YO BAC W PNETOSR G M LTE PINE T 0\nA HE KG LO ORG NG Y SA WP UGIOSI ASS URL RAY K SAY P B ESN I\nD PRES ENGINE LOISGEASSLOAG IS RRS ROSES BIRESR LP\nLP SY LIISA PM BO GRE O SPACE PR VARS IGOPF\nOSIEIIOG EDO PTGS ON N AY S\nSNIOURLLLM RNAI N CAGES\n\nSOAIAOEDA AS"
+  },
+  "cross_validation": {
+    "matches": [],
+    "mismatches": [],
+    "confidence": 0.0
+  }
+}

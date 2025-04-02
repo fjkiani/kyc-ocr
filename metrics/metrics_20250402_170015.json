@@ -1,0 +1,63 @@
+{
+  "document_count": 0,
+  "session_duration": "0:03:39.409517",
+  "processing_time": {
+    "traditional_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 8.80254077911377,
+      "min": 7.469767332077026,
+      "max": 9.691173791885376,
+      "total": 35.21016311645508,
+      "raw": [
+        9.454900979995728,
+        7.469767332077026,
+        8.594321012496948,
+        9.691173791885376
+      ]
+    }
+  },
+  "extraction_counts": {
+    "traditional_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "confidence_scores": {
+    "traditional_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 0.85,
+      "min": 0.85,
+      "max": 0.85,
+      "raw": [
+        0.85,
+        0.85,
+        0.85,
+        0.85
+      ]
+    }
+  }
+}

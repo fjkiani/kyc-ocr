@@ -1,0 +1,68 @@
+{
+  "document_count": 1,
+  "session_duration": "0:00:42.584722",
+  "processing_time": {
+    "traditional_ocr": {
+      "average": 5.919264078140259,
+      "min": 5.919264078140259,
+      "max": 5.919264078140259,
+      "total": 5.919264078140259,
+      "raw": [
+        5.919264078140259
+      ]
+    },
+    "document_inlining": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0,
+      "raw": []
+    }
+  },
+  "extraction_counts": {
+    "traditional_ocr": {
+      "average": 85.0,
+      "min": 85.0,
+      "max": 85.0,
+      "raw": [
+        85
+      ]
+    },
+    "document_inlining": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    }
+  },
+  "confidence_scores": {
+    "traditional_ocr": {
+      "average": 0.6667488540493839,
+      "min": 0.6667488540493839,
+      "max": 0.6667488540493839,
+      "raw": [
+        0.6667488540493839
+      ]
+    },
+    "document_inlining": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    }
+  },
+  "structure_metrics": {
+    "section_count": {
+      "average": 0,
+      "raw": []
+    },
+    "key_value_pairs": {
+      "average": 0,
+      "raw": []
+    },
+    "list_items": {
+      "average": 0,
+      "raw": []
+    }
+  }
+}

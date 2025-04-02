@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Arial, sans-serif">
+    <defs>
+        <!-- Arrow marker -->
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0,0 L8,5 L0,10 L2,5 Z" fill="#333333" />
+        </marker>
+
+        <!-- Shadow filter -->
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#333" flood-opacity="0.3"/>
+        </filter>
+
+        <!-- Background gradient -->
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#edf2f7;stop-opacity:1" />
+        </linearGradient>
+
+        <!-- Flow gradients -->
+        <linearGradient id="orchestratorGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1565C0;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#90CAF9;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="3s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="knowledgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="4s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#A5D6A7;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="4s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="4s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="transactionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#6A1B9A;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="3.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#CE93D8;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="3.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#6A1B9A;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="3.5s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+
+        <linearGradient id="socialGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#E65100;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="4.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#FFCC80;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="4.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#E65100;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="4.5s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="800" fill="url(#bg-gradient)" rx="15" ry="15" />
+
+    <!-- Title -->
+    <text x="600" y="40" font-size="30" font-weight="bold" text-anchor="middle" fill="#333" filter="url(#shadow)">
+        Multi-Agent Chatbot Architecture
+    </text>
+    <text x="600" y="70" font-size="16" text-anchor="middle" fill="#555">
+        Orchestrated Conversational AI System with Specialized Agents
+    </text>
+
+    <!-- Orchestrator -->
+    <rect x="450" y="100" width="300" height="150" rx="15" ry="15" fill="#E3F2FD" stroke="#1565C0" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="600" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565C0">Orchestrator and Conversation Manager</text>
+    <rect x="470" y="150" width="260" height="35" rx="5" ry="5" fill="#ffffff" stroke="#1565C0" stroke-width="1" />
+    <text x="490" y="173" font-size="14" fill="#1565C0">🎯 Intent Classification and Routing</text>
+    <rect x="470" y="190" width="260" height="35" rx="5" ry="5" fill="#ffffff" stroke="#1565C0" stroke-width="1" />
+    <text x="490" y="213" font-size="14" fill="#1565C0">💾 Conversation State Management</text>
+
+    <!-- Knowledge Base Q&A -->
+    <rect x="50" y="100" width="250" height="200" rx="15" ry="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="175" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#2E7D32">Knowledge Base QA</text>
+    <rect x="70" y="150" width="210" height="35" rx="5" ry="5" fill="#ffffff" stroke="#2E7D32" stroke-width="1" />
+    <text x="90" y="173" font-size="14" fill="#2E7D32">🔍 RAG Implementation</text>
+    <rect x="70" y="190" width="210" height="35" rx="5" ry="5" fill="#ffffff" stroke="#2E7D32" stroke-width="1" />
+    <text x="90" y="213" font-size="14" fill="#2E7D32">📚 Azure Cognitive Search</text>
+    <rect x="70" y="230" width="210" height="35" rx="5" ry="5" fill="#ffffff" stroke="#2E7D32" stroke-width="1" />
+    <text x="90" y="253" font-size="14" fill="#2E7D32">📝 Content Indexing</text>
+
+    <!-- Transactional Agents -->
+    <rect x="900" y="100" width="250" height="200" rx="15" ry="15" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="1025" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">Transactional Agents</text>
+    <rect x="920" y="150" width="210" height="35" rx="5" ry="5" fill="#ffffff" stroke="#6A1B9A" stroke-width="1" />
+    <text x="940" y="173" font-size="14" fill="#6A1B9A">💸 Funds Transfer</text>
+    <rect x="920" y="190" width="210" height="35" rx="5" ry="5" fill="#ffffff" stroke="#6A1B9A" stroke-width="1" />
+    <text x="940" y="213" font-size="14" fill="#6A1B9A">💳 Card Management</text>
+    <rect x="920" y="230" width="210" height="35" rx="5" ry="5" fill="#ffffff" stroke="#6A1B9A" stroke-width="1" />
+    <text x="940" y="253" font-size="14" fill="#6A1B9A">📅 Appointment Scheduler</text>
+
+    <!-- Infrastructure & Integration -->
+    <rect x="50" y="350" width="1100" height="250" rx="15" ry="15" fill="#E8EAF6" stroke="#283593" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="600" y="380" font-size="18" font-weight="bold" text-anchor="middle" fill="#283593">Infrastructure and Integration</text>
+
+    <!-- Teams Integration -->
+    <rect x="70" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="195" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Teams Integration</text>
+    <text x="90" y="460" font-size="14" fill="#283593">🤖 Bot Registration</text>
+    <text x="90" y="490" font-size="14" fill="#283593">🎨 Adaptive Cards</text>
+    <text x="90" y="520" font-size="14" fill="#283593">💬 Message Formatting</text>
+    <text x="90" y="550" font-size="14" fill="#283593">🔊 Voice Integration</text>
+
+    <!-- Context & Memory -->
+    <rect x="340" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="465" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Context and Memory</text>
+    <text x="360" y="460" font-size="14" fill="#283593">💾 Session State</text>
+    <text x="360" y="490" font-size="14" fill="#283593">👤 User Profiles</text>
+    <text x="360" y="520" font-size="14" fill="#283593">📝 History Tracking</text>
+    <text x="360" y="550" font-size="14" fill="#283593">🔒 Security Boundaries</text>
+
+    <!-- Storage & Retrieval -->
+    <rect x="610" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="735" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Storage and Retrieval</text>
+    <text x="630" y="460" font-size="14" fill="#283593">🔍 Vector Store</text>
+    <text x="630" y="490" font-size="14" fill="#283593">❄️ Snowflake</text>
+    <text x="630" y="520" font-size="14" fill="#283593">📦 Cosmos DB</text>
+    <text x="630" y="550" font-size="14" fill="#283593">📊 Analytics</text>
+
+    <!-- Social & Small-talk -->
+    <rect x="880" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="1005" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Social and Small-talk</text>
+    <text x="900" y="460" font-size="14" fill="#283593">💬 Casual Conversation</text>
+    <text x="900" y="490" font-size="14" fill="#283593">🛡️ Content Filtering</text>
+    <text x="900" y="520" font-size="14" fill="#283593">😊 Sentiment Awareness</text>
+    <text x="900" y="550" font-size="14" fill="#283593">🎭 Personality Management</text>
+
+    <!-- Flow Connections -->
+    <path d="M300 200 L450 175" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M750 175 L900 200" stroke="url(#transactionGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M600 250 L600 350" stroke="url(#orchestratorGradient)" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Infrastructure Connections -->
+    <path d="M320 490 L340 490" stroke="url(#socialGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M590 490 L610 490" stroke="url(#socialGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M860 490 L880 490" stroke="url(#socialGradient)" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- Legend -->
+    <rect x="50" y="650" width="1100" height="120" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1" opacity="0.9" />
+    <text x="70" y="675" font-size="16" font-weight="bold" fill="#333">Legend:</text>
+
+    <!-- Legend items -->
+    <rect x="150" y="665" width="20" height="10" fill="url(#orchestratorGradient)" />
+    <text x="180" y="675" font-size="14" fill="#333">Orchestration Flow</text>
+
+    <rect x="350" y="665" width="20" height="10" fill="url(#knowledgeGradient)" />
+    <text x="380" y="675" font-size="14" fill="#333">Knowledge Flow</text>
+
+    <rect x="550" y="665" width="20" height="10" fill="url(#transactionGradient)" />
+    <text x="580" y="675" font-size="14" fill="#333">Transaction Flow</text>
+
+    <rect x="750" y="665" width="20" height="10" fill="url(#socialGradient)" />
+    <text x="780" y="675" font-size="14" fill="#333">Integration Flow</text>
+
+    <rect x="150" y="695" width="20" height="10" fill="#E3F2FD" />
+    <text x="180" y="705" font-size="14" fill="#333">Orchestrator Components</text>
+
+    <rect x="350" y="695" width="20" height="10" fill="#E8F5E9" />
+    <text x="380" y="705" font-size="14" fill="#333">Knowledge Components</text>
+
+    <rect x="550" y="695" width="20" height="10" fill="#F3E5F5" />
+    <text x="580" y="705" font-size="14" fill="#333">Transaction Components</text>
+
+    <rect x="750" y="695" width="20" height="10" fill="#E8EAF6" />
+    <text x="780" y="705" font-size="14" fill="#333">Infrastructure Components</text>
+
+    <text x="600" y="745" font-size="12" fill="#666" text-anchor="middle">Multi-Agent Chatbot Architecture - Orchestrated Conversational AI System with Specialized Agents</text>
+</svg> 

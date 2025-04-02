@@ -1,8 +1,32 @@
+# Core dependencies
+numpy>=1.20.0
 opencv-python>=4.5.0
-numpy>=1.19.0
-tensorflow-macos>=2.4.0,<2.14.0
-keras==2.12.0
-keras-ocr>=0.8.7
-pytesseract>=0.3.8
-easyocr>=1.4.1
-matplotlib>=3.3.0
+matplotlib>=3.5.0
+Pillow>=9.0.0,<10.0.0
+python-dotenv>=0.19.0
+requests>=2.25.0
+
+# OCR engines
+easyocr>=1.6.0
+pytesseract>=0.3.9
+
+# Streamlit for web interface
+streamlit>=1.20.0
+
+# Image processing
+scikit-image>=0.19.0
+
+# PDF processing
+PyMuPDF>=1.19.0
+pdf2image>=1.16.0
+python-magic>=0.4.24
+# Note: python-magic requires libmagic to be installed on your system:
+# - macOS: brew install libmagic
+# - Ubuntu/Debian: sudo apt-get install libmagic1
+# - Windows: See https://github.com/ahupp/python-magic#dependencies
+
+# Utilities
+tqdm>=4.60.0
+
+# Error handling
+nest_asyncio>=1.5.5

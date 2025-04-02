@@ -1,0 +1,45 @@
+{
+  "document_type": "loan_application",
+  "processing_method": "document_inlining",
+  "structure_preservation": true,
+  "modality_gap_bridged": true,
+  "model": "llama-v3p3-70b-instruct",
+  "extracted_fields": {
+    "full_text": {
+      "value": "### Loan Application Analysis\n\n#### Document Structure\nThe loan application document is structured into four main sections:\n1. **Borrower Information**: Contains personal details of the borrower.\n2. **Employment Information**: Provides details about the borrower's employment.\n3. **Loan Information**: Specifies the loan details requested by the borrower.\n4. **References / Additional Information**: Includes any additional comments, references, and the borrower's signature with the date.\n\n#### Extracted Information\n\n##### Borrower Information\n- **Full Name**: John Doe\n- **Address**: 1234 Elm Street, City, ST 12345\n- **Phone**: (123) 456-7890\n- **Email**: johndoe@example.com\n- **Social Security Number**: 123-45-6789\n\n##### Employment Information\n- **Employer**: ABC Corporation\n- **Position**: Software Engineer\n- **Monthly Income**: $5,000\n- **Years at Current Job**: 3\n\n##### Loan Information\n- **Loan Amount Requested**: $20,000\n- **Loan Purpose**: Home Renovation\n- **Collateral**: None\n\n##### References / Additional Information\n- **Additional Comments**: Looking to repay over 5 years.\n- **Reference 1**: Jane Smith, (987) 654-3210\n- **Reference 2**: Bob Johnson, (555) 123-4567\n- **Signature**: John Doe\n- **Date**: 04/02/2025\n\n#### Tables and Form Fields\nThe document does not contain explicit tables but can be represented in a tabular form for clarity:\n\n| **Section** | **Field** | **Value** |\n| --- | --- | --- |\n| Borrower Information | Full Name | John Doe |\n| Borrower Information | Address | 1234 Elm Street, City, ST 12345 |\n| Borrower Information | Phone | (123) 456-7890 |\n| Borrower Information | Email | johndoe@example.com |\n| Borrower Information | Social Security Number | 123-45-6789 |\n| Employment Information | Employer | ABC Corporation |\n| Employment Information | Position | Software Engineer |\n| Employment Information | Monthly Income | $5,000 |\n| Employment Information | Years at Current Job | 3 |\n| Loan Information | Loan Amount Requested | $20,000 |\n| Loan Information | Loan Purpose | Home Renovation |\n| Loan Information | Collateral | None |\n| References / Additional Information | Additional Comments | Looking to repay over 5 years. |\n| References / Additional Information | Reference 1 | Jane Smith, (987) 654-3210 |\n| References / Additional Information | Reference 2 | Bob Johnson, (555) 123-4567 |\n| References / Additional Information | Signature | John Doe |\n| References / Additional Information | Date | 04/02/2025 |\n\n#### Relationships Between Elements\n- The borrower's personal and employment information is used to assess their creditworthiness.\n- The loan information (amount, purpose, collateral) is directly related to the borrower's request and their ability to repay, as indicated by their employment information.\n- The references provided are contacts that can vouch for the borrower, potentially influencing the loan decision.\n- The borrower's signature and date indicate their agreement with the terms of the loan application.\n\n#### Overall Confidence Score\nGiven the clear structure and explicit information provided in the loan application, the confidence score for the extraction of this information is **0.95**. The only potential for error lies in the interpretation of the \"Additional Comments\" section, which could contain variable or unstructured data. However, in this case, the comment is straightforward and easy to understand.",
+      "confidence": 0.8
+    }
+  },
+  "field_confidence_avg": 0.8,
+  "structured_content": "### Loan Application Analysis\n\n#### Document Structure\nThe loan application document is structured into four main sections:\n1. **Borrower Information**: Contains personal details of the borrower.\n2. **Employment Information**: Provides details about the borrower's employment.\n3. **Loan Information**: Specifies the loan details requested by the borrower.\n4. **References / Additional Information**: Includes any additional comments, references, and the borrower's signature with the date.\n\n#### Extracted Information\n\n##### Borrower Information\n- **Full Name**: John Doe\n- **Address**: 1234 Elm Street, City, ST 12345\n- **Phone**: (123) 456-7890\n- **Email**: johndoe@example.com\n- **Social Security Number**: 123-45-6789\n\n##### Employment Information\n- **Employer**: ABC Corporation\n- **Position**: Software Engineer\n- **Monthly Income**: $5,000\n- **Years at Current Job**: 3\n\n##### Loan Information\n- **Loan Amount Requested**: $20,000\n- **Loan Purpose**: Home Renovation\n- **Collateral**: None\n\n##### References / Additional Information\n- **Additional Comments**: Looking to repay over 5 years.\n- **Reference 1**: Jane Smith, (987) 654-3210\n- **Reference 2**: Bob Johnson, (555) 123-4567\n- **Signature**: John Doe\n- **Date**: 04/02/2025\n\n#### Tables and Form Fields\nThe document does not contain explicit tables but can be represented in a tabular form for clarity:\n\n| **Section** | **Field** | **Value** |\n| --- | --- | --- |\n| Borrower Information | Full Name | John Doe |\n| Borrower Information | Address | 1234 Elm Street, City, ST 12345 |\n| Borrower Information | Phone | (123) 456-7890 |\n| Borrower Information | Email | johndoe@example.com |\n| Borrower Information | Social Security Number | 123-45-6789 |\n| Employment Information | Employer | ABC Corporation |\n| Employment Information | Position | Software Engineer |\n| Employment Information | Monthly Income | $5,000 |\n| Employment Information | Years at Current Job | 3 |\n| Loan Information | Loan Amount Requested | $20,000 |\n| Loan Information | Loan Purpose | Home Renovation |\n| Loan Information | Collateral | None |\n| References / Additional Information | Additional Comments | Looking to repay over 5 years. |\n| References / Additional Information | Reference 1 | Jane Smith, (987) 654-3210 |\n| References / Additional Information | Reference 2 | Bob Johnson, (555) 123-4567 |\n| References / Additional Information | Signature | John Doe |\n| References / Additional Information | Date | 04/02/2025 |\n\n#### Relationships Between Elements\n- The borrower's personal and employment information is used to assess their creditworthiness.\n- The loan information (amount, purpose, collateral) is directly related to the borrower's request and their ability to repay, as indicated by their employment information.\n- The references provided are contacts that can vouch for the borrower, potentially influencing the loan decision.\n- The borrower's signature and date indicate their agreement with the terms of the loan application.\n\n#### Overall Confidence Score\nGiven the clear structure and explicit information provided in the loan application, the confidence score for the extraction of this information is **0.95**. The only potential for error lies in the interpretation of the \"Additional Comments\" section, which could contain variable or unstructured data. However, in this case, the comment is straightforward and easy to understand.",
+  "validation_notes": [
+    "Document processed with Document Inlining technology"
+  ],
+  "overall_confidence": 0.8,
+  "confidence": 0.8,
+  "detected_fields": [
+    {
+      "text": "full_text",
+      "confidence": 0.8,
+      "bbox": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "confidence_explanation": "Based on average confidence of 1 extracted fields"
+}

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" font-family="Arial, sans-serif">
+    <!-- Arrow marker definition -->
+    <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+            <path d="M0,0 L8,5 L0,10 L2,5 Z" fill="#333333" />
+        </marker>
+        
+        <!-- Shadow filter -->
+        <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#333" flood-opacity="0.3"/>
+        </filter>
+        
+        <!-- Gradient for background -->
+        <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f8f9fa;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#edf2f7;stop-opacity:1" />
+        </linearGradient>
+        
+        <!-- Animated gradients for flows -->
+        <linearGradient id="audioGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#1565C0;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#90CAF9;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="3s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#1565C0;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="3s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+        
+        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#2E7D32;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="4s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#A5D6A7;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="4s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="4s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+        
+        <linearGradient id="nlpGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#6A1B9A;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="3.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#CE93D8;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="3.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#6A1B9A;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="3.5s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+        
+        <linearGradient id="knowledgeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#E65100;stop-opacity:1">
+                <animate attributeName="offset" from="0%" to="100%" dur="4.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="50%" style="stop-color:#FFCC80;stop-opacity:1">
+                <animate attributeName="offset" from="50%" to="150%" dur="4.5s" repeatCount="indefinite" />
+            </stop>
+            <stop offset="100%" style="stop-color:#E65100;stop-opacity:1">
+                <animate attributeName="offset" from="100%" to="200%" dur="4.5s" repeatCount="indefinite" />
+            </stop>
+        </linearGradient>
+    </defs>
+    
+    <!-- Background with subtle gradient -->
+    <rect width="1200" height="800" fill="url(#bg-gradient)" rx="15" ry="15" />
+    
+    <!-- Title with shadow -->
+    <text x="600" y="40" font-size="30" font-weight="bold" text-anchor="middle" fill="#333" filter="url(#shadow)">Streaming Call Processing Architecture</text>
+    <text x="600" y="70" font-size="16" text-anchor="middle" fill="#555">Real-time Audio Processing, Analysis, and Agent Assistance Flow</text>
+    
+    <!-- Call Ingestion Layer -->
+    <rect x="50" y="100" width="250" height="200" rx="15" ry="15" fill="#E3F2FD" stroke="#1565C0" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="175" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#1565C0">Call Ingestion</text>
+    
+    <rect x="70" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1565C0" stroke-width="2" filter="url(#shadow)" />
+    <text x="100" y="175" font-size="14" fill="#1565C0">📞 ACS Integration</text>
+    
+    <rect x="70" y="200" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1565C0" stroke-width="2" filter="url(#shadow)" />
+    <text x="100" y="225" font-size="14" fill="#1565C0">🔄 Call Automation</text>
+    
+    <rect x="70" y="250" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#1565C0" stroke-width="2" filter="url(#shadow)" />
+    <text x="100" y="275" font-size="14" fill="#1565C0">📡 WebSocket Stream</text>
+    
+    <!-- Audio Processing -->
+    <rect x="350" y="100" width="250" height="200" rx="15" ry="15" fill="#E8F5E9" stroke="#2E7D32" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="475" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#2E7D32">Audio Processing</text>
+    
+    <rect x="370" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)" />
+    <text x="400" y="175" font-size="14" fill="#2E7D32">🎤 Audio Streaming</text>
+    
+    <rect x="370" y="200" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)" />
+    <text x="400" y="225" font-size="14" fill="#2E7D32">🗣️ Speech-to-Text</text>
+    
+    <rect x="370" y="250" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)" />
+    <text x="400" y="275" font-size="14" fill="#2E7D32">👥 Speaker Diarization</text>
+    
+    <!-- NLP Processing -->
+    <rect x="650" y="100" width="250" height="200" rx="15" ry="15" fill="#F3E5F5" stroke="#6A1B9A" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="775" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#6A1B9A">NLP Processing</text>
+    
+    <rect x="670" y="150" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+    <text x="700" y="175" font-size="14" fill="#6A1B9A">📈 Sentiment Analysis</text>
+    
+    <rect x="670" y="200" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+    <text x="700" y="225" font-size="14" fill="#6A1B9A">🔍 Entity Extraction</text>
+    
+    <rect x="670" y="250" width="210" height="40" rx="10" ry="10" fill="#ffffff" stroke="#6A1B9A" stroke-width="2" filter="url(#shadow)" />
+    <text x="700" y="275" font-size="14" fill="#6A1B9A">📊 Text Analytics</text>
+    
+    <!-- Knowledge System -->
+    <rect x="950" y="100" width="200" height="200" rx="15" ry="15" fill="#FFF3E0" stroke="#E65100" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="1050" y="130" font-size="18" font-weight="bold" text-anchor="middle" fill="#E65100">Knowledge System</text>
+    
+    <rect x="970" y="150" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" filter="url(#shadow)" />
+    <text x="1000" y="175" font-size="14" fill="#E65100">🔍 Real-time Search</text>
+    
+    <rect x="970" y="200" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" filter="url(#shadow)" />
+    <text x="1000" y="225" font-size="14" fill="#E65100">💡 Suggestions</text>
+    
+    <rect x="970" y="250" width="160" height="40" rx="10" ry="10" fill="#ffffff" stroke="#E65100" stroke-width="2" filter="url(#shadow)" />
+    <text x="1000" y="275" font-size="14" fill="#E65100">🤖 LLM Responses</text>
+    
+    <!-- Agent Interface & State Management -->
+    <rect x="50" y="350" width="1100" height="250" rx="15" ry="15" fill="#E8EAF6" stroke="#283593" stroke-width="3" opacity="0.9" filter="url(#shadow)" />
+    <text x="600" y="380" font-size="18" font-weight="bold" text-anchor="middle" fill="#283593">Agent Interface &amp; State Management</text>
+    
+    <!-- Live Dashboard -->
+    <rect x="70" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="195" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Live Dashboard</text>
+    <text x="100" y="460" font-size="14" fill="#283593">📊 Real-time Metrics</text>
+    <text x="100" y="490" font-size="14" fill="#283593">😊 Sentiment Meter</text>
+    <text x="100" y="520" font-size="14" fill="#283593">⚠️ Alerts</text>
+    <text x="100" y="550" font-size="14" fill="#283593">💬 Suggestions</text>
+    
+    <!-- State Management -->
+    <rect x="340" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="465" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">State Management</text>
+    <text x="370" y="460" font-size="14" fill="#283593">💾 Session Store</text>
+    <text x="370" y="490" font-size="14" fill="#283593">🔄 Context Cache</text>
+    <text x="370" y="520" font-size="14" fill="#283593">📝 Transfer Data</text>
+    <text x="370" y="550" font-size="14" fill="#283593">⚡ Real-time State</text>
+    
+    <!-- Call Completion -->
+    <rect x="610" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="735" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">Call Completion</text>
+    <text x="640" y="460" font-size="14" fill="#283593">📝 Summary Generation</text>
+    <text x="640" y="490" font-size="14" fill="#283593">💾 Data Finalization</text>
+    <text x="640" y="520" font-size="14" fill="#283593">🔔 Notifications</text>
+    <text x="640" y="550" font-size="14" fill="#283593">📊 CRM Updates</text>
+    
+    <!-- System Integration -->
+    <rect x="880" y="400" width="250" height="180" rx="10" ry="10" fill="#ffffff" stroke="#283593" stroke-width="2" filter="url(#shadow)" />
+    <text x="1005" y="430" font-size="16" font-weight="bold" text-anchor="middle" fill="#283593">System Integration</text>
+    <text x="910" y="460" font-size="14" fill="#283593">🔄 Teams Integration</text>
+    <text x="910" y="490" font-size="14" fill="#283593">❄️ Snowflake Connection</text>
+    <text x="910" y="520" font-size="14" fill="#283593">📊 Power BI Dashboards</text>
+    <text x="910" y="550" font-size="14" fill="#283593">🔍 Monitoring Feeds</text>
+    
+    <!-- Flow Connections -->
+    <path d="M280 170 C320 170, 330 170, 370 170" fill="none" stroke="url(#audioGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M580 170 C620 170, 630 170, 670 170" fill="none" stroke="url(#textGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M880 170 C920 170, 930 170, 970 170" fill="none" stroke="url(#nlpGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    
+    <!-- Vertical Flows -->
+    <path d="M175 290 L175 400" fill="none" stroke="url(#audioGradient)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+    <path d="M475 290 L475 400" fill="none" stroke="url(#textGradient)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+    <path d="M775 290 L775 400" fill="none" stroke="url(#nlpGradient)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+    <path d="M1050 290 L1050 400" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)" />
+    
+    <!-- Infrastructure Connections -->
+    <path d="M320 490 L340 490" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M590 490 L610 490" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    <path d="M860 490 L880 490" fill="none" stroke="url(#knowledgeGradient)" stroke-width="2" marker-end="url(#arrow)" />
+    
+    <!-- Legend -->
+    <rect x="50" y="650" width="1100" height="120" rx="10" ry="10" fill="white" stroke="#333" stroke-width="1" opacity="0.9" />
+    <text x="70" y="675" font-size="16" font-weight="bold" fill="#333">Legend:</text>
+    
+    <!-- Legend items -->
+    <rect x="150" y="665" width="20" height="10" fill="url(#audioGradient)" />
+    <text x="180" y="675" font-size="14" fill="#333">Audio Stream</text>
+    
+    <rect x="350" y="665" width="20" height="10" fill="url(#textGradient)" />
+    <text x="380" y="675" font-size="14" fill="#333">Text Analysis</text>
+    
+    <rect x="550" y="665" width="20" height="10" fill="url(#nlpGradient)" />
+    <text x="580" y="675" font-size="14" fill="#333">NLP Processing</text>
+    
+    <rect x="750" y="665" width="20" height="10" fill="url(#knowledgeGradient)" />
+    <text x="780" y="675" font-size="14" fill="#333">Knowledge Flow</text>
+    
+    <rect x="150" y="695" width="20" height="10" fill="#E3F2FD" />
+    <text x="180" y="705" font-size="14" fill="#333">Communication Components</text>
+    
+    <rect x="350" y="695" width="20" height="10" fill="#E8F5E9" />
+    <text x="380" y="705" font-size="14" fill="#333">Processing Components</text>
+    
+    <rect x="550" y="695" width="20" height="10" fill="#F3E5F5" />
+    <text x="580" y="705" font-size="14" fill="#333">AI/ML Components</text>
+    
+    <rect x="750" y="695" width="20" height="10" fill="#FFF3E0" />
+    <text x="780" y="705" font-size="14" fill="#333">Knowledge Components</text>
+    
+    <rect x="950" y="695" width="20" height="10" fill="#E8EAF6" />
+    <text x="980" y="705" font-size="14" fill="#333">Agent Interface &amp; State</text>
+    
+    <text x="600" y="745" font-size="12" fill="#666" text-anchor="middle">Streaming Call Processing Architecture - Real-time Audio Processing, Analysis, and Agent Assistance Flow</text>
+</svg> 
