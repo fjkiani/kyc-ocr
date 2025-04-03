@@ -1595,211 +1595,145 @@ def extract_text_with_ocr(image_path):
         return []
 
 def process_with_enhanced_ocr(image_path, doc_type):
-    """Process document with OCR followed by LLM enhancement
+    """Process documents using OCR followed by LLM enhancement"""
+    print("\nProcessing with Enhanced OCR + LLM:")
     
-    This pipeline uses OCR to extract text elements, then uses
-    a Large Language Model to structure and validate the extracted fields.
-    """
-    # Output will include metrics at each stage
-    result = {}
-    api_error_message = None
+    result = {
+        'status': 'processing',
+        'document_type': doc_type,
+        'processing_method': 'enhanced_ocr',
+        'extracted_fields': {},
+        'validation_notes': [],
+        'confidence': 0.0,
+        'raw_ocr_results': []
+    }
     
-    # Stopwatch for tracking processing time
-    start_time = time.time()
-    
-    # Step 1: Extract text with OCR
-    print("Step 1: Extracting text with OCR...")
-    ocr_results = extract_text_with_ocr(image_path)
-    
-    if not ocr_results:
-        return {
-            'status': 'error',
-            'message': 'No text could be extracted from the image'
-        }
-    
-    # Store OCR results and timing
-    elements_extracted = len(ocr_results)
-    result['detected_fields'] = ocr_results
-    print(f"Extracted {elements_extracted} text elements")
-    
-    # Step 2: Process with LLM
-    print("Step 2: Enhancing with LLM processing...")
-    llm_processor = LLMProcessor()
-    
-    # Check if API key is available
-    if not llm_processor.api_key or len(llm_processor.api_key.strip()) < 10:
-        use_mock_data = True
-        api_error_message = "Missing or invalid Fireworks AI API key"
-        print(f"Warning: {api_error_message}. Using mock data instead.")
-    else:
-        # Run LLM processing in a separate thread with timeout
-        llm_results = None
-        llm_error = None
-        llm_completed = False
-        raw_llm_response = None
-        raw_llm_content = None
+    try:
+        # Step 1: Extract text with OCR
+        print("\n1. Getting OCR results...")
+        ocr = OCR(os.path.dirname(image_path))
+        ocr_results = ocr.process_image(image_path, engine='easyocr', visualization=True)
         
-        def llm_process_thread():
-            nonlocal llm_results, llm_error, llm_completed, raw_llm_response, raw_llm_content
-            try:
-                # Create a modified LLMProcessor to capture raw response
-                class DetailedLLMProcessor(LLMProcessor):
-                    def _call_llm(self, prompt):
-                        nonlocal raw_llm_response, raw_llm_content
-                        
-                        if not self.api_key or len(self.api_key.strip()) < 10:
-                            print(f"WARNING: API key looks invalid: '{self.api_key[:5]}...'")
+        # Format OCR results
+        formatted_results = []
+        for bbox, text, conf in ocr_results:
+            formatted_results.append((text.strip(), conf))
+            print(f"- Text: {text:<30} (Confidence: {conf:.2f})")
+        
+        if not formatted_results:
+            result.update({
+                'status': 'error',
+                'error': 'No text extracted from image',
+                'validation_notes': ['OCR failed to extract any text from the image']
+            })
+            return result
+            
+        result['raw_ocr_results'] = formatted_results
+        print(f"\nFound {len(formatted_results)} text regions")
+        
+        # Step 2: Process with LLM
+        print("\n2. Processing with LLM...")
+        llm = LLMProcessor()
+        
+        try:
+            # Create a simpler prompt for the LLM
+            text_content = "\n".join([f"{text} (Confidence: {conf:.2f})" 
+                                    for text, conf in formatted_results])
+            
+            prompt = f"""Analyze this {doc_type} and extract key information.
+            Document content:
+            {text_content}
+            
+            Return a JSON object with:
+            1. extracted_fields: Dictionary of field name to object containing:
+               - value: Raw value from document
+               - standardized_value: Cleaned/formatted value
+               - confidence: Confidence score (0.0-1.0)
+               - validation_status: 'verified' or 'needs_review'
+            2. validation_notes: List of any issues or observations
+            3. overall_confidence: Overall confidence in extraction (0.0-1.0)
+            """
+            
+            llm_response = llm._call_llm(prompt)
+            
+            if llm_response:
+                # Parse the JSON response
+                try:
+                    # Extract message content from LLM response
+                    if isinstance(llm_response, dict) and 'choices' in llm_response:
+                        content = llm_response['choices'][0]['message']['content']
+                    else:
+                        content = llm_response
+
+                    # Try to extract JSON from the content
+                    if isinstance(content, str):
+                        json_match = re.search(r'\{[\s\S]*\}', content)
+                        if json_match:
+                            parsed_response = json.loads(json_match.group(0))
                         else:
-                            print(f"Using API key: '{self.api_key[:5]}...'")
-                            
-                        payload = {
-                            "model": "accounts/fireworks/models/mixtral-8x7b-instruct",
-                            "max_tokens": 4096,
-                            "top_p": 1,
-                            "top_k": 40,
-                            "presence_penalty": 0,
-                            "frequency_penalty": 0,
-                            "temperature": 0.6,
-                            "messages": [
-                                {
-                                    "role": "system",
-                                    "content": "You are an expert document analyzer specializing in ID verification."
-                                },
-                                {
-                                    "role": "user",
-                                    "content": prompt
-                                }
-                            ]
-                        }
-                        
-                        print("\nSending request to Fireworks AI API...")
-                        print(f"API URL: {self.url}")
-                        print(f"Using model: {payload['model']}")
-                        
-                        start_time = time.time()
-                        response = requests.post(
-                            self.url,
-                            headers=self.headers,
-                            json=payload
-                        )
-                        
-                        elapsed_time = time.time() - start_time
-                        print(f"API call completed in {elapsed_time:.2f} seconds with status code: {response.status_code}")
-                        
-                        if response.status_code == 200:
-                            result = response.json()
-                            raw_llm_response = result  # Save the raw JSON response
-                            message = result["choices"][0]["message"]["content"]
-                            raw_llm_content = message  # Save the raw message content
-                            return message
+                            raise ValueError("No JSON found in response")
+                    else:
+                        parsed_response = content
+                    
+                    # Update result with parsed data
+                    result.update({
+                        'status': 'success',
+                        'extracted_fields': parsed_response.get('extracted_fields', {}),
+                        'validation_notes': parsed_response.get('validation_notes', []),
+                        'confidence': parsed_response.get('overall_confidence', 0.0)
+                    })
+                    
+                    # Display results
+                    print("\n3. Results:")
+                    print("\nExtracted Fields:")
+                    for field, data in result['extracted_fields'].items():
+                        print(f"\n{field}:")
+                        if isinstance(data, dict):
+                            print(f"  Value: {data.get('value', 'N/A')}")
+                            print(f"  Standardized: {data.get('standardized_value', 'N/A')}")
+                            print(f"  Confidence: {data.get('confidence', 0.0)}")
+                            print(f"  Status: {data.get('validation_status', 'unknown')}")
                         else:
-                            print(f"API Error ({response.status_code}): {response.text}")
-                            error_messages = {
-                                401: "Authentication error - check your API key",
-                                404: "Model not found - check that you're using a valid model ID", 
-                                429: "Rate limit exceeded or quota exceeded",
-                                500: "Server error from the API provider",
-                                503: "Service unavailable - the API service might be down"
-                            }
-                            status_message = error_messages.get(response.status_code, "Unknown error")
-                            print(f"Error details: {status_message}")
-                            
-                            raise Exception(f"API Error: {status_message} (Status code: {response.status_code})")
+                            print(f"  Value: {data}")
+                    
+                    if result['validation_notes']:
+                        print("\nValidation Notes:")
+                        for note in result['validation_notes']:
+                            print(f"- {note}")
+                    
+                    print(f"\nOverall Confidence: {result['confidence']:.2%}")
+                    
+                except Exception as parse_error:
+                    print(f"Error parsing LLM response: {str(parse_error)}")
+                    result.update({
+                        'status': 'error',
+                        'error': f'Failed to parse LLM response: {str(parse_error)}',
+                        'raw_llm_response': llm_response
+                    })
+            else:
+                raise ValueError("LLM returned empty response")
                 
-                # Use the detailed processor
-                detailed_llm = DetailedLLMProcessor(api_key=llm_processor.api_key)
-                llm_results = detailed_llm.process_document_fields(ocr_results, doc_type)
-                llm_completed = True
-            except Exception as e:
-                llm_error = str(e)
-                print(f"LLM Processing Error: {llm_error}")
-                llm_completed = True
-        
-        # Start LLM processing in a separate thread
-        thread = threading.Thread(target=llm_process_thread)
-        thread.start()
-        
-        # Wait with a timeout
-        timeout = 20  # seconds
-        timeout_start = time.time()
-        
-        use_mock_data = False
-        while not llm_completed and (time.time() - timeout_start) < timeout:
-            # Update status with dots to show progress
-            elapsed = time.time() - timeout_start
-            dots = "." * int(elapsed % 4)
-            status_text = f"⏳ Waiting for LLM processing{dots}"
-            sys.stdout.write('\r' + status_text.ljust(50))
-            sys.stdout.flush()
-            time.sleep(0.5)
-        
-        if not llm_completed:
-            print("\nLLM processing timed out after", timeout, "seconds")
-            use_mock_data = True
-            api_error_message = f"LLM processing timed out after {timeout} seconds"
-            # Don't interrupt the thread, let it complete in background
-        elif llm_error:
-            print("\nLLM processing failed:", llm_error)
-            use_mock_data = True
-            api_error_message = llm_error
-        elif not llm_results:
-            print("\nLLM processing completed but returned no results")
-            use_mock_data = True
-            api_error_message = "LLM processing returned no results"
-        else:
-            print("\nLLM processing completed successfully")
-            use_mock_data = False
+        except Exception as llm_error:
+            print(f"\nLLM Processing Error: {str(llm_error)}")
+            # Use fallback mock data
+            mock_response = _generate_mock_llm_response(formatted_results, doc_type)
+            result.update({
+                'status': 'success',
+                'using_mock_data': True,
+                'api_error': str(llm_error),
+                'extracted_fields': mock_response.get('extracted_fields', {}),
+                'validation_notes': mock_response.get('validation_notes', []),
+                'confidence': mock_response.get('overall_confidence', 0.0)
+            })
+            
+    except Exception as e:
+        print(f"\nError during processing: {str(e)}")
+        result.update({
+            'status': 'error',
+            'error': str(e),
+            'validation_notes': [f'Processing error: {str(e)}']
+        })
     
-    # Step 3: Get results (either from LLM or mock data)
-    if use_mock_data:
-        print("Using mock data generator for demonstration purposes")
-        mock_results = _generate_mock_llm_response(ocr_results, doc_type)
-        result.update(mock_results)
-        result['using_mock_data'] = True
-        if api_error_message:
-            result['api_error'] = api_error_message
-        
-        # For mock data, add a help section
-        result['help_info'] = """
-        To use the real Fireworks AI API:
-        1. Obtain an API key from https://app.fireworks.ai
-        2. Create a .env file in the project root
-        3. Add this line: FIREWORKS_API_KEY=your_api_key_here
-        """
-    else:
-        # Check if llm_results is None before updating the result
-        if llm_results is not None:
-            result.update(llm_results)
-        else:
-            # If llm_results is None, use mock data as a fallback
-            print("LLM results were None. Falling back to mock data.")
-            mock_results = _generate_mock_llm_response(ocr_results, doc_type)
-            result.update(mock_results)
-            result['using_mock_data'] = True
-            result['api_error'] = "LLM processing returned no results"
-    
-    # Add document type to result
-    result['document_type'] = doc_type
-    
-    # Add method identifier 
-    result['processing_method'] = 'enhanced_ocr'
-    
-    # Add raw LLM response if available
-    if 'raw_llm_response' in locals() and raw_llm_response:
-        result['raw_llm_response'] = raw_llm_response
-    if 'raw_llm_content' in locals() and raw_llm_content:
-        result['raw_llm_content'] = raw_llm_content
-    
-    # Add indicator if using mock data
-    if use_mock_data:
-        print(f"NOTICE: Using mock data (reason: {api_error_message})")
-    
-    # Record elapsed time
-    elapsed_time = time.time() - start_time
-    result['processing_time'] = elapsed_time
-    print(f"Enhanced OCR processing completed in {elapsed_time:.2f} seconds")
-    
-    # Return complete result
     return result
 
 def display_financial_impact():

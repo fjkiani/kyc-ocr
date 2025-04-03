@@ -1,0 +1,45 @@
+{
+  "document_type": "loan_application",
+  "processing_method": "document_inlining",
+  "structure_preservation": true,
+  "modality_gap_bridged": true,
+  "model": "llama-v3p3-70b-instruct",
+  "extracted_fields": {
+    "full_text": {
+      "value": "{'error': 'Operation timed out after 5 minutes', 'code': 500, 'type': 'error', 'step': 'error'}",
+      "confidence": 0.7
+    }
+  },
+  "field_confidence_avg": 0.7,
+  "structured_content": "{'error': 'Operation timed out after 5 minutes', 'code': 500, 'type': 'error', 'step': 'error'}",
+  "validation_notes": [
+    "Processed with Document Inlining but response format was unexpected"
+  ],
+  "overall_confidence": 0.7,
+  "confidence": 0.7,
+  "detected_fields": [
+    {
+      "text": "full_text",
+      "confidence": 0.7,
+      "bbox": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "confidence_explanation": "Based on average confidence of 1 extracted fields"
+}

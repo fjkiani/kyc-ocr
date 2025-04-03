@@ -1,0 +1,45 @@
+{
+  "document_type": "loan_application",
+  "processing_method": "document_inlining",
+  "structure_preservation": true,
+  "modality_gap_bridged": true,
+  "model": "llama-v3p3-70b-instruct",
+  "extracted_fields": {
+    "full_text": {
+      "value": "### Document Structure Analysis\n\nThe provided document appears to be a template for a homecare agency's patient care report. It includes various sections for recording patient information, employee details, time and activity reports, tasks, treatments, and household support activities.\n\n### Extracted Information\n\n1. **Agency Information**\n   - Name: Silver Lining Homecare Agency\n   - Address: 1115 Avenue U, Brooklyn, NY 11223\n   - Telephone: 718-717-8337\n   - Fax: 718-208-4294\n   - Email: timesheets@slcareny.com\n\n2. **Patient and Employee Information**\n   - Patient Name: Austin\n   - Employee Name: Arkestra\n\n3. **Aide Time and Activity Report**\n   - The document includes a table for recording time in, time out, hours worked, and signatures for each day of the week. However, the table is not filled with actual data.\n\n4. **Task/Activity Section**\n   - This section outlines various care activities, including:\n     - Universal Precautions\n     - Personal Care (bathing, oral hygiene, hair care, shaving, nail care, foot care)\n     - Dressing\n     - Skin Care\n     - Incontinent Care\n     - Toileting\n     - Nutrition (including meals and dietary assistance)\n     - Activity (transfer, ambulation, exercise program, ROM, turning)\n\n5. **Treatments/Special Needs**\n   - Record temperature\n   - Record weight\n   - Record intake/output\n   - Catheter care\n   - Ostomy care\n   - Medication assistance\n\n6. **Household/Patient Support Activities**\n   - Linen change\n   - Laundry\n   - Light housekeeping\n   - Cleaning patient care equipment\n   - Shopping/errands\n   - Escort to appointments\n   - Diversional activities\n   - Monitoring patient safety\n\n### Relationships Between Elements\n\n- The document is structured to flow from general agency and patient/employee information to specific care activities and treatments.\n- Each section (Aide Time and Activity Report, Task/Activity, Treatments/Special Needs, Household/Patient Support Activities) is designed to capture detailed information about the care provided to the patient.\n- The tables and lists within these sections are meant to systematically record various aspects of patient care, ensuring comprehensiveness and organization.\n\n### Confidence Score\n\nGiven the structured format of the document and the clear headings and tables, the extraction of information can be done with a high degree of accuracy. However, the actual data (e.g., specific times, patient weights, etc.) is not provided in the template, which would be necessary for a complete analysis of patient care. Therefore, based on the structure and the ability to identify where data should be filled in, I would rate the confidence score for extracting the structure and intended use of the document as **0.9**. The lack of actual patient data in the tables prevents a perfect score. \n\n### Code for Extraction\n\nTo extract this information programmatically, one could use HTML parsing libraries such as BeautifulSoup in Python. The process would involve:\n\n1. Loading the HTML document.\n2. Identifying and extracting text from relevant HTML elements (h1, p, table, tr, th, td).\n3. Organizing the extracted data into a structured format (e.g., dictionaries or dataframes in Python).\n\nExample Python code snippet using BeautifulSoup:\n\n```python\nfrom bs4 import BeautifulSoup\n\n# Assuming 'html_doc' contains the HTML content\nsoup = BeautifulSoup(html_doc, 'html.parser')\n\n# Extract agency information\nagency_name = soup.find('h1').text\nagency_address = soup.find_all('p')[0].text\n# ... continue extracting other information\n\n# For tables\ntables = soup.find_all('table')\nfor table in tables:\n    rows = table.find_all('tr')\n    for row in rows:\n        cols = row.find_all('th') + row.find_all('td')\n        cols = [col.text.strip() for col in cols]\n        # Process or store the column data\n```\n\nThis example illustrates how to begin parsing the document. A complete extraction would require iterating through all relevant elements and organizing the data accordingly.",
+      "confidence": 0.8
+    }
+  },
+  "field_confidence_avg": 0.8,
+  "structured_content": "### Document Structure Analysis\n\nThe provided document appears to be a template for a homecare agency's patient care report. It includes various sections for recording patient information, employee details, time and activity reports, tasks, treatments, and household support activities.\n\n### Extracted Information\n\n1. **Agency Information**\n   - Name: Silver Lining Homecare Agency\n   - Address: 1115 Avenue U, Brooklyn, NY 11223\n   - Telephone: 718-717-8337\n   - Fax: 718-208-4294\n   - Email: timesheets@slcareny.com\n\n2. **Patient and Employee Information**\n   - Patient Name: Austin\n   - Employee Name: Arkestra\n\n3. **Aide Time and Activity Report**\n   - The document includes a table for recording time in, time out, hours worked, and signatures for each day of the week. However, the table is not filled with actual data.\n\n4. **Task/Activity Section**\n   - This section outlines various care activities, including:\n     - Universal Precautions\n     - Personal Care (bathing, oral hygiene, hair care, shaving, nail care, foot care)\n     - Dressing\n     - Skin Care\n     - Incontinent Care\n     - Toileting\n     - Nutrition (including meals and dietary assistance)\n     - Activity (transfer, ambulation, exercise program, ROM, turning)\n\n5. **Treatments/Special Needs**\n   - Record temperature\n   - Record weight\n   - Record intake/output\n   - Catheter care\n   - Ostomy care\n   - Medication assistance\n\n6. **Household/Patient Support Activities**\n   - Linen change\n   - Laundry\n   - Light housekeeping\n   - Cleaning patient care equipment\n   - Shopping/errands\n   - Escort to appointments\n   - Diversional activities\n   - Monitoring patient safety\n\n### Relationships Between Elements\n\n- The document is structured to flow from general agency and patient/employee information to specific care activities and treatments.\n- Each section (Aide Time and Activity Report, Task/Activity, Treatments/Special Needs, Household/Patient Support Activities) is designed to capture detailed information about the care provided to the patient.\n- The tables and lists within these sections are meant to systematically record various aspects of patient care, ensuring comprehensiveness and organization.\n\n### Confidence Score\n\nGiven the structured format of the document and the clear headings and tables, the extraction of information can be done with a high degree of accuracy. However, the actual data (e.g., specific times, patient weights, etc.) is not provided in the template, which would be necessary for a complete analysis of patient care. Therefore, based on the structure and the ability to identify where data should be filled in, I would rate the confidence score for extracting the structure and intended use of the document as **0.9**. The lack of actual patient data in the tables prevents a perfect score. \n\n### Code for Extraction\n\nTo extract this information programmatically, one could use HTML parsing libraries such as BeautifulSoup in Python. The process would involve:\n\n1. Loading the HTML document.\n2. Identifying and extracting text from relevant HTML elements (h1, p, table, tr, th, td).\n3. Organizing the extracted data into a structured format (e.g., dictionaries or dataframes in Python).\n\nExample Python code snippet using BeautifulSoup:\n\n```python\nfrom bs4 import BeautifulSoup\n\n# Assuming 'html_doc' contains the HTML content\nsoup = BeautifulSoup(html_doc, 'html.parser')\n\n# Extract agency information\nagency_name = soup.find('h1').text\nagency_address = soup.find_all('p')[0].text\n# ... continue extracting other information\n\n# For tables\ntables = soup.find_all('table')\nfor table in tables:\n    rows = table.find_all('tr')\n    for row in rows:\n        cols = row.find_all('th') + row.find_all('td')\n        cols = [col.text.strip() for col in cols]\n        # Process or store the column data\n```\n\nThis example illustrates how to begin parsing the document. A complete extraction would require iterating through all relevant elements and organizing the data accordingly.",
+  "validation_notes": [
+    "Document processed with Document Inlining technology"
+  ],
+  "overall_confidence": 0.8,
+  "confidence": 0.8,
+  "detected_fields": [
+    {
+      "text": "full_text",
+      "confidence": 0.8,
+      "bbox": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "confidence_explanation": "Based on average confidence of 1 extracted fields"
+}

@@ -334,175 +334,91 @@ class LLMProcessor:
             return None
 
     def _parse_llm_response(self, response):
-        """Parse and validate LLM response"""
-        if not response:
-            print("Error: Received empty response from LLM API")
-            return None
+        """Parse and validate the LLM response
         
-        if not isinstance(response, dict):
-            print(f"Error: Response is not a dictionary. Type: {type(response)}")
-            # Try to wrap non-dictionary responses
-            if isinstance(response, str):
-                return {
-                    "extracted_fields": {
-                        "raw_content": {
-                            "value": response,
-                            "standardized_value": response,
-                            "confidence": 0.5,
-                            "validation_status": "uncertain"
-                        }
-                    },
-                    "validation_notes": ["Response was a string, not structured JSON"],
-                    "overall_confidence": 0.5
-                }
-            return None
+        Args:
+            response (str): Raw response from the LLM
             
-        if 'choices' not in response:
-            print(f"Error: 'choices' not found in response. Keys: {list(response.keys())}")
-            return None
-            
+        Returns:
+            dict: Structured response with extracted fields and metadata
+        """
+        if not response:
+            print("Warning: Empty response from LLM")
+            return {
+                'status': 'error',
+                'message': 'Empty response from LLM',
+                'extracted_fields': {},
+                'validation_notes': ['No data could be extracted'],
+                'confidence': 0.0
+            }
+        
         try:
-            # Extract content from the first choice
-            if not response['choices'] or len(response['choices']) == 0:
-                print("Error: No choices returned in the response")
-                return None
-                
-            choice = response['choices'][0]
-            if 'message' not in choice:
-                print(f"Error: 'message' not found in choice. Keys: {list(choice.keys())}")
-                return None
-                
-            if 'content' not in choice['message']:
-                print(f"Error: 'content' not found in message. Keys: {list(choice['message'].keys())}")
-                return None
-                
-            content = choice['message']['content']
-            print(f"DEBUG: Content type: {type(content)}")
-            print(f"DEBUG: Content length: {len(content) if isinstance(content, str) else 'N/A'}")
-            
-            # Print a preview of the content
-            if isinstance(content, str):
-                if len(content) > 200:
-                    print(f"DEBUG: Content preview (first/last 100 chars):")
-                    print(f"  START: {content[:100]}")
-                    print(f"  END:   {content[-100:]}")
-                else:
-                    print(f"DEBUG: Full content: {content}")
-            else:
-                print(f"DEBUG: Content is not a string. Type: {type(content)}")
-            
-            # First check if the entire content is valid JSON
-            if isinstance(content, str):
-                try:
-                    parsed_result = json.loads(content)
-                    print("DEBUG: Successfully parsed entire content as JSON")
-                    if isinstance(parsed_result, dict) and 'extracted_fields' in parsed_result:
-                        return parsed_result
-                    elif isinstance(parsed_result, dict):
-                        # Content is JSON but doesn't have extracted_fields
-                        print("DEBUG: Content is JSON but missing 'extracted_fields'")
-                        return {
-                            "extracted_fields": parsed_result,
-                            "validation_notes": ["Adjusted response format - JSON was missing extracted_fields wrapper"],
-                            "overall_confidence": 0.8
-                        }
-                except json.JSONDecodeError:
-                    print("DEBUG: Content is not valid JSON, trying to find JSON within content")
-                    pass  # Continue with partial JSON extraction
-            
-            # Handle case where content is not a string
-            if not isinstance(content, str):
-                print(f"Warning: Content is not a string. Type: {type(content)}")
-                if isinstance(content, dict):
-                    # If it's already a dict, wrap it appropriately
-                    if 'extracted_fields' in content:
-                        return content
-                    else:
-                        return {
-                            "extracted_fields": content,
-                            "validation_notes": ["Wrapped non-string content as extracted_fields"],
-                            "overall_confidence": 0.7
-                        }
-                return self._create_fallback_response(str(content))
-            
-            # Look for JSON within the content
-            json_start = content.find('{')
-            json_end = content.rfind('}')
-            
-            if json_start == -1 or json_end == -1 or json_start > json_end:
-                print("Warning: Could not find valid JSON markers in content")
-                # Create a simplified structure with the raw content
-                return self._create_fallback_response(content)
-            
-            # Extract the JSON portion
-            json_str = content[json_start:json_end+1]
-            print(f"DEBUG: Extracted potential JSON of length {len(json_str)}")
-            
+            # First try to parse the entire response as JSON
             try:
-                # Parse the JSON
-                parsed_json = json.loads(json_str)
-                print("DEBUG: Successfully parsed extracted JSON substring")
-                
-                # Check if parsed JSON has the expected structure
-                if isinstance(parsed_json, dict):
-                    if 'extracted_fields' not in parsed_json:
-                        print("Warning: 'extracted_fields' not found in parsed JSON")
-                        
-                        # Try to interpret the JSON as extracted fields directly
-                        if len(parsed_json) > 0:
-                            return {
-                                "extracted_fields": parsed_json,
-                                "validation_notes": ["Adjusted response format to expected structure"],
-                                "overall_confidence": 0.7
-                            }
-                    else:
-                        return parsed_json
+                result = json.loads(response)
+                print("Successfully parsed response as JSON")
+            except json.JSONDecodeError:
+                # If that fails, try to extract JSON from the text
+                print("Initial JSON parse failed, attempting to extract JSON from text")
+                json_start = response.find('{')
+                json_end = response.rfind('}') + 1
+                if json_start >= 0 and json_end > json_start:
+                    json_str = response[json_start:json_end]
+                    result = json.loads(json_str)
+                    print("Successfully extracted and parsed JSON from text")
                 else:
-                    print(f"Warning: Parsed JSON is not a dictionary. Type: {type(parsed_json)}")
-                    return self._create_fallback_response(content)
-                
-            except json.JSONDecodeError as json_err:
-                print(f"Warning: JSON parsing error: {str(json_err)}")
-                
-                # Try a more conservative approach - look for complete JSON objects
-                import re
-                json_objects = re.findall(r'(\{.*?\})', content, re.DOTALL)
-                if json_objects:
-                    for obj in json_objects:
-                        try:
-                            parsed = json.loads(obj)
-                            if isinstance(parsed, dict) and len(parsed) > 1:
-                                print(f"Found valid JSON object with keys: {list(parsed.keys())}")
-                                if 'extracted_fields' in parsed:
-                                    return parsed
-                                else:
-                                    return {
-                                        "extracted_fields": parsed,
-                                        "validation_notes": ["Extracted embedded JSON object"],
-                                        "overall_confidence": 0.6
-                                    }
-                        except:
-                            continue
-                
-                # If all else fails, use fallback
-                return self._create_fallback_response(content)
-                
+                    raise ValueError("No valid JSON found in response")
+            
+            # Validate required fields
+            if 'extracted_fields' not in result:
+                print("Warning: No extracted_fields in response")
+                result['extracted_fields'] = {}
+            
+            # Ensure all fields have the required structure
+            for field_name, field_data in result['extracted_fields'].items():
+                if isinstance(field_data, str):
+                    # Convert simple string values to full structure
+                    result['extracted_fields'][field_name] = {
+                        'value': field_data,
+                        'standardized_value': field_data,
+                        'confidence': 0.8,
+                        'validation_status': 'valid'
+                    }
+                elif isinstance(field_data, dict):
+                    # Ensure all required keys exist
+                    field_data.setdefault('value', '')
+                    field_data.setdefault('standardized_value', field_data['value'])
+                    field_data.setdefault('confidence', 0.8)
+                    field_data.setdefault('validation_status', 'valid')
+            
+            # Add validation notes if not present
+            if 'validation_notes' not in result:
+                result['validation_notes'] = []
+            
+            # Calculate overall confidence
+            confidences = [
+                field['confidence'] 
+                for field in result['extracted_fields'].values() 
+                if isinstance(field, dict) and 'confidence' in field
+            ]
+            result['confidence'] = sum(confidences) / len(confidences) if confidences else 0.0
+            
+            # Add processing metadata
+            result['status'] = 'completed'
+            result['message'] = 'Successfully processed document'
+            
+            return result
+            
         except Exception as e:
-            print(f"Error processing LLM response: {str(e)}")
-            import traceback
-            traceback.print_exc()
-            
-            # Try to recover something usable
-            try:
-                if isinstance(response, dict) and 'choices' in response and response['choices']:
-                    choice = response['choices'][0]
-                    if 'message' in choice and 'content' in choice['message']:
-                        raw_content = choice['message']['content']
-                        return self._create_fallback_response(raw_content)
-            except:
-                pass
-            
-            return self._create_fallback_response("Error processing response")
+            print(f"Error parsing LLM response: {str(e)}")
+            print(f"Raw response: {response[:500]}...")  # Print first 500 chars for debugging
+            return {
+                'status': 'error',
+                'message': f'Failed to parse LLM response: {str(e)}',
+                'extracted_fields': {},
+                'validation_notes': ['Error processing document'],
+                'confidence': 0.0
+            }
     
     def _create_fallback_response(self, content):
         """Create a fallback response when JSON parsing fails"""

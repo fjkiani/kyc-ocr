@@ -1,0 +1,45 @@
+{
+  "document_type": "loan_application",
+  "processing_method": "document_inlining",
+  "structure_preservation": true,
+  "modality_gap_bridged": true,
+  "model": "llama-v3p3-70b-instruct",
+  "extracted_fields": {
+    "full_text": {
+      "value": "After analyzing the provided loan application, I extracted the following information while preserving the document structure:\n\n### Header Section\n- **State**: California\n- **Document Type**: USA Driver License\n\n### License Information\n- **License Number**: DL 11234568\n- **License Class**: CLASS C\n- **Expiration Date**: 08/31/2014\n- **Endorsements**: NONE\n\n### Personal Details\n- **Last Name**: CARDHOLDER\n- **First Name**: FNIMA\n- **Address**: 2570 24TH STREET, ANYTOWN, CA 95818\n\n### Demographic Information\n- **Date of Birth**: 08/31/1977\n- **Restrictions**: NONE\n\n### Additional Information\n- **Donor Status**: DONOR\n- **Veteran Status**: VETERAN\n\n### Physical Characteristics\n- **Hair Color**: BRN\n- **Eye Color**: BRN\n- **Issue Date**: 08/31/2009\n\n### Biometric Information\n- **Sex**: F\n- **Height**: 5'-05\"\n- **Weight**: 125 lb\n- **DD (Unknown Field)**: 00/00/0000NNNAN/ANFD/YY\n\n### Observations\n- The document appears to be a driver's license rather than a loan application. The information extracted is personal and related to the identification and physical characteristics of the individual.\n- There are no tables or form fields in the traditional sense, but rather a structured format of paragraphs that contain specific pieces of information.\n- The relationships between elements are primarily sequential, with each section of the document providing different types of information about the individual.\n\n### Confidence Score\nGiven the straightforward nature of the document and the clear structure of the information presented, I would assign a confidence score of **0.9** for the extraction. The only element that reduces the confidence score is the \"DD\" field, which is not clearly defined and contains what appears to be placeholder or corrupted data. Otherwise, the extraction of information from the provided document is relatively straightforward and unambiguous.",
+      "confidence": 0.8
+    }
+  },
+  "field_confidence_avg": 0.8,
+  "structured_content": "After analyzing the provided loan application, I extracted the following information while preserving the document structure:\n\n### Header Section\n- **State**: California\n- **Document Type**: USA Driver License\n\n### License Information\n- **License Number**: DL 11234568\n- **License Class**: CLASS C\n- **Expiration Date**: 08/31/2014\n- **Endorsements**: NONE\n\n### Personal Details\n- **Last Name**: CARDHOLDER\n- **First Name**: FNIMA\n- **Address**: 2570 24TH STREET, ANYTOWN, CA 95818\n\n### Demographic Information\n- **Date of Birth**: 08/31/1977\n- **Restrictions**: NONE\n\n### Additional Information\n- **Donor Status**: DONOR\n- **Veteran Status**: VETERAN\n\n### Physical Characteristics\n- **Hair Color**: BRN\n- **Eye Color**: BRN\n- **Issue Date**: 08/31/2009\n\n### Biometric Information\n- **Sex**: F\n- **Height**: 5'-05\"\n- **Weight**: 125 lb\n- **DD (Unknown Field)**: 00/00/0000NNNAN/ANFD/YY\n\n### Observations\n- The document appears to be a driver's license rather than a loan application. The information extracted is personal and related to the identification and physical characteristics of the individual.\n- There are no tables or form fields in the traditional sense, but rather a structured format of paragraphs that contain specific pieces of information.\n- The relationships between elements are primarily sequential, with each section of the document providing different types of information about the individual.\n\n### Confidence Score\nGiven the straightforward nature of the document and the clear structure of the information presented, I would assign a confidence score of **0.9** for the extraction. The only element that reduces the confidence score is the \"DD\" field, which is not clearly defined and contains what appears to be placeholder or corrupted data. Otherwise, the extraction of information from the provided document is relatively straightforward and unambiguous.",
+  "validation_notes": [
+    "Document processed with Document Inlining technology"
+  ],
+  "overall_confidence": 0.8,
+  "confidence": 0.8,
+  "detected_fields": [
+    {
+      "text": "full_text",
+      "confidence": 0.8,
+      "bbox": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "confidence_explanation": "Based on average confidence of 1 extracted fields"
+}
