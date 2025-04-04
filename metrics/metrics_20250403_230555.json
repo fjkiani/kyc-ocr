@@ -1,0 +1,99 @@
+{
+  "document_count": 2,
+  "session_duration": "0:02:51.089928",
+  "processing_time": {
+    "traditional_ocr": {
+      "average": 3.7054383754730225,
+      "min": 3.632723808288574,
+      "max": 3.7781529426574707,
+      "total": 7.410876750946045,
+      "raw": [
+        3.7781529426574707,
+        3.632723808288574
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0,
+      "raw": []
+    }
+  },
+  "extraction_counts": {
+    "traditional_ocr": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    }
+  },
+  "confidence_scores": {
+    "traditional_ocr": {
+      "average": 0.7277423210460918,
+      "min": 0.7277423210460918,
+      "max": 0.7277423210460918,
+      "raw": [
+        0.7277423210460918,
+        0.7277423210460918
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    }
+  },
+  "structure_metrics": {
+    "section_count": {
+      "average": 0,
+      "raw": []
+    },
+    "key_value_pairs": {
+      "average": 0,
+      "raw": []
+    },
+    "list_items": {
+      "average": 0,
+      "raw": []
+    }
+  },
+  "comparative": {
+    "processing_time_reduction_pct": 99,
+    "confidence_improvement_pct": 0,
+    "ocr_to_enhanced_time_reduction_pct": 99,
+    "ocr_to_enhanced_confidence_improvement_pct": 0,
+    "enhanced_to_inlining_time_reduction_pct": 0,
+    "enhanced_to_inlining_confidence_improvement_pct": 0,
+    "manual_review_reduction_pct": 60
+  }
+}

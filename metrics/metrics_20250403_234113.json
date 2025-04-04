@@ -1,0 +1,108 @@
+{
+  "document_count": 2,
+  "session_duration": "0:01:21.412721",
+  "processing_time": {
+    "traditional_ocr": {
+      "average": 4.220380902290344,
+      "min": 4.07781982421875,
+      "max": 4.3629419803619385,
+      "total": 8.440761804580688,
+      "raw": [
+        4.3629419803619385,
+        4.07781982421875
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 4.913311004638672,
+      "min": 4.497452020645142,
+      "max": 5.329169988632202,
+      "total": 9.826622009277344,
+      "raw": [
+        5.329169988632202,
+        4.497452020645142
+      ]
+    }
+  },
+  "extraction_counts": {
+    "traditional_ocr": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1
+      ]
+    }
+  },
+  "confidence_scores": {
+    "traditional_ocr": {
+      "average": 0.8530095863556133,
+      "min": 0.8530095863556133,
+      "max": 0.8530095863556133,
+      "raw": [
+        0.8530095863556133,
+        0.8530095863556133
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 0.8,
+      "min": 0.8,
+      "max": 0.8,
+      "raw": [
+        0.8,
+        0.8
+      ]
+    }
+  },
+  "structure_metrics": {
+    "section_count": {
+      "average": 0,
+      "raw": []
+    },
+    "key_value_pairs": {
+      "average": 0,
+      "raw": []
+    },
+    "list_items": {
+      "average": 0,
+      "raw": []
+    }
+  },
+  "comparative": {
+    "processing_time_reduction_pct": 0,
+    "confidence_improvement_pct": 0,
+    "ocr_to_enhanced_time_reduction_pct": 99,
+    "ocr_to_enhanced_confidence_improvement_pct": 0,
+    "enhanced_to_inlining_time_reduction_pct": 0,
+    "enhanced_to_inlining_confidence_improvement_pct": 0,
+    "manual_review_reduction_pct": 65.64990698317196
+  }
+}

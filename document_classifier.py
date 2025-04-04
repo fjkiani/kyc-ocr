@@ -12,7 +12,15 @@ class DocumentClassifier:
             'drivers_license': ['driver license', 'dl', 'operator license', 'commercial'],
             'resume': ['resume', 'cv', 'curriculum vitae', 'work experience', 'education', 'skills', 
                       'certifications', 'employment history', 'professional experience', 
-                      'technical skills', 'contact info', 'references']
+                      'technical skills', 'contact info', 'references'],
+            'bank_statement': ['account', 'balance', 'transaction', 'deposit', 'withdrawal', 'bank', 
+                             'statement', 'beginning balance', 'ending balance', 'account number'],
+            'tax_form': ['form w-2', 'form 1040', 'tax return', 'irs', 'wages', 'income tax', 
+                        'social security', 'medicare', 'employer', 'employee'],
+            'loan_application': ['loan', 'application', 'borrower', 'lender', 'mortgage', 'property', 
+                               'income', 'employment', 'assets', 'liabilities'],
+            'property_appraisal': ['appraisal', 'property', 'value', 'assessment', 'real estate', 
+                                  'comparable', 'market value', 'improvements', 'land']
         }
         
     def classify(self, image_path):
@@ -95,26 +103,79 @@ class DocumentClassifier:
         best_type = max(type_matches, key=type_matches.get)
         best_confidence = type_confidence[best_type]
         
-        # If no good matches, check for resume-specific patterns
+        # If no good matches, check for patterns
         if best_confidence < 0.3:
-            # Check for resume-specific patterns like education/experience sections
+            # Check for resume-specific patterns
             resume_patterns = [
                 r'education|experience|skills|certifications',
-                r'\d{4}\s*-\s*\d{4}|\d{2}/\d{4}',  # Date ranges like 2019-2021 or 05/2021
+                r'\d{4}\s*-\s*\d{4}|\d{2}/\d{4}',  # Date ranges
                 r'university|college|school',
                 r'bachelor|master|phd|bs|ba|ms|mba',
                 r'technical skills|programming|languages',
                 r'email|phone|contact'
             ]
             
-            resume_matches = 0
-            for pattern in resume_patterns:
-                if re.search(pattern, text_lower):
-                    resume_matches += 1
+            # Check for bank statement patterns
+            bank_patterns = [
+                r'\$\d+[,\d]*\.\d{2}',  # Currency amounts
+                r'balance|deposit|withdrawal|credit|debit',
+                r'account\s+\d+',  # Account numbers
+                r'transaction|payment|transfer'
+            ]
             
-            if resume_matches >= 3:  # If at least 3 resume patterns match
-                best_type = 'resume'
-                best_confidence = 0.7  # Higher confidence based on pattern matching
+            # Check for tax form patterns
+            tax_patterns = [
+                r'form\s+\d+',  # Form numbers
+                r'tax\s+year|\d{4}\s+tax',
+                r'wages|salary|income',
+                r'employer\s+id|ein',
+                r'social security|medicare'
+            ]
+            
+            # Check for loan application patterns
+            loan_patterns = [
+                r'loan|mortgage|borrower',
+                r'property|address|residence',
+                r'income|employment|employer',
+                r'assets|liabilities|debt'
+            ]
+            
+            # Check for property appraisal patterns
+            appraisal_patterns = [
+                r'property|real estate|land',
+                r'value|assessment|appraisal',
+                r'square\s+feet|sq\s*ft',
+                r'comparable|market\s+value'
+            ]
+            
+            # Count matches for each pattern set
+            pattern_matches = {
+                'resume': sum(1 for p in resume_patterns if re.search(p, text_lower)),
+                'bank_statement': sum(1 for p in bank_patterns if re.search(p, text_lower)),
+                'tax_form': sum(1 for p in tax_patterns if re.search(p, text_lower)),
+                'loan_application': sum(1 for p in loan_patterns if re.search(p, text_lower)),
+                'property_appraisal': sum(1 for p in appraisal_patterns if re.search(p, text_lower))
+            }
+            
+            # Find the best matching pattern type
+            best_pattern_type = max(pattern_matches, key=pattern_matches.get)
+            best_pattern_matches = pattern_matches[best_pattern_type]
+            
+            # Calculate confidence based on pattern matches
+            pattern_confidence = {
+                'resume': 0.7 if best_pattern_matches >= 3 else 0.5 if best_pattern_matches >= 2 else 0.3,
+                'bank_statement': 0.8 if best_pattern_matches >= 3 else 0.6 if best_pattern_matches >= 2 else 0.4,
+                'tax_form': 0.8 if best_pattern_matches >= 3 else 0.6 if best_pattern_matches >= 2 else 0.4,
+                'loan_application': 0.7 if best_pattern_matches >= 3 else 0.5 if best_pattern_matches >= 2 else 0.3,
+                'property_appraisal': 0.7 if best_pattern_matches >= 3 else 0.5 if best_pattern_matches >= 2 else 0.3
+            }
+            
+            if best_pattern_matches >= 2:
+                best_type = best_pattern_type
+                best_confidence = pattern_confidence[best_pattern_type]
+            else:
+                best_type = 'unknown'
+                best_confidence = 0.1
         
         return best_type, best_confidence
     

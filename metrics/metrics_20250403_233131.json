@@ -1,0 +1,114 @@
+{
+  "document_count": 3,
+  "session_duration": "0:03:03.881857",
+  "processing_time": {
+    "traditional_ocr": {
+      "average": 4.418169577916463,
+      "min": 4.131838083267212,
+      "max": 4.82226037979126,
+      "total": 13.25450873374939,
+      "raw": [
+        4.300410270690918,
+        4.131838083267212,
+        4.82226037979126
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "total": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 4.046660343805949,
+      "min": 3.781447172164917,
+      "max": 4.3215789794921875,
+      "total": 12.139981031417847,
+      "raw": [
+        4.036954879760742,
+        3.781447172164917,
+        4.3215789794921875
+      ]
+    }
+  },
+  "extraction_counts": {
+    "traditional_ocr": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1,
+        1
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "confidence_scores": {
+    "traditional_ocr": {
+      "average": 0.8530095863556134,
+      "min": 0.8530095863556133,
+      "max": 0.8530095863556133,
+      "raw": [
+        0.8530095863556133,
+        0.8530095863556133,
+        0.8530095863556133
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "raw": []
+    },
+    "document_inlining": {
+      "average": 0.8530095863556134,
+      "min": 0.8530095863556133,
+      "max": 0.8530095863556133,
+      "raw": [
+        0.8530095863556133,
+        0.8530095863556133,
+        0.8530095863556133
+      ]
+    }
+  },
+  "structure_metrics": {
+    "section_count": {
+      "average": 0,
+      "raw": []
+    },
+    "key_value_pairs": {
+      "average": 0,
+      "raw": []
+    },
+    "list_items": {
+      "average": 0,
+      "raw": []
+    }
+  },
+  "comparative": {
+    "processing_time_reduction_pct": 8.408668512124233,
+    "confidence_improvement_pct": 0,
+    "ocr_to_enhanced_time_reduction_pct": 99,
+    "ocr_to_enhanced_confidence_improvement_pct": 0,
+    "enhanced_to_inlining_time_reduction_pct": 0,
+    "enhanced_to_inlining_confidence_improvement_pct": 0,
+    "manual_review_reduction_pct": 70.0
+  }
+}

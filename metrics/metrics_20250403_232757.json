@@ -1,0 +1,126 @@
+{
+  "document_count": 3,
+  "session_duration": "0:02:53.720501",
+  "processing_time": {
+    "traditional_ocr": {
+      "average": 4.333231528600057,
+      "min": 3.9503066539764404,
+      "max": 5.084558010101318,
+      "total": 12.999694585800171,
+      "raw": [
+        5.084558010101318,
+        3.964829921722412,
+        3.9503066539764404
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 3.8845291137695312,
+      "min": 3.658860206604004,
+      "max": 4.317681074142456,
+      "total": 11.653587341308594,
+      "raw": [
+        3.658860206604004,
+        3.677046060562134,
+        4.317681074142456
+      ]
+    },
+    "document_inlining": {
+      "average": 3.615234692891439,
+      "min": 3.5509049892425537,
+      "max": 3.715365171432495,
+      "total": 10.845704078674316,
+      "raw": [
+        3.5509049892425537,
+        3.5794339179992676,
+        3.715365171432495
+      ]
+    }
+  },
+  "extraction_counts": {
+    "traditional_ocr": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1,
+        1
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "raw": [
+        0,
+        0,
+        0
+      ]
+    },
+    "document_inlining": {
+      "average": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "raw": [
+        1,
+        1,
+        1
+      ]
+    }
+  },
+  "confidence_scores": {
+    "traditional_ocr": {
+      "average": 0.8530095863556134,
+      "min": 0.8530095863556133,
+      "max": 0.8530095863556133,
+      "raw": [
+        0.8530095863556133,
+        0.8530095863556133,
+        0.8530095863556133
+      ]
+    },
+    "enhanced_ocr": {
+      "average": 0.8530095863556134,
+      "min": 0.8530095863556134,
+      "max": 0.8530095863556134,
+      "raw": [
+        0.8530095863556134,
+        0.8530095863556134,
+        0.8530095863556134
+      ]
+    },
+    "document_inlining": {
+      "average": 0.8530095863556134,
+      "min": 0.8530095863556133,
+      "max": 0.8530095863556133,
+      "raw": [
+        0.8530095863556133,
+        0.8530095863556133,
+        0.8530095863556133
+      ]
+    }
+  },
+  "structure_metrics": {
+    "section_count": {
+      "average": 0,
+      "raw": []
+    },
+    "key_value_pairs": {
+      "average": 0,
+      "raw": []
+    },
+    "list_items": {
+      "average": 0,
+      "raw": []
+    }
+  },
+  "comparative": {
+    "processing_time_reduction_pct": 16.56954702211774,
+    "confidence_improvement_pct": 0,
+    "ocr_to_enhanced_time_reduction_pct": 10.354914383619109,
+    "ocr_to_enhanced_confidence_improvement_pct": 0,
+    "enhanced_to_inlining_time_reduction_pct": 6.932485585537808,
+    "enhanced_to_inlining_confidence_improvement_pct": 0,
+    "manual_review_reduction_pct": 70.0
+  }
+}

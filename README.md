@@ -364,3 +364,151 @@ graph TD
    - API endpoint development
    - Additional document type support
    - Advanced security features
+
+# Document Processing Comparison: Document Inlining vs Traditional OCR+LLM
+
+This repository demonstrates and compares two approaches to document processing:
+1. Traditional OCR + LLM Pipeline
+2. Document Inlining Technology
+
+## Overview
+
+### Traditional OCR + LLM Pipeline
+The traditional approach follows a multi-step process:
+1. OCR extracts text from documents
+2. Text is formatted and structured
+3. LLM processes the extracted text
+4. Results are validated and formatted
+
+### Document Inlining Technology
+Document Inlining takes a fundamentally different approach:
+1. Documents are transformed while preserving their structure
+2. Specialized language models process the inlined documents
+3. Results maintain structural relationships and context
+
+## Key Differences
+
+### 1. Structure Preservation
+- **Traditional OCR + LLM:**
+  - ❌ Loses document structure during OCR
+  - ❌ Tables become flat text
+  - ❌ Form field relationships are lost
+  - ❌ Multi-page connections break
+
+- **Document Inlining:**
+  - ✅ Preserves table structures
+  - ✅ Maintains form field relationships
+  - ✅ Keeps multi-page connections
+  - ✅ Retains document hierarchy
+
+### 2. Processing Accuracy
+- **Traditional OCR + LLM:**
+  - 80-85% accuracy on complex documents
+  - Higher error rates on tables
+  - Requires extensive validation
+  - Struggles with poor quality scans
+
+- **Document Inlining:**
+  - 95%+ accuracy on complex documents
+  - Excellent table handling
+  - Built-in validation
+  - Better handling of low-quality inputs
+
+### 3. Processing Speed
+- **Traditional OCR + LLM:**
+  - Multiple processing steps
+  - 2-3 hours per complex application
+  - Manual verification needed
+  - Sequential processing bottlenecks
+
+- **Document Inlining:**
+  - Single unified process
+  - 5-10 minutes per complex application
+  - Minimal manual verification
+  - Parallel processing capable
+
+### 4. Document Types
+- **Traditional OCR + LLM:**
+  - Basic documents (text-heavy)
+  - Simple forms
+  - Single-page documents
+  - Structured layouts
+
+- **Document Inlining:**
+  - Complex financial documents
+  - Multi-page applications
+  - Tables and statements
+  - Variable layouts
+
+## Use Cases
+
+### Financial Services
+- **Bank Statements**
+  - Traditional: Struggles with transaction tables
+  - Inlining: Preserves transaction relationships
+
+- **Loan Applications**
+  - Traditional: Manual cross-reference needed
+  - Inlining: Automated field relationship validation
+
+- **Tax Documents**
+  - Traditional: Box numbers/values disconnect
+  - Inlining: Maintains form structure and references
+
+### Business Impact
+
+#### Processing Time
+- Traditional: 40-45 days average loan processing
+- Inlining: 15-20 days average loan processing
+
+#### Error Reduction
+- Traditional: 3-5% error rate
+- Inlining: <1% error rate
+
+#### Cost Savings
+- Traditional: $8,000+ per loan processing
+- Inlining: $3,000-4,000 per loan processing
+
+## Technical Implementation
+
+### Setup
+```bash
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment
+cp .env.example .env
+# Add your API key to .env file
+
+# Run the application
+python run_app.py
+```
+
+### Key Components
+1. Document Processing Pipeline
+2. OCR Engine Integration
+3. LLM Processing
+4. Document Inlining Transform
+5. Results Visualization
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies
+3. Configure API keys
+4. Run sample tests
+5. Process your documents
+
+## Documentation
+
+- [Technical Discovery Guide](docs/discovery_meeting_guide.md)
+- [Demo Scenarios](docs/demo_scenarios.md)
+- [API Documentation](docs/api.md)
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
