@@ -109,25 +109,21 @@ st.markdown("""
         margin-bottom: 1rem;
     }
     .info-box {
-        background-color: #E3F2FD;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
     }
     .success-box {
-        background-color: #E8F5E9;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
     }
     .warning-box {
-        background-color: #FFF8E1;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
     }
     .error-box {
-        background-color: #FFEBEE;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
@@ -152,7 +148,6 @@ st.markdown("""
     }
     .sample-image-item:hover {
         border-color: #1E88E5;
-        background-color: #E3F2FD;
     }
     .sample-image-item img {
         max-width: 100%;
@@ -183,22 +178,18 @@ st.markdown("""
         width: 50%;
         padding: 1rem;
         border-right: 1px solid #ddd;
-        # background-color: #FFF8E1;
     }
     .comparison-right {
         width: 50%;
         padding: 1rem;
-        # background-color: #E8F5E9;
     }
     .modality-gap-box {
-        background-color: #FFEBEE;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
         border: 1px dashed #B71C1C;
     }
     .structure-preserved-box {
-        background-color: #E8F5E9;
         padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1rem;
@@ -233,7 +224,7 @@ st.markdown("""
     .confidence-high { color: green; font-weight: bold; }
     .confidence-medium { color: orange; font-weight: bold; }
     .confidence-low { color: red; font-weight: bold; }
-    .mock-data { background-color: #fffde7; padding: 10px; border-left: 5px solid #ffeb3b; }
+    .mock-data { padding: 10px; border-left: 5px solid #ffeb3b; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -425,131 +416,6 @@ def handle_document_upload(uploaded_file):
         st.info("Please upload an image (JPG, JPEG, PNG) or PDF file.")
         return None, file_info
 
-def get_sample_images():
-    """Get list of sample images from the test directory"""
-    test_dir = Path("test")
-    if not test_dir.exists():
-        return []
-    
-    # Get all image files
-    image_files = []
-    for ext in ["*.jpg", "*.jpeg", "*.png"]:
-        image_files.extend(test_dir.glob(ext))
-    
-    return sorted(image_files)
-
-def categorize_sample_images(sample_images):
-    """Categorize sample images by document type"""
-    categories = {
-        "loan_application": [],
-        "bank_statement": [],
-        "tax_form": [],
-        "property_appraisal": [],
-        "other": []
-    }
-    
-    for image_path in sample_images:
-        name = image_path.name.lower()
-        
-        if any(term in name for term in ["loan", "application", "mortgage", "form1003", "1003"]):
-            categories["loan_application"].append(image_path)
-        elif any(term in name for term in ["bank", "statement", "account", "transaction"]):
-            categories["bank_statement"].append(image_path)
-        elif any(term in name for term in ["tax", "w2", "1099", "income"]):
-            categories["tax_form"].append(image_path)
-        elif any(term in name for term in ["property", "appraisal", "valuation", "real estate"]):
-            categories["property_appraisal"].append(image_path)
-        else:
-            categories["other"].append(image_path)
-    
-    return categories
-
-def display_sample_images(sample_images):
-    """Display sample images in a grid for selection"""
-    if not sample_images:
-        st.warning("No sample images found in the test directory.")
-        
-        st.markdown("""
-        <div class='warning-box'>
-        <strong>Recommendation:</strong> For the best demonstration experience, please add sample financial documents to the test directory:
-        <ul>
-            <li>Loan applications (Form 1003)</li>
-            <li>Bank statements with transaction tables</li>
-            <li>Tax forms (W-2s, 1099s)</li>
-            <li>Property appraisals with comparison tables</li>
-        </ul>
-        This will enable a more realistic demonstration of Document Inlining technology with financial documents.
-        </div>
-        """, unsafe_allow_html=True)
-        
-        return None
-    
-    st.markdown("<div class='sub-header'>Sample Financial Documents</div>", unsafe_allow_html=True)
-    st.markdown("Select a document to process:")
-    
-    # Categorize images
-    categories = categorize_sample_images(sample_images)
-    
-    selected_image = None
-    
-    # Display categorized images
-    for category, images in categories.items():
-        if not images:
-            continue
-        
-        # Get display name for category
-        category_display = {
-            "loan_application": "Loan Applications",
-            "bank_statement": "Bank Statements",
-            "tax_form": "Tax Forms",
-            "property_appraisal": "Property Appraisals",
-            "other": "Other Documents"
-        }.get(category, "Other Documents")
-        
-        st.markdown(f"<div class='sub-header'>{category_display}</div>", unsafe_allow_html=True)
-        
-        # Create columns for the images in this category
-        cols = st.columns(min(3, len(images)))
-        
-        # Display images in columns
-        for i, image_path in enumerate(images):
-            col = cols[i % min(3, len(images))]
-            with col:
-                img = Image.open(image_path)
-                # Resize for thumbnail
-                img.thumbnail((200, 200))
-                
-                # Create a container with image and caption
-                st.markdown(f"<div class='sample-image-item'>", unsafe_allow_html=True)
-                st.image(img, caption=f"{image_path.name}")
-                if st.button(f"Select", key=f"sample_{category}_{i}"):
-                    selected_image = str(image_path)
-                st.markdown("</div>", unsafe_allow_html=True)
-    
-    # If no categorized images were displayed
-    if all(len(images) == 0 for images in categories.values()):
-        st.info("No categorized financial documents found. Displaying all available images.")
-        
-        # Create columns for the images
-        cols = st.columns(3)
-        
-        # Display images in columns
-        for i, image_path in enumerate(sample_images):
-            col = cols[i % 3]
-            with col:
-                img = Image.open(image_path)
-                # Resize for thumbnail
-                img.thumbnail((200, 200))
-                
-                # Create a container with image and caption
-                st.markdown(f"<div class='sample-image-item'>", unsafe_allow_html=True)
-                st.image(img, caption=f"{image_path.name}")
-                if st.button(f"Select", key=f"sample_{i}"):
-                    selected_image = str(image_path)
-                st.markdown("</div>", unsafe_allow_html=True)
-    
-    return selected_image
-
 def display_image(image_path, title="Uploaded Image"):
     """Display an image with a title"""
     img = Image.open(image_path)
@@ -588,15 +454,15 @@ def display_ocr_results(image_path, ocr_results):
         # Style the DataFrame
         def highlight_confidence(val):
             if 'HIGH' in val:
-                return 'background-color: #90EE90'  # Light green
+                return 'color: green; font-weight: bold'
             elif 'MEDIUM' in val:
-                return 'background-color: #FFE5B4'  # Light orange
+                return 'color: orange; font-weight: bold'
             elif 'LOW' in val:
-                return 'background-color: #FFB6C1'  # Light red
+                return 'color: red; font-weight: bold'
             return ''
         
         # Apply styling and display
-        styled_df = df.style.apply(lambda x: ['background-color: transparent']*len(x) if x.name != 'Level' 
+        styled_df = df.style.apply(lambda x: ['']*len(x) if x.name != 'Level' 
                                  else [highlight_confidence(val) for val in x], axis=0)
         st.dataframe(styled_df, use_container_width=True)
         
@@ -670,14 +536,14 @@ def display_extracted_fields(result):
             # Style the DataFrame
             def highlight_status(val):
                 if 'verified' in val.lower():
-                    return 'background-color: #90EE90'
+                    return 'color: green; font-weight: bold'
                 elif 'needs_review' in val.lower():
-                    return 'background-color: #FFE5B4'
+                    return 'color: orange; font-weight: bold'
                 elif 'error' in val.lower():
-                    return 'background-color: #FFB6C1'
+                    return 'color: red; font-weight: bold'
                 return ''
                 
-            styled_df = df.style.apply(lambda x: ['background-color: transparent']*len(x) if x.name != 'Status' 
+            styled_df = df.style.apply(lambda x: ['']*len(x) if x.name != 'Status' 
                                      else [highlight_status(val) for val in x], axis=0)
             st.dataframe(styled_df, use_container_width=True)
             
@@ -1544,13 +1410,15 @@ def process_with_enhanced_ocr(image_path, doc_type):
             
             # Style the dataframe
             def highlight_confidence(val):
-                if val >= 0.8:
-                    return 'background-color: #c6efce'  # Light green
-                elif val >= 0.6:
-                    return 'background-color: #ffeb9c'  # Light yellow
-                return 'background-color: #ffc7ce'  # Light red
+                if 'HIGH' in val:
+                    return 'color: green; font-weight: bold'
+                elif 'MEDIUM' in val:
+                    return 'color: orange; font-weight: bold'
+                elif 'LOW' in val:
+                    return 'color: red; font-weight: bold'
+                return ''
             
-            styled_df = ocr_df.style.applymap(highlight_confidence, subset=['Confidence'])
+            styled_df = ocr_df.style.applymap(highlight_confidence, subset=['Confidence Level'])
             st.dataframe(styled_df)
             
             # Display metrics
@@ -1652,10 +1520,11 @@ def process_with_enhanced_ocr(image_path, doc_type):
                                 def highlight_field_confidence(val):
                                     if isinstance(val, float):
                                         if val >= 0.8:
-                                            return 'background-color: #c6efce'  # Light green
+                                            return 'color: green; font-weight: bold'
                                         elif val >= 0.6:
-                                            return 'background-color: #ffeb9c'  # Light yellow
-                                        return 'background-color: #ffc7ce'  # Light red
+                                            return 'color: orange; font-weight: bold'
+                                        else:
+                                            return 'color: red; font-weight: bold'
                                     return ''
                                 
                                 styled_fields_df = fields_df.style.applymap(highlight_field_confidence, subset=['Confidence'])
@@ -1884,7 +1753,7 @@ def display_comparison(traditional_results, enhanced_results, inlining_results, 
                 st.markdown("### Enhanced OCR + LLM")
                 if enhanced_results.get('using_mock_data', False):
                     st.markdown("""
-                    <div style="background-color: #fffde7; padding: 5px; margin-bottom: 10px; border-radius: 5px;">
+                    <div style="padding: 5px; margin-bottom: 10px; border-radius: 5px;">
                         <small>⚠️ Using demonstration data (API unavailable)</small>
                     </div>
                     """, unsafe_allow_html=True)
@@ -2172,16 +2041,6 @@ def display_structure_preservation_quality(traditional_results, inlining_results
 def main():
     st.markdown("<div class='main-header'>Fireworks AI Document Inlining™ Demo</div>", unsafe_allow_html=True)
     
-    st.markdown("""
-    <div class='info-box'>
-    <strong>Bridging the Modality Gap in Financial Document Processing</strong><br><br>
-    This demonstration shows how Fireworks AI's Document Inlining technology preserves document structure
-    while processing complex financial documents like loan applications, bank statements, and tax forms.
-    <br><br>
-    Compare Document Inlining with traditional OCR to see the difference in structure preservation and accuracy.
-    </div>
-    """, unsafe_allow_html=True)
-    
     # Initialize session state for tracking processing state
     if 'processing_complete' not in st.session_state:
         st.session_state.processing_complete = False
@@ -2268,18 +2127,6 @@ def main():
             image_path, file_info = handle_document_upload(uploaded_file)
             if image_path:
                 filename = Path(image_path).name
-        
-        # Sample images
-        sample_images = get_sample_images()
-        selected_sample = display_sample_images(sample_images)
-        if selected_sample:
-            image_path = selected_sample
-            filename = Path(selected_sample).name
-            file_info = get_file_info(image_path)
-            # Clear any previous PDF conversion state when selecting a sample image
-            if 'converted_image_path' in st.session_state:
-                del st.session_state.converted_image_path
-                del st.session_state.converted_file_info
         
         # If no image is selected, show document type suggestions
         if not image_path:
@@ -2463,17 +2310,6 @@ def main():
     with selected_tab[1]:
         st.markdown("<div class='section-header'>Document Processing Methods Comparison</div>", unsafe_allow_html=True)
         
-        st.markdown("""
-        <div class='info-box'>
-        Compare the results of different document processing methods:
-        <ul>
-            <li><strong>Traditional OCR:</strong> Basic text extraction without structure preservation</li>
-            <li><strong>Enhanced OCR + LLM:</strong> OCR extraction followed by LLM processing for field identification</li>
-            <li><strong>Document Inlining:</strong> Direct document understanding with structure preservation</li>
-        </ul>
-        </div>
-        """, unsafe_allow_html=True)
-        
         # Show comparison if both methods have been run
         if st.session_state.both_methods_run:
             # Display modality gap explanation
@@ -2532,12 +2368,6 @@ def main():
     # How It Works Tab
     with selected_tab[2]:
         st.markdown("<div class='section-header'>How Document Processing Works</div>", unsafe_allow_html=True)
-        
-        st.markdown("""
-        <div class='info-box'>
-        <strong>Comparing Three Approaches to Document Processing</strong>
-        </div>
-        """, unsafe_allow_html=True)
         
         # Create tabs for each approach
         approach_tabs = st.tabs(["Traditional OCR", "Enhanced OCR + LLM", "Document Inlining"])
@@ -2618,13 +2448,6 @@ def main():
         
         # Display comparison diagram
         st.markdown("<div class='sub-header'>The Modality Gap Challenge</div>", unsafe_allow_html=True)
-        
-        st.markdown("""
-        <div class='info-box'>
-        <strong>Why structure preservation matters:</strong> Financial documents contain critical relationships between data elements.
-        When these relationships are lost during processing (the modality gap), it leads to errors, manual verification, and delays.
-        </div>
-        """, unsafe_allow_html=True)
         
         # Display the modality gap explanation
         display_modality_gap_explanation()

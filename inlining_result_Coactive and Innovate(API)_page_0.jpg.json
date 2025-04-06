@@ -1,0 +1,45 @@
+{
+  "document_type": "other",
+  "processing_method": "document_inlining",
+  "structure_preservation": true,
+  "modality_gap_bridged": true,
+  "model": "llama-v3p3-70b-instruct",
+  "extracted_fields": {
+    "full_text": {
+      "value": "### Analysis of Provided HTML Document\n\nThe given document is an HTML snippet that outlines the technical integration between Innovate's Unstructured Framework for Educational Content Processing and Coactive's visual understanding API. Below is a structured analysis of the document, focusing on its content, structure, and any identifiable relationships or data that can be extracted.\n\n#### Document Structure\n\n- **Introduction**: The document starts with a title, \"Innovate-Coactive Integration: Technical Specification,\" followed by an overview section.\n- **Overview**: This section describes the purpose of the document and the partnership between Innovate and Coactive, aiming to transform educational content into structured, searchable, and intelligent learning assets.\n- **Architecture**: This section briefly introduces the integration architecture, mentioning a bidirectional flow between Innovate's text processing and Coactive's visual understanding capabilities.\n- **API Integration Points**: This section is mentioned but not elaborated upon in the provided snippet.\n\n#### Extracted Information\n\n- **Partners**: Innovate and Coactive.\n- **Purpose**: Integration of Innovate's Unstructured Framework for Educational Content Processing with Coactive's visual understanding API to create a comprehensive solution for educational content transformation.\n- **Content Types**: Text, images, videos.\n- **Outcome**: Structured, searchable, and intelligent learning assets.\n- **Architecture**: Bidirectional flow between text processing and visual understanding capabilities.\n\n#### Tables, Form Fields, and Relationships\n\n- **Tables**: None identified in the provided snippet.\n- **Form Fields**: None identified in the provided snippet.\n- **Relationships**: The primary relationship outlined is the partnership between Innovate and Coactive, focusing on integrating their respective technologies (text processing and visual understanding) to achieve a common goal.\n\n#### Confidence Score\n\nGiven the simplicity and the introductory nature of the provided HTML snippet, the extraction of detailed technical specifications, tables, form fields, or complex relationships is limited. However, the extraction of the partnership's purpose, the involved parties, and the general architecture of the integration has been successfully accomplished with high accuracy. \n\nTherefore, the confidence score for this extraction is: **0.8**\n\nThis score reflects the ability to accurately identify and extract the available information but also acknowledges the lack of more detailed technical data (such as specific API integration points, detailed architecture diagrams, or performance metrics) that would be expected in a comprehensive technical specification document.",
+      "confidence": 0.8
+    }
+  },
+  "field_confidence_avg": 0.8,
+  "structured_content": "### Analysis of Provided HTML Document\n\nThe given document is an HTML snippet that outlines the technical integration between Innovate's Unstructured Framework for Educational Content Processing and Coactive's visual understanding API. Below is a structured analysis of the document, focusing on its content, structure, and any identifiable relationships or data that can be extracted.\n\n#### Document Structure\n\n- **Introduction**: The document starts with a title, \"Innovate-Coactive Integration: Technical Specification,\" followed by an overview section.\n- **Overview**: This section describes the purpose of the document and the partnership between Innovate and Coactive, aiming to transform educational content into structured, searchable, and intelligent learning assets.\n- **Architecture**: This section briefly introduces the integration architecture, mentioning a bidirectional flow between Innovate's text processing and Coactive's visual understanding capabilities.\n- **API Integration Points**: This section is mentioned but not elaborated upon in the provided snippet.\n\n#### Extracted Information\n\n- **Partners**: Innovate and Coactive.\n- **Purpose**: Integration of Innovate's Unstructured Framework for Educational Content Processing with Coactive's visual understanding API to create a comprehensive solution for educational content transformation.\n- **Content Types**: Text, images, videos.\n- **Outcome**: Structured, searchable, and intelligent learning assets.\n- **Architecture**: Bidirectional flow between text processing and visual understanding capabilities.\n\n#### Tables, Form Fields, and Relationships\n\n- **Tables**: None identified in the provided snippet.\n- **Form Fields**: None identified in the provided snippet.\n- **Relationships**: The primary relationship outlined is the partnership between Innovate and Coactive, focusing on integrating their respective technologies (text processing and visual understanding) to achieve a common goal.\n\n#### Confidence Score\n\nGiven the simplicity and the introductory nature of the provided HTML snippet, the extraction of detailed technical specifications, tables, form fields, or complex relationships is limited. However, the extraction of the partnership's purpose, the involved parties, and the general architecture of the integration has been successfully accomplished with high accuracy. \n\nTherefore, the confidence score for this extraction is: **0.8**\n\nThis score reflects the ability to accurately identify and extract the available information but also acknowledges the lack of more detailed technical data (such as specific API integration points, detailed architecture diagrams, or performance metrics) that would be expected in a comprehensive technical specification document.",
+  "validation_notes": [
+    "Document processed with Document Inlining technology"
+  ],
+  "overall_confidence": 0.8,
+  "confidence": 0.8,
+  "detected_fields": [
+    {
+      "text": "full_text",
+      "confidence": 0.8,
+      "bbox": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "confidence_explanation": "Based on average confidence of 1 extracted fields"
+}
